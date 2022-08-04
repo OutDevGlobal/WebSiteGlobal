@@ -24,5 +24,8 @@ export const HomePage = () => {
         <p className="read-the-docs">
         Click on the Vite and React logos to learn more
         </p>
+        <svg class="animate-bounce w-6 h-6 ...">
+        
+        </svg>
     </div>
 }
