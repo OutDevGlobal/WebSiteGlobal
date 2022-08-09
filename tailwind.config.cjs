@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "base-blue": '#3013E4',
+        "base-purple": '#645DC7',
         heading: '#C94141',
         primary: '#850000',
         secondary: '#FCB043',
@@ -32,8 +34,7 @@ module.exports = {
         navIcon: "url('./src/assets/svg/brand/navigationIcon.svg')",
       },
       fontFamily: {
-        display: ['Montserrat', 'Sofia Sans'],
-        body: ['Montserrat', 'Sofia Sans'],
+        montserrat : ['Montserrat', 'Sofia Sans']
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
