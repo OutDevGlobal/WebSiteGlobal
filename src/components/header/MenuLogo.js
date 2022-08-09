@@ -1,5 +1,5 @@
 import React from 'react'
-import navigationIcon from '../../assets/brand/NavigationIcon.svg'
+import navigationIcon from '../../assets/brand/navigationIcon.svg'
 // import navigationIconBorder from '../../assets/brand/navigationIconBorder.svg'
 
 export const MenuLogo = () => (
