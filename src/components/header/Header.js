@@ -1,9 +1,10 @@
 import React from 'react'
-import {MainLogo} from './MainLogo'
-import {MenuLogo} from './MenuLogo'
-export const Header = () => {
-    return <nav className='w-full flex items-center justify-between flex-wrap'>
-        <MainLogo />
-        <MenuLogo />
-    </nav>
-}
+import { MainLogo } from './MainLogo'
+import { MenuLogo } from './MenuLogo'
+
+export const Header = () => (
+  <nav className="w-full flex items-center justify-between flex-wrap">
+    <MainLogo />
+    <MenuLogo />
+  </nav>
+)
