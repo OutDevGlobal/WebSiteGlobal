@@ -1,6 +1,10 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    fontFamily: {
+      "montserrat" : ['Montserrat', 'sans-serif'],
+      "sofia" : ['"Sofia Sans"', 'serif']
+    },
     extend: {
       colors: {
         "base-blue": '#3013E4',
@@ -32,9 +36,6 @@ module.exports = {
         navIconBorderWhite:
           "url('./src/assets/svg/brand/navigationIconBorderBGWhite.svg')",
         navIcon: "url('./src/assets/svg/brand/navigationIcon.svg')",
-      },
-      fontFamily: {
-        montserrat : ['Montserrat', 'Sofia Sans']
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

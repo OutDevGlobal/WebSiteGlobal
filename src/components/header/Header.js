@@ -48,9 +48,9 @@ export const Header = () => {
           fixed z-0 left-0 top-0 w-full h-screen flex justify-center items-center bg-black opacity-0 duration-700
           overflow-hidden
         ">
-        <div className="grid grid-cols-2 w-full">
-          <div className="text-white grid grid-cols-2 pt-10">
-            <div className="col-start-2 flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+          <div className="text-white grid md:grid-cols-2 md:pt-10 order-2 md:order-1 pt-10">
+            <div className="md:col-start-2 flex flex-col w-full text-center">
               <a
                 href="/"
                 className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
@@ -73,12 +73,13 @@ export const Header = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col text-white text-left text-xl space-y-3 items-top">
+          <div className="flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left ">
             <a
               href="/"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
-                text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4 duration-300
+                text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
+                duration-300
               ">
               Home
             </a>
@@ -86,7 +87,8 @@ export const Header = () => {
               href="/"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
-                text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4 duration-300
+                text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
+                duration-300
               ">
               Services
             </a>
@@ -94,7 +96,8 @@ export const Header = () => {
               href="/"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
-                text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4 duration-300
+                text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
+                duration-300
               ">
               Development Areas
             </a>
@@ -102,7 +105,8 @@ export const Header = () => {
               href="/"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
-                text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4 duration-300
+                text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
+                duration-300
               ">
               Say Hello
             </a>

@@ -5,6 +5,7 @@ import { Header } from './components/header/Header'
 import { BGParticles } from './components/animations/Particles'
 import { HomePage } from './views/HomePage'
 import { Cursor } from './components/animations/Cursor'
+import { Footer } from './components/Footer'
 
 window.gsap = gsap
 
@@ -18,6 +19,7 @@ const App = () => (
         <Route path="/" element={<HomePage />} exact />
       </Routes>
     </Router>
+    <Footer />
   </>
 )
 

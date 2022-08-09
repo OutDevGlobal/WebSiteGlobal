@@ -2,6 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 100;
+  src: url(/fonts/Montserrat/Montserrat-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 200;
+  src: url(/fonts/Montserrat/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  src: url(/fonts/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url(/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  src: url(/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url(/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  src: url(/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  src: url(/fonts/Montserrat/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 100;
+  src: url(/fonts/SofiaSans/SofiaSans-Thin.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 200;
+  src: url(/fonts/SofiaSans/SofiaSans-ExtraLight.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 300;
+  src: url(/fonts/SofiaSans/SofiaSans-Light.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 400;
+  src: url(/fonts/SofiaSans/SofiaSans-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 500;
+  src: url(/fonts/SofiaSans/SofiaSans-Medium.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 600;
+  src: url(/fonts/SofiaSans/SofiaSans-SemiBold.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 700;
+  src: url(/fonts/SofiaSans/SofiaSans-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 800;
+  src: url(/fonts/SofiaSans/SofiaSans-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 900;
+  src: url(/fonts/SofiaSans/SofiaSans-Black.otf);
+}
+
 :root {
   font-family: 'Montserrat', 'Sofia Sans';
   font-size: 16px;
