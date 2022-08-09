@@ -1,6 +1,6 @@
 import React from 'react'
-import iconLogo from '../../assets/brand/iconLogoOutDev.svg'
-import mainLogo from '../../assets/brand/mainLogoOutDev.svg'
+import iconLogo from '../../assets/svg/brand/iconLogoOutDev.svg'
+import mainLogo from '../../assets/svg/brand/mainLogoOutDev.svg'
 
 export const MainLogo = () => (
   <a href="/" target="_self" className="flex justify-start">

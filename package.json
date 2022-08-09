@@ -13,6 +13,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "autoprefixer": "^10.4.8",
+    "gsap": "^3.10.4",
     "moment": "^2.29.3",
     "plugin-transform-react-jsx": "^0.0.1-security",
     "postcss": "^8.4.14",

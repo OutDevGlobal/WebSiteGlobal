@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import reactLogo from '../assets/react.svg'
+import reactLogo from '../assets/svg/react.svg'
 
 export const HomePage = () => {
   const [count, setCount] = useState(0)

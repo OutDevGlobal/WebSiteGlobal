@@ -22,14 +22,14 @@ module.exports = {
         thead: '#f6f7f9',
       },
       backgroundImage: {
-        navIconBorder: "url('./src/assets/brand/navigationIconBorder.svg')",
+        navIconBorder: "url('./src/assets/svg/brand/navigationIconBorder.svg')",
         navIconBorderEmpty:
-          "url('./src/assets/brand/navigationIconBorderEmpty.svg')",
+          "url('./src/assets/svg/brand/navigationIconBorderEmpty.svg')",
         navIconBorderBlack:
-          "url('./src/assets/brand/navigationIconBorderBGBlack.svg')",
+          "url('./src/assets/svg/brand/navigationIconBorderBGBlack.svg')",
         navIconBorderWhite:
-          "url('./src/assets/brand/navigationIconBorderBGWhite.svg')",
-        navIcon: "url('./src/assets/brand/navigationIcon.svg')",
+          "url('./src/assets/svg/brand/navigationIconBorderBGWhite.svg')",
+        navIcon: "url('./src/assets/svg/brand/navigationIcon.svg')",
       },
       fontFamily: {
         display: ['Montserrat', 'Sofia Sans'],
