@@ -1,5 +1,4 @@
 {
-    "editor.detectIndentation": true,
-    "editor.rulers": [120],
- }
- 
+  "editor.detectIndentation": true,
+  "editor.rulers": [120]
+}

@@ -10,8 +10,15 @@ export const MenuLogo = () => (
     "
   >
     <div className="card rotate-45">
-      <button type="button" className="flex justify-center rotate-45 z-10 w-6 h-6 sm:w-10 sm:h-10">
-        <img src={navigationIcon} className="w-6 h-6 sm:w-10 sm:h-10" alt="OutDevGlobal-Menu" />
+      <button
+        type="button"
+        className="flex justify-center rotate-45 z-10 w-6 h-6 sm:w-10 sm:h-10"
+      >
+        <img
+          src={navigationIcon}
+          className="w-6 h-6 sm:w-10 sm:h-10"
+          alt="OutDevGlobal-Menu"
+        />
       </button>
     </div>
   </div>
