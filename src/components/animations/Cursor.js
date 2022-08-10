@@ -8,9 +8,9 @@ export const Cursor = () => {
   // Move the cursor
   function onMouseMove(e) {
     if (bigBallRef.current !== null) {
-      window.gsap.to(bigBallRef.current, 0.4, {
+      window.gsap.to(bigBallRef.current, {
         x: e.pageX - 15,
-        y: e.pageY - 15,
+        y: e.pageY - window.scrollY - 15,
       })
     }
   }
