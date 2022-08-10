@@ -19,6 +19,19 @@ export const Header = () => {
     }
   }
 
+  const handleOnMouseEnter = () => {
+    const cursor = document.getElementById('custom-cursor')
+    cursor.classList.remove('p-5')
+    cursor.classList.add('p-7')
+    
+  }
+
+  const handleOnMouseLeave = () => {
+    const cursor = document.getElementById('custom-cursor')
+    cursor.classList.remove('p-7')
+    cursor.classList.add('p-5')
+  }
+
   return (
     <>
       <nav className="sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50">
@@ -32,6 +45,8 @@ export const Header = () => {
             <button
               type="button"
               onClick={handleMenu}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}
               className="flex justify-center rotate-45 w-6 h-6 sm:w-10 sm:h-10">
               <img
                 src={navigationIcon}
