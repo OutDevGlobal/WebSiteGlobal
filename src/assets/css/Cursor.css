@@ -10,7 +10,7 @@
   z-index: 1000;
 }
 
-circle {
+.circle-cursor {
   fill: white;
   stroke: gold;
 }

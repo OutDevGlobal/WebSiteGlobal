@@ -41,7 +41,13 @@ export const Cursor = () => {
     <div className="cursor hidden md:block">
       <div ref={bigBallRef} className="cursor-ball">
         <svg height="30" width="30">
-          <circle cx="15" cy="15" r="15" strokeWidth="1" />
+          <circle
+            cx="15"
+            cy="15"
+            r="15"
+            strokeWidth="1"
+            className="circle-cursor"
+          />
         </svg>
       </div>
     </div>

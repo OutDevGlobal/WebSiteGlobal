@@ -3,7 +3,7 @@ import logo from '../assets/svg/brand/mainLogoOutDev.svg'
 
 export const Footer = () => (
   <footer className="flex justify-center">
-    <div className="absolute bottom-0 md:w-full">
+    <div className="md:w-full">
       <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left">
         <div className="flex justify-center">
           <img src={logo} className="w-52" alt="OutDev" />
@@ -12,18 +12,18 @@ export const Footer = () => (
           <div className="flex flex-col font-sofia font-light gap-2 mb-4">
             <a
               href="/"
-              className="text-white text-xl hover:text-2xl hover:text-base-purple duration-300">
+              className="text-white text-xl hover:text-base-purple duration-300">
               JOIN US
               <p>CAREERS@OUTDEV.COM</p>
             </a>
             <a
               href="/"
-              className="text-white text-xl hover:text-2xl hover:text-base-purple duration-300">
+              className="text-white text-xl hover:text-base-purple duration-300">
               OUTDEV.MX
             </a>
             <a
               href="/"
-              className="text-white text-xl hover:text-2xl hover:text-base-purple duration-300">
+              className="text-white text-xl hover:text-base-purple duration-300">
               OUTDEV.CND
             </a>
           </div>
@@ -32,56 +32,56 @@ export const Footer = () => (
           <div className="flex flex-col gap-2">
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Home
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               About us
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Services
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               What we do
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Our Tec
             </a>
           </div>
           <div className="flex flex-col gap-2">
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Services
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               About our work
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Expertise
             </a>
           </div>
           <div className="flex flex-col gap-2">
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Locations
             </a>
             <a
               href="/"
-              className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
+              className="text-white text-2xl hover:text-base-purple duration-300">
               Contact us
             </a>
           </div>

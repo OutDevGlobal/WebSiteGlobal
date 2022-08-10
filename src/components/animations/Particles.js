@@ -24,7 +24,7 @@ export const BGParticles = () => {
           fpsLimit: 120,
           particles: {
             color: {
-              value: '#ffffff',
+              value: ['#FFFFFF', '#8E7CF9'],
             },
             move: {
               direction: 'none',
@@ -44,7 +44,7 @@ export const BGParticles = () => {
               value: 80,
             },
             opacity: {
-              value: 0.5,
+              value: 0.8,
             },
             shape: {
               type: 'circle',

@@ -10,23 +10,23 @@ export const Header = () => {
 
     if (isOpen) {
       setIsOpen(!isOpen)
-      menu.classList.remove('w-screen', 'h-screen', 'opactiy-95')
-      menu.classList.add('w-0', 'h-0', 'opacity-0')
+      menu.classList.remove('h-screen', 'opactiy-95')
+      menu.classList.add('h-0', 'opacity-0')
     } else {
       setIsOpen(!isOpen)
-      menu.classList.remove('w-0', 'h-0', 'opacity-0')
-      menu.classList.add('w-screen', 'h-screen', 'opacity-95')
+      menu.classList.remove('h-0', 'opacity-0')
+      menu.classList.add('h-screen', 'opacity-95')
     }
   }
 
   return (
     <>
-      <nav className="w-full flex items-center justify-between flex-wrap hoverable z-50 px-10 py-5">
+      <nav className="sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50">
         <MainLogo />
         <div
           className="
             flex items-center justify-center bg-navIconBorder hover:bg-navIconBorderEmpty bg-cover bg-no-repeat 
-            w-10 h-10 sm:w-16 sm:h-16 z-50
+            w-10 h-10 sm:w-16 sm:h-16
           ">
           <div className="card rotate-45">
             <button
@@ -45,11 +45,11 @@ export const Header = () => {
       <div
         id="menu"
         className="
-          fixed z-0 left-0 top-0 w-full h-screen flex justify-center items-center bg-black opacity-0 duration-700
-          overflow-hidden
+          fixed z-10 flex h-0 w-screen justify-center items-center bg-black opacity-0 duration-700
+          overflow-hidden bottom-0
         ">
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-          <div className="text-white grid md:grid-cols-2 md:pt-10 order-2 md:order-1 pt-10">
+          <div className="text-white grid md:grid-cols-2 md:pt-10 pt-10">
             <div className="md:col-start-2 flex flex-col w-full text-center">
               <a
                 href="/"

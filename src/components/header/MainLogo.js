@@ -4,7 +4,7 @@ import mainLogo from '../../assets/svg/brand/mainLogoOutDev.svg'
 
 export const MainLogo = () => (
   <a href="/" target="_self" className="flex justify-start z-50">
-    <img src={iconLogo} className="m1 w-14 sm:w-24" alt="OutDevGlobal" />
-    <img src={mainLogo} className="m1 w-12 sm:w-20" alt="OutDevGlobal" />
+    <img src={iconLogo} className="w-14 sm:w-24" alt="OutDevGlobal" />
+    <img src={mainLogo} className="w-12 sm:w-20" alt="OutDevGlobal" />
   </a>
 )

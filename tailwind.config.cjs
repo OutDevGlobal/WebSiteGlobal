@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         "base-blue": '#3013E4',
         "base-purple": '#645DC7',
+        "base-yellow": '#F1BA2B',
         heading: '#C94141',
         primary: '#850000',
         secondary: '#FCB043',
@@ -22,7 +23,7 @@ module.exports = {
         btn: '25px',
       },
       boxShadow: {
-        tableContainer: '0px 0px 16px -4px rgba(0, 0, 0, .75)',
+        'purple': '0 0px 20px 0px #645DC7',
       },
       backgroundColor: {
         thead: '#f6f7f9',
