@@ -1,12 +1,12 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
-import tecnologicalDevImg from '../assets/img/technological_development.png'
-import artAndEntretainmentImg from '../assets/img/art_and_entretainment.png'
-import smartWearablesImg from '../assets/img/smart_wearables.png'
-import sportsImg from '../assets/img/sports.png'
-import healthImg from '../assets/img/health.png'
-import educationImg from '../assets/img/education.png'
-import feedingImg from '../assets/img/feeding.png'
+import tecnologicalDevImg from '../assets/img/development-areas/technological_development.png'
+import artAndEntretainmentImg from '../assets/img/development-areas/art_and_entretainment.png'
+import smartWearablesImg from '../assets/img/development-areas/smart_wearables.png'
+import sportsImg from '../assets/img/development-areas/sports.png'
+import healthImg from '../assets/img/development-areas/health.png'
+import educationImg from '../assets/img/development-areas/education.png'
+import feedingImg from '../assets/img/development-areas/feeding.png'
 
 export const DevelopmentAreas = () => (
   <div className="w-full relative px-10">
