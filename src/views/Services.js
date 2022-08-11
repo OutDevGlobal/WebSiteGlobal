@@ -4,7 +4,6 @@ import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.
 
 export const Services = () => (
   <div className="w-full relative px-10">
-
     {/* Start banner slide */}
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
       <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
@@ -12,7 +11,6 @@ export const Services = () => (
       </div>
     </div>
     {/* Ends banner slide */}
-
 
     {/* Start What We Do slide */}
     <div className="justify-center md:p-20 cursor-default h-screen">
@@ -77,6 +75,5 @@ export const Services = () => (
         />
       </button>
     </div>
-
   </div>
 )

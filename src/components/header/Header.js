@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { MainLogo } from './MainLogo'
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
-import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,7 +24,6 @@ export const Header = () => {
     const cursor = document.getElementById('custom-cursor')
     cursor.classList.remove('p-5')
     cursor.classList.add('p-7')
-    
   }
 
   const handleOnMouseLeave = () => {
@@ -92,8 +91,7 @@ export const Header = () => {
           <div
             className="
               flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left order-1 md:order-2
-            "
-          >
+            ">
             <NavLink
               to="/"
               className="

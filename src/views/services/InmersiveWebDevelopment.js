@@ -1,19 +1,20 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-import nftImg from '../../assets/img/web-3-development/nft.png'
-import cryptoTokensImg from '../../assets/img/web-3-development/crypto_tokens.png'
-import decentralizedImg from '../../assets/img/web-3-development/decentralized_solutions.png'
+import video360Img from '../../assets/img/inmersive-web-development/video_360.png'
+import dataVisualizationImg from '../../assets/img/inmersive-web-development/data_visualization.png'
+import homeStoresImg from '../../assets/img/inmersive-web-development/home_stores.png'
+import digitalArtImg from '../../assets/img/inmersive-web-development/digital_art.png'
 
-export const Web3Development = () => (
+export const InmersiveWebDevelopment = () => (
   <div className="w-full relative px-10">
     {/* Start banner slide */}
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
       <div className="text-2xl md:text-6xl uppercase self-center md:w-2/3">
         <p className="text-md md:text-2xl self-center md:w-2/3 font-sofia font-thin">
-          / Expertise — 3.0 Web develpment
+          / Expertise — Inmersive Web Development
         </p>
-        We dive into the blockchain with you
+        Exceptional contents and world-class Visuals.
       </div>
     </div>
     {/* Ends banner slide */}
@@ -33,14 +34,14 @@ export const Web3Development = () => (
 
     {/* Start content slide */}
     <div>
-      {/* Start NFT */}
+      {/* Start 360º Video */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — 3.0 Web develpment
+              / Expertise — Inmersive Web Development
             </p>
-            <p className="uppercase text-3xl mb-5">NFT</p>
+            <p className="uppercase text-3xl mb-5">360º Video</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -56,23 +57,23 @@ export const Web3Development = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <img
-              src={nftImg}
+              src={video360Img}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="NFT"
+              alt="360º Video"
             />
           </div>
         </div>
       </div>
-      {/* Ends NFT */}
+      {/* Ends 360º Video */}
 
-      {/* Start Crypto Tokens */}
+      {/* Start Data Visualization */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — 3.0 Web develpment
+              / Expertise — Inmersive Web Development
             </p>
-            <p className="uppercase text-3xl mb-5">Crypto Tokens</p>
+            <p className="uppercase text-3xl mb-5">Data Visualization</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -88,23 +89,23 @@ export const Web3Development = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-4 col-span-2">
             <img
-              src={cryptoTokensImg}
+              src={dataVisualizationImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Crypto Tokens"
+              alt="Data Visualization"
             />
           </div>
         </div>
       </div>
-      {/* Ends Crypto Tokens */}
+      {/* Ends Data Visualization */}
 
-      {/* Start Decentralized Solutions */}
+      {/* Start Home Stores */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — 3.0 Web develpment
+              / Expertise — Inmersive Web Development
             </p>
-            <p className="uppercase text-3xl mb-5">Decentralized Solutions</p>
+            <p className="uppercase text-3xl mb-5">Home Stores</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -120,14 +121,46 @@ export const Web3Development = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <img
-              src={decentralizedImg}
+              src={homeStoresImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Decentralized Solutions"
+              alt="Home Stores"
             />
           </div>
         </div>
       </div>
-      {/* Ends Decentralized Solutions */}
+      {/* Ends Home Stores */}
+
+      {/* Start Digital Art */}
+      <div className="relative w-full mb-40">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+          <div className="col-start-3 col-span-2">
+            <p className="text-md md:text-2xl self-center font-sofia font-thin">
+              / Expertise — Inmersive Web Development
+            </p>
+            <p className="uppercase text-3xl mb-5">Digital Art</p>
+            <p className="font-sofia font-thin text-2xl mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p className="font-sofia font-light font-md">
+              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
+              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
+              fermentum cursus tempor non mauris. Nulla euismod risus libero,
+              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
+              rhoncus nulla eleifend, ultrices enim.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-6">
+          <div className="col-start-4 col-span-2">
+            <img
+              src={digitalArtImg}
+              className="w-full md:h-[500px] mt-5 md:mt-0"
+              alt="Digital Art"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Ends Digital Art */}
     </div>
     {/* Ends content slide */}
 
