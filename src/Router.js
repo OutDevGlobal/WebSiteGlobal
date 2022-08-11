@@ -6,7 +6,10 @@ import { Header } from './components/header/Header'
 import { DevelopmentAreas } from './views/DevelopmentAreas'
 import { Home } from './views/Home'
 import { Services } from './views/Services'
+import { AppDevelopment } from './views/services/AppDevelopment'
+import { ArVrMrDevelopment } from './views/services/ArVrMrDevelopment'
 import { InmersiveWebDevelopment } from './views/services/InmersiveWebDevelopment'
+import { Web2Development } from './views/services/Web2Development'
 import { Web3Development } from './views/services/Web3Development'
 
 export const SiteRouter = () => (
@@ -21,6 +24,9 @@ export const SiteRouter = () => (
         path="/inmersive-web-development"
         element={<InmersiveWebDevelopment />}
       />
+      <Route path="/web-2-development" element={<Web2Development />} />
+      <Route path="/app-development" element={<AppDevelopment />} />
+      <Route path="/ar-vr-mr-development" element={<ArVrMrDevelopment />} />
     </Routes>
     <Footer />
   </Router>

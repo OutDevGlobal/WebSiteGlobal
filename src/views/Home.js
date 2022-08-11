@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import shape1 from '../assets/img/shape_test_1.png'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
@@ -59,48 +60,48 @@ export const Home = () => (
       </div>
       <div className="text-xl md:text-4xl md:px-20">
         <div className="md:flex my-3">
-          <button
-            type="button"
+          <NavLink
+            to="/web-3-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             3.0 WEB DEVELOPMENT
-          </button>
+          </NavLink>
           <div className="mr-10 hidden md:block">
             <IconSlashDivider />
           </div>
-          <button
-            type="button"
+          <NavLink
+            to="/ar-vr-mr-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             AR / VR /MR DEVELOPMENT
-          </button>
+          </NavLink>
         </div>
 
         <div className="flex my-5">
-          <button
-            type="button"
+          <NavLink
+            to="/inmersive-web-development"
             className="
                 hover:text-base-yellow cursor-pointer md:self-center text-left duration-300
               ">
             INMERSIVE WEB DEVELOPMENT
-          </button>
+          </NavLink>
           <div className="hidden md:block">
             <IconSlashDivider />
           </div>
         </div>
 
         <div className="md:flex my-5">
-          <button
-            type="button"
+          <NavLink
+            to="/web-2-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             2.0 WEB DEVELOPMENT
-          </button>
+          </NavLink>
           <div className="hidden md:block">
             <IconSlashDivider className="mr-10" />
           </div>
-          <button
-            type="button"
+          <NavLink
+            to="/app-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             CROSS-PLATFORM MOBILE DEVELOPMENTS
-          </button>
+          </NavLink>
         </div>
       </div>
       <div className="text-lg md:p-8 uppercase text-right my-5">
@@ -181,11 +182,11 @@ export const Home = () => (
 
     {/* Start seventh slide */}
     <div className="justify-center md:p-20 h-full">
-      <div className="self-center grid grid-cols-1 md:grid-cols-5 gap-8">
-        <div className="text-2xl md:text-4xl md:p-8 uppercase text-left md:col-span-2 cursor-default mb-8">
+      <div className="self-center grid grid-cols-1 md:grid-cols-3">
+        <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8">
           we invest efforts in different areas that take us to the next level.
         </div>
-        <div>
+        <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
           <button type="button" className="mb-10 text-left">
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               Research and technological development
@@ -210,8 +211,6 @@ export const Home = () => (
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
-        </div>
-        <div>
           <button type="button" className="mb-10 text-left">
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               ART AND ENTRETAINMENT
@@ -228,8 +227,6 @@ export const Home = () => (
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
-        </div>
-        <div>
           <button type="button" className="mb-10 text-left">
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               HEALTH
