@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MainLogo } from './MainLogo'
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
+import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -64,7 +65,7 @@ export const Header = () => {
           overflow-hidden bottom-0
         ">
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-          <div className="text-white grid md:grid-cols-2 md:pt-10 pt-10">
+          <div className="text-white grid md:grid-cols-2 md:pt-10 pt-10 order-2 md:order-1">
             <div className="md:col-start-2 flex flex-col w-full text-center">
               <a
                 href="/"
@@ -88,34 +89,38 @@ export const Header = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left ">
-            <a
-              href="/"
+          <div
+            className="
+              flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left order-1 md:order-2
+            "
+          >
+            <NavLink
+              to="/"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
                 duration-300
               ">
               Home
-            </a>
-            <a
-              href="/"
+            </NavLink>
+            <NavLink
+              to="/services"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
                 duration-300
               ">
               Services
-            </a>
-            <a
-              href="/"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
                 duration-300
               ">
               Development Areas
-            </a>
+            </NavLink>
             <a
               href="/"
               className="

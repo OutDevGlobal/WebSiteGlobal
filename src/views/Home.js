@@ -4,7 +4,7 @@ import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
 import howWeDoItImg from '../assets/img/how_we_do_it.png'
 
-export const HomePage = () => (
+export const Home = () => (
   <div className="w-full relative px-10">
     {/* Start first slide */}
     <div className="-mt-32 flex justify-center h-screen">
@@ -28,7 +28,7 @@ export const HomePage = () => (
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
       <div className="self-center">
         <div className="text-6xl md:p-8">WHO WE ARE</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
           <div className="pr-8">
             We are the company that make real the technological ventures,
             developing technological starups at early stages and generating
@@ -190,7 +190,7 @@ export const HomePage = () => (
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               Research and technological development
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
@@ -198,7 +198,7 @@ export const HomePage = () => (
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               SMART WEARABLES
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
@@ -206,7 +206,7 @@ export const HomePage = () => (
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               SPORTS
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
@@ -216,7 +216,7 @@ export const HomePage = () => (
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               ART AND ENTRETAINMENT
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
@@ -224,7 +224,7 @@ export const HomePage = () => (
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               EDUCATION
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
@@ -232,9 +232,9 @@ export const HomePage = () => (
         <div>
           <button type="button" className="mb-10 text-left">
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
-              HEALT
+              HEALTH
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
@@ -242,7 +242,7 @@ export const HomePage = () => (
             <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
               FEEDING
             </p>
-            <p className="text-sm">
+            <p className="font-sofia font-light text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
           </button>
