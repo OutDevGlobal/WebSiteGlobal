@@ -68,21 +68,25 @@ export const Header = () => {
             <div className="md:col-start-2 flex flex-col w-full text-center">
               <a
                 href="/"
+                onClick={handleMenu}
                 className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
                 Linkedin
               </a>
               <a
                 href="/"
+                onClick={handleMenu}
                 className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
                 Facebook
               </a>
               <a
                 href="/"
+                onClick={handleMenu}
                 className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
                 Instagram
               </a>
               <a
                 href="/"
+                onClick={handleMenu}
                 className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
                 Twitter
               </a>
@@ -94,6 +98,7 @@ export const Header = () => {
             ">
             <NavLink
               to="/"
+              onClick={handleMenu}
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
@@ -103,6 +108,7 @@ export const Header = () => {
             </NavLink>
             <NavLink
               to="/services"
+              onClick={handleMenu}
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
@@ -112,6 +118,7 @@ export const Header = () => {
             </NavLink>
             <NavLink
               to="/development-areas"
+              onClick={handleMenu}
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
@@ -121,6 +128,7 @@ export const Header = () => {
             </NavLink>
             <a
               href="/"
+              onClick={handleMenu}
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4

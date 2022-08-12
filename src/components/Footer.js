@@ -21,11 +21,6 @@ export const Footer = () => (
               className="text-white text-xl hover:text-base-purple duration-300">
               OUTDEV.MX
             </a>
-            <a
-              href="/"
-              className="text-white text-xl hover:text-base-purple duration-300">
-              OUTDEV.CND
-            </a>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 font-sofia font-light">
@@ -43,16 +38,6 @@ export const Footer = () => (
             <a
               href="/"
               className="text-white text-2xl hover:text-base-purple duration-300">
-              Services
-            </a>
-            <a
-              href="/"
-              className="text-white text-2xl hover:text-base-purple duration-300">
-              What we do
-            </a>
-            <a
-              href="/"
-              className="text-white text-2xl hover:text-base-purple duration-300">
               Our Tec
             </a>
           </div>
@@ -65,12 +50,7 @@ export const Footer = () => (
             <a
               href="/"
               className="text-white text-2xl hover:text-base-purple duration-300">
-              About our work
-            </a>
-            <a
-              href="/"
-              className="text-white text-2xl hover:text-base-purple duration-300">
-              Expertise
+              Research and Development
             </a>
           </div>
           <div className="flex flex-col gap-2">
