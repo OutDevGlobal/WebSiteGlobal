@@ -1,10 +1,10 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-import video360Img from '../../assets/img/inmersive-web-development/video_360.png'
-import dataVisualizationImg from '../../assets/img/inmersive-web-development/data_visualization.png'
-import homeStoresImg from '../../assets/img/inmersive-web-development/home_stores.png'
-import digitalArtImg from '../../assets/img/inmersive-web-development/digital_art.png'
+import artPreservationImg from '../../assets/img/ar-vr-mr-development/art_preservation.png'
+import medicalCheckupImg from '../../assets/img/ar-vr-mr-development/medical_checkup.png'
+import bodyAnalysisImg from '../../assets/img/ar-vr-mr-development/body_analysis.png'
+import agileEducationImg from '../../assets/img/ar-vr-mr-development/agile_education.png'
 
 export const ArVrMrDevelopment = () => (
   <div className="w-full relative px-10">
@@ -12,7 +12,7 @@ export const ArVrMrDevelopment = () => (
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
       <div className="text-2xl md:text-6xl uppercase self-center md:w-2/3">
         <p className="text-md md:text-2xl self-center md:w-2/3 font-sofia font-thin">
-          / Expertise — Inmersive Web Development
+          / Expertise — AR/VR/MR Development
         </p>
         Exceptional contents and world-class Visuals.
       </div>
@@ -34,14 +34,14 @@ export const ArVrMrDevelopment = () => (
 
     {/* Start content slide */}
     <div>
-      {/* Start 360º Video */}
+      {/* Start Art Preservation */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — AR/VR/MR Development
             </p>
-            <p className="uppercase text-3xl mb-5">360º Video</p>
+            <p className="uppercase text-3xl mb-5">Art Preservation</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -57,23 +57,23 @@ export const ArVrMrDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <img
-              src={video360Img}
+              src={artPreservationImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="360º Video"
+              alt="Art Preservation"
             />
           </div>
         </div>
       </div>
-      {/* Ends 360º Video */}
+      {/* Ends Art Preservation */}
 
-      {/* Start Data Visualization */}
+      {/* Start Medical Check Up */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — AR/VR/MR Development
             </p>
-            <p className="uppercase text-3xl mb-5">Data Visualization</p>
+            <p className="uppercase text-3xl mb-5">Medical Check Up</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -89,23 +89,25 @@ export const ArVrMrDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-4 col-span-2">
             <img
-              src={dataVisualizationImg}
+              src={medicalCheckupImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Data Visualization"
+              alt="Medical Check Up"
             />
           </div>
         </div>
       </div>
-      {/* Ends Data Visualization */}
+      {/* Ends Medical Check Up */}
 
-      {/* Start Home Stores */}
+      {/* Start Body Analysis With VR / MR / AR */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — AR/VR/MR Development
             </p>
-            <p className="uppercase text-3xl mb-5">Home Stores</p>
+            <p className="uppercase text-3xl mb-5">
+              Body Analysis With VR / MR / AR
+            </p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -121,23 +123,25 @@ export const ArVrMrDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <img
-              src={homeStoresImg}
+              src={bodyAnalysisImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Home Stores"
+              alt="Body Analysis With VR / MR / AR"
             />
           </div>
         </div>
       </div>
-      {/* Ends Home Stores */}
+      {/* Ends Body Analysis With VR / MR / AR */}
 
-      {/* Start Digital Art */}
+      {/* Start Agile Education Processes with VR / MR / AR */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — AR/VR/MR Development
             </p>
-            <p className="uppercase text-3xl mb-5">Digital Art</p>
+            <p className="uppercase text-3xl mb-5">
+              Agile Education Processes with VR / MR / AR
+            </p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -153,14 +157,14 @@ export const ArVrMrDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-4 col-span-2">
             <img
-              src={digitalArtImg}
+              src={agileEducationImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Digital Art"
+              alt="Agile Education Processes with VR / MR / AR"
             />
           </div>
         </div>
       </div>
-      {/* Ends Digital Art */}
+      {/* Ends Agile Education Processes with VR / MR / AR */}
     </div>
     {/* Ends content slide */}
 

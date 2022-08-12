@@ -1,10 +1,9 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-import video360Img from '../../assets/img/inmersive-web-development/video_360.png'
-import dataVisualizationImg from '../../assets/img/inmersive-web-development/data_visualization.png'
-import homeStoresImg from '../../assets/img/inmersive-web-development/home_stores.png'
-import digitalArtImg from '../../assets/img/inmersive-web-development/digital_art.png'
+import androidImg from '../../assets/img/app-development/android.png'
+import iosImg from '../../assets/img/app-development/ios.png'
+import hybridImg from '../../assets/img/app-development/hybrid.png'
 
 export const AppDevelopment = () => (
   <div className="w-full relative px-10">
@@ -12,7 +11,7 @@ export const AppDevelopment = () => (
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
       <div className="text-2xl md:text-6xl uppercase self-center md:w-2/3">
         <p className="text-md md:text-2xl self-center md:w-2/3 font-sofia font-thin">
-          / Expertise — Inmersive Web Development
+          / Expertise — App Development
         </p>
         Exceptional contents and world-class Visuals.
       </div>
@@ -34,14 +33,14 @@ export const AppDevelopment = () => (
 
     {/* Start content slide */}
     <div>
-      {/* Start 360º Video */}
+      {/* Start Android */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — App Development
             </p>
-            <p className="uppercase text-3xl mb-5">360º Video</p>
+            <p className="uppercase text-3xl mb-5">Android</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -57,23 +56,23 @@ export const AppDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <img
-              src={video360Img}
+              src={androidImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="360º Video"
+              alt="Android"
             />
           </div>
         </div>
       </div>
-      {/* Ends 360º Video */}
+      {/* Ends Android */}
 
-      {/* Start Data Visualization */}
+      {/* Start IOS */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — App Development
             </p>
-            <p className="uppercase text-3xl mb-5">Data Visualization</p>
+            <p className="uppercase text-3xl mb-5">IOS</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -89,23 +88,23 @@ export const AppDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-4 col-span-2">
             <img
-              src={dataVisualizationImg}
+              src={iosImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Data Visualization"
+              alt="IOS"
             />
           </div>
         </div>
       </div>
-      {/* Ends Data Visualization */}
+      {/* Ends IOS */}
 
-      {/* Start Home Stores */}
+      {/* Start Hybrid */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
+              / Expertise — App Development
             </p>
-            <p className="uppercase text-3xl mb-5">Home Stores</p>
+            <p className="uppercase text-3xl mb-5">Hybrid</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -121,46 +120,14 @@ export const AppDevelopment = () => (
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
             <img
-              src={homeStoresImg}
+              src={hybridImg}
               className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Home Stores"
+              alt="Hybrid"
             />
           </div>
         </div>
       </div>
-      {/* Ends Home Stores */}
-
-      {/* Start Digital Art */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="text-md md:text-2xl self-center font-sofia font-thin">
-              / Expertise — Inmersive Web Development
-            </p>
-            <p className="uppercase text-3xl mb-5">Digital Art</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={digitalArtImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Digital Art"
-            />
-          </div>
-        </div>
-      </div>
-      {/* Ends Digital Art */}
+      {/* Ends Hybrid */}
     </div>
     {/* Ends content slide */}
 
