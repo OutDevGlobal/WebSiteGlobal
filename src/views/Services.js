@@ -1,10 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
 
 export const Services = () => (
   <div className="w-full relative px-10">
-
     {/* Start banner slide */}
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
       <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
@@ -13,7 +13,6 @@ export const Services = () => (
     </div>
     {/* Ends banner slide */}
 
-
     {/* Start What We Do slide */}
     <div className="justify-center md:p-20 cursor-default h-screen">
       <div className="text-2xl md:text-6xl md:p-8 uppercase">
@@ -21,49 +20,54 @@ export const Services = () => (
       </div>
       <div className="text-xl md:text-4xl md:px-20">
         <div className="md:flex my-3">
-          <button
-            type="button"
+          <NavLink
+            to="/web-3-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             3.0 WEB DEVELOPMENT
-          </button>
+          </NavLink>
           <div className="mr-10 hidden md:block">
             <IconSlashDivider />
           </div>
-          <button
-            type="button"
+          <NavLink
+            to="/ar-vr-mr-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             AR / VR /MR DEVELOPMENT
-          </button>
+          </NavLink>
         </div>
 
         <div className="flex my-5">
-          <button
-            type="button"
+          <NavLink
+            to="/inmersive-web-development"
             className="
                 hover:text-base-yellow cursor-pointer md:self-center text-left duration-300
               ">
             INMERSIVE WEB DEVELOPMENT
-          </button>
+          </NavLink>
           <div className="hidden md:block">
             <IconSlashDivider />
           </div>
         </div>
 
         <div className="md:flex my-5">
-          <button
-            type="button"
+          <NavLink
+            to="/web-2-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             2.0 WEB DEVELOPMENT
-          </button>
+          </NavLink>
           <div className="hidden md:block">
             <IconSlashDivider className="mr-10" />
           </div>
-          <button
-            type="button"
+          <NavLink
+            to="/app-development"
             className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
             CROSS-PLATFORM MOBILE DEVELOPMENTS
-          </button>
+          </NavLink>
         </div>
+      </div>
+      <div className="text-lg md:p-8 uppercase text-right my-5">
+        <button type="button" className="hover:text-base-yellow duration-300">
+          EXPLORE ALL EXPERTISE
+        </button>
       </div>
     </div>
     {/* Ends What We Do slide */}
@@ -77,6 +81,5 @@ export const Services = () => (
         />
       </button>
     </div>
-
   </div>
 )
