@@ -1,14 +1,20 @@
 import React from 'react'
 import logo from '../assets/svg/brand/mainLogoOutDev.svg'
+import background from '../assets/img/background_footer.png'
 
 export const Footer = () => (
-  <footer className="flex justify-center">
-    <div className="md:w-full">
+  <footer className="md:flex justify-center">
+    <div className="md:w-full relative">
+      <img
+        src={background}
+        className="absolute w-full md:w-5/12 h-[400px] md:h-[600px] -mt-28 md:-mt-44 md:-ml-12 z-5"
+        alt="Blue Light"
+      />
       <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left">
-        <div className="flex justify-center">
+        <div className="flex justify-center z-10">
           <img src={logo} className="w-52" alt="OutDev" />
         </div>
-        <div>
+        <div className="z-10">
           <div className="flex flex-col font-sofia font-light gap-2 mb-4">
             <a
               href="/"
@@ -68,7 +74,7 @@ export const Footer = () => (
         </div>
       </div>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-        <div className="flex justify-center">
+        <div className="flex justify-center z-10">
           &copy; {new Date().getFullYear()} OutDevGlobal
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 text-center gap-2">

@@ -126,8 +126,8 @@ export const Header = () => {
               ">
               Development Areas
             </NavLink>
-            <a
-              href="/"
+            <NavLink
+              to="/contact-us"
               onClick={handleMenu}
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
@@ -135,7 +135,7 @@ export const Header = () => {
                 duration-300
               ">
               Say Hello
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

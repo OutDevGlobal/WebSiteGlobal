@@ -29,14 +29,11 @@ module.exports = {
         thead: '#f6f7f9',
       },
       backgroundImage: {
+        "waves-how": "url('./src/assets/img/waves_how.png')",
+        "waves-technology": "url('./src/assets/img/waves_technology.png')",
         navIconBorder: "url('./src/assets/svg/brand/navigationIconBorder.svg')",
         navIconBorderEmpty:
           "url('./src/assets/svg/brand/navigationIconBorderEmpty.svg')",
-        navIconBorderBlack:
-          "url('./src/assets/svg/brand/navigationIconBorderBGBlack.svg')",
-        navIconBorderWhite:
-          "url('./src/assets/svg/brand/navigationIconBorderBGWhite.svg')",
-        navIcon: "url('./src/assets/svg/brand/navigationIcon.svg')",
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

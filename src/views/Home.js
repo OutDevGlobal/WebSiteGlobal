@@ -1,8 +1,5 @@
-import React from 'react'
-import {
-  useScrollSection,
-  Section,
-} from 'react-scroll-section'
+import React, { useEffect, useState } from 'react'
+import { Section } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
@@ -11,23 +8,51 @@ import howWeDoItImg from '../assets/img/how_we_do_it.png'
 import shape1 from '../assets/img/shape_test_1.png'
 
 export const Home = () => {
-  const home = useScrollSection('home')
-  const whoWeAre = useScrollSection('whoWeAre')
-  const stuff = useScrollSection('stuff')
-  const services = useScrollSection('services')
-  const howWeDoIt = useScrollSection('howWeDoIt')
-  const ourTec = useScrollSection('ourTec')
-  const devAreas = useScrollSection('devAreas')
+  // const home = useScrollSection('home')
+  // const whoWeAre = useScrollSection('whoWeAre')
+  // const stuff = useScrollSection('stuff')
+  // const services = useScrollSection('services')
+  // const howWeDoIt = useScrollSection('howWeDoIt')
+  // const ourTec = useScrollSection('ourTec')
+  // const devAreas = useScrollSection('devAreas')
+  const [scrollDir, setScrollDir] = useState('scrolling down')
 
-  const changeSection = () => {
-   
-   console.log('Change Section')
-  }
+  useEffect(() => {
+    const threshold = 0
+    let lastScrollY = window.pageYOffset
+    let ticking = false
+
+    const updateScrollDir = () => {
+      const scrollY = window.pageYOffset
+
+      if (Math.abs(scrollY - lastScrollY) < threshold) {
+        ticking = false
+        return
+      }
+      setScrollDir(scrollY > lastScrollY ? 'scrolling down' : 'scrolling up')
+      lastScrollY = scrollY > 0 ? scrollY : 0
+      ticking = false
+    }
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollDir)
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', onScroll)
+    // console.log(scrollDir)
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [scrollDir])
+
+  const changeSection = () => {}
 
   return (
-    <div className="w-full relative px-10">
+    <div className="w-full relative">
       {/* Start home slide */}
-      <Section id="home" className="-mt-32 flex justify-center h-screen">
+      <Section id="home" className="-mt-32 flex justify-center h-screen px-10">
         <div className="self-center relative">
           <img src={shape1} alt="Animation" className="w-[1000px]" />
           <div className="absolute bottom-20">
@@ -47,7 +72,7 @@ export const Home = () => {
       {/* Start who we are slide */}
       <Section
         id="whoWeAre"
-        className="grid grid-cols-1 justify-center md:p-20 h-screen">
+        className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
         <div className="self-center">
           <div className="text-6xl md:p-8">WHO WE ARE</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
@@ -69,7 +94,7 @@ export const Home = () => {
       {/* Start stuff slide */}
       <Section
         id="stuff"
-        className="grid grid-cols-1 justify-center md:p-20 h-screen">
+        className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
         <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
           We team up with you to develop the products that you need
         </div>
@@ -79,7 +104,7 @@ export const Home = () => {
       {/* Start services slide */}
       <Section
         id="services"
-        className="justify-center md:p-20 cursor-default h-screen">
+        className="justify-center md:p-20 cursor-default h-screen px-10">
         <div className="text-2xl md:text-6xl md:p-8 uppercase">
           WHAT DO WE DO?
         </div>
@@ -138,7 +163,9 @@ export const Home = () => {
       {/* Ends services slide */}
 
       {/* Start how we do it slide */}
-      <Section id="howWeDoIt" className="justify-center md:p-20">
+      <Section
+        id="howWeDoIt"
+        className="justify-center md:p-20 px-10 bg-waves-how bg-no-repeat">
         <div className="self-center grid grid-cols-1 md:grid-cols-2">
           <div className="">
             <img src={howWeDoItImg} alt="How we do it" />
@@ -164,8 +191,10 @@ export const Home = () => {
       {/* Ends how we do ithow we do it slide */}
 
       {/* Start out technology slide */}
-      <Section id="ourTec" className="justify-center md:p-20 my-10 md:my-auto">
-        <div className="self-center">
+      <Section
+        id="ourTec"
+        className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat px-10">
+        <div className="self-center md:p-20">
           <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12">
             OUR TECNOLOGY
           </div>
@@ -206,7 +235,7 @@ export const Home = () => {
       {/* Ends out technology slide */}
 
       {/* Start dev areas slide */}
-      <Section id="devAreas" className="justify-center md:p-20 h-full">
+      <Section id="devAreas" className="justify-center md:p-20 h-full px-10">
         <div className="self-center grid grid-cols-1 md:grid-cols-3">
           <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8">
             we invest efforts in different areas that take us to the next level.
