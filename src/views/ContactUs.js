@@ -1,18 +1,20 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
+import { ReactComponent as AttachIcon } from "../assets/svg/attach.svg"
 
 export const ContactUs = () => (
   <div className="w-full relative p-10">
+
     {/* Start banner slide */}
-    <div className="grid grid-cols-3 justify-end h-screen">
-      <div className="md:col-start-3 text-2xl md:text-6xl uppercase self-end md:mr-20 md:mb-40">
+    <div className="grid grid-cols-1 md:grid-cols-3 justify-center md:justify-end h-screen">
+      <div className="md:col-start-3 text-2xl md:text-6xl uppercase self-center md:self-end md:mr-20 md:mb-40">
         we&apos;re here for you
       </div>
     </div>
     {/* Ends banner slide */}
 
     {/* Start Contact slide */}
-    <div className="grid grid-cols-1 md:grid-cols-2 h-screen px-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:px-20">
       <div className="md:col-start-2">
         <div className="uppercase text-2xl md:text-6xl">
           <p>Interested?</p>
@@ -33,8 +35,9 @@ export const ContactUs = () => (
               id="name"
               placeholder="Your Name"
               className="
-                w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl text-white
-                outline-none focus:outline-none
+                w-full md:w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl
+                text-white outline-none focus:outline-none
+                
               "
             />
             <input
@@ -42,8 +45,8 @@ export const ContactUs = () => (
               id="eamil"
               placeholder="Your Email"
               className="
-                w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl text-white
-                outline-none focus:outline-none
+                w-full md:w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl
+                text-white outline-none focus:outline-none
               "
             />
             <textarea
@@ -51,21 +54,24 @@ export const ContactUs = () => (
               placeholder="Tell Us About Your Project"
               rows="1"
               className="
-                w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl text-white
-                outline-none focus:outline-none
+                w-full md:w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl
+                text-white outline-none focus:outline-none
               "
             />
-            <input
-              type="file"
-              id="file"
-              className="
-                w-9/12 bg-transparent rounded mx-3 pt-4 pb-3 text-xl text-white
-                outline-none focus:outline-none
-              "
-            />
+            <div className="flex">
+              <label for="file" className="pt-4 pl-4 cursor-ponter flex">
+                <AttachIcon/>
+                <span className="ml-4">Add Attachment</span>
+                <input
+                  type="file"
+                  id="file"
+                  class="hidden"
+                />
+              </label>
+            </div>
             <button
               type="submit"
-              className="rounded-full border border-base-purple p-4 my-4 hover:bg-base-purple duration-300">
+              className="rounded-full border border-base-purple p-4 mt-10 hover:bg-base-purple duration-300">
               Send Request
             </button>
           </form>

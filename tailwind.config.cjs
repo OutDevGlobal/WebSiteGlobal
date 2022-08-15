@@ -25,9 +25,6 @@ module.exports = {
       boxShadow: {
         'purple': '0 0px 20px 0px #645DC7',
       },
-      backgroundColor: {
-        thead: '#f6f7f9',
-      },
       backgroundImage: {
         "waves-how": "url('./src/assets/img/waves_how.png')",
         "waves-technology": "url('./src/assets/img/waves_technology.png')",

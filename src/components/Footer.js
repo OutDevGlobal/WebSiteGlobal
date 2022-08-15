@@ -7,7 +7,7 @@ export const Footer = () => (
     <div className="md:w-full relative">
       <img
         src={background}
-        className="absolute w-full md:w-5/12 h-[400px] md:h-[600px] -mt-28 md:-mt-44 md:-ml-12 z-5"
+        className="absolute w-full md:w-5/12 h-[400px] md:h-[400px] -mt-28 md:-ml-12 z-5"
         alt="Blue Light"
       />
       <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left">

@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MainLogo } from './MainLogo'
+
+import { ReactComponent as FacebookIcon } from "../../assets/svg/facebook.svg"
+import { ReactComponent as TwitterIcon } from "../../assets/svg/twitter.svg"
+import { ReactComponent as InstagramIcon } from "../../assets/svg/instagram.svg"
+import { ReactComponent as LinkedinIcon } from "../../assets/svg/linkedin.svg"
+
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
 
 export const Header = () => {
@@ -63,38 +69,11 @@ export const Header = () => {
           fixed z-10 flex h-0 w-screen justify-center items-center bg-black opacity-0 duration-700
           overflow-hidden bottom-0
         ">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-          <div className="text-white grid md:grid-cols-2 md:pt-10 pt-10 order-2 md:order-1">
-            <div className="md:col-start-2 flex flex-col w-full text-center">
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Linkedin
-              </a>
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Facebook
-              </a>
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Instagram
-              </a>
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Twitter
-              </a>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full">
           <div
             className="
-              flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left order-1 md:order-2
+              flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left
+              col-start-2 col-span-2
             ">
             <NavLink
               to="/"
@@ -136,6 +115,40 @@ export const Header = () => {
               ">
               Say Hello
             </NavLink>
+            <div className="text-center flex gap-8 justify-center md:justify-start">
+              
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="
+                  text-white text-2xl hover:text-base-blue duration-300
+                  
+                "
+              >
+                <FacebookIcon className="w-4"/>
+              </a>
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue duration-300"
+              >
+                <TwitterIcon className="w-6 mt-1"/>
+              </a>
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue duration-300"
+              >
+                <InstagramIcon className="w-6 mt-1"/>
+              </a>
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue duration-300"
+              >
+                <LinkedinIcon className="w-6 mt-2"/>
+              </a>
+            </div>
           </div>
         </div>
       </div>
