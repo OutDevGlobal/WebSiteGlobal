@@ -1,6 +1,5 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
-import tecnologicalDevImg from '../assets/img/development-areas/technological_development.png'
 import artAndEntretainmentImg from '../assets/img/development-areas/art_and_entretainment.png'
 import smartWearablesImg from '../assets/img/development-areas/smart_wearables.png'
 import sportsImg from '../assets/img/development-areas/sports.png'
@@ -8,7 +7,37 @@ import healthImg from '../assets/img/development-areas/health.png'
 import educationImg from '../assets/img/development-areas/education.png'
 import feedingImg from '../assets/img/development-areas/feeding.png'
 
-export const DevelopmentAreas = () => (
+export const DevelopmentAreas = () => {
+
+
+  // Move the cursor
+  function handleOnMouseMove(e) {
+    let section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      const rect = e.currentTarget.getBoundingClientRect()
+      section.style.backgroundPosition = (-e.clientX + rect.left + 20)+'px ' + (-e.clientY + rect.top + 20)+'px'
+      window.gsap.to(section, {
+        x: e.clientX - rect.left - 20,
+        y: e.clientY - rect.top - 20,
+      })
+    }
+  }
+
+  function handleOnMouseEnter(e) {
+    let section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      section.classList.remove("hidden")
+    }
+  }
+
+  function handleOnMouseLeave(e) {
+    let section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      section.classList.add("hidden")
+    }
+  }
+
+return (
   <div className="w-full relative px-10">
     {/* Start banner slide */}
     <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
@@ -35,7 +64,7 @@ export const DevelopmentAreas = () => (
     <div>
       {/* Start Technological Development */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="col-start-2 col-span-2">
             <p className="uppercase text-3xl mb-5">Technological Development</p>
             <p className="font-sofia font-thin text-2xl mb-5">
@@ -50,12 +79,21 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={tecnologicalDevImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Technological Development"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0 ">
+        
+          <div
+            className="col-start-3 col-span-2 w-full md:h-[600px] relative"
+            onMouseMove={handleOnMouseMove}
+            onMouseEnter={handleOnMouseEnter}
+            onMouseLeave={handleOnMouseLeave}
+          >
+            <div className="bg-technological-dev bg-[length:450px_600px] bg-no-repeat w-full h-full top-0 grayscale" />
+            <div className="absolute bg-gradient-to-t from-[#090F26] z-5 w-full h-full top-0" />
+            <div
+              className="
+                bg-technological-dev bg-[length:450px_600px] bg-no-repeat highlight-section rounded-full h-16 w-16 
+                top-0 absolute pointer-events-none
+              "
             />
           </div>
         </div>
@@ -249,3 +287,5 @@ export const DevelopmentAreas = () => (
     </div>
   </div>
 )
+
+}

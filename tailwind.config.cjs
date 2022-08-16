@@ -26,6 +26,7 @@ module.exports = {
         'purple': '0 0px 20px 0px #645DC7',
       },
       backgroundImage: {
+        "technological-dev": "url('./src/assets/img/development-areas/technological_development.png')",
         "waves-how": "url('./src/assets/img/waves_how.png')",
         "waves-technology": "url('./src/assets/img/waves_technology.png')",
         navIconBorder: "url('./src/assets/svg/brand/navigationIconBorder.svg')",
