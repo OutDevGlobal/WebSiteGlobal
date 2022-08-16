@@ -79,19 +79,19 @@ return (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6 z-0 ">
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
         
           <div
-            className="col-start-3 col-span-2 w-full md:h-[600px] relative"
+            className="md:col-start-3 md:col-span-2 w-image h-image relative mt-4 md:mt-0"
             onMouseMove={handleOnMouseMove}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           >
-            <div className="bg-technological-dev bg-[length:450px_600px] bg-no-repeat w-full h-full top-0 grayscale" />
-            <div className="absolute bg-gradient-to-t from-[#090F26] z-5 w-full h-full top-0" />
+            <div className="bg-technological-dev bg-no-repeat w-image h-image top-0 grayscale" />
+            <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
             <div
               className="
-                bg-technological-dev bg-[length:450px_600px] bg-no-repeat highlight-section rounded-full h-16 w-16 
+                bg-technological-dev bg-no-repeat highlight-section rounded-full h-16 w-16 
                 top-0 absolute pointer-events-none
               "
             />

@@ -6,8 +6,15 @@ module.exports = {
       "sofia" : ['"Sofia Sans"', 'serif']
     },
     extend: {
+      width: {
+        'image': '450px',
+      },
+      height: {
+        'image': '600px',
+      },
       colors: {
         "base-blue": '#3013E4',
+        "base-dark-blue": '#090F26',
         "base-purple": '#645DC7',
         "base-yellow": '#F1BA2B',
         heading: '#C94141',
