@@ -1,113 +1,7 @@
-import React, { useEffect } from 'react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 
 export const DevelopmentAreas = () => {
-  useEffect(() => {
-    window.gsap.registerPlugin(ScrollTrigger)
-
-    // Reveal animation
-    window.gsap.utils.toArray('.reveal-up').forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        markers: true,
-        onEnter() {
-          window.gsap.fromTo(
-            element,
-            {
-              y: 100,
-              autoAlpha: 0,
-            },
-            {
-              duration: 1.25,
-              y: 0,
-              autoAlpha: 1,
-              ease: 'back',
-              overwrite: 'auto',
-            },
-          )
-        },
-      })
-    })
-
-    // Left animation
-    window.gsap.utils.toArray('.slide-left').forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        markers: true,
-        onEnter() {
-          window.gsap.fromTo(
-            element,
-            {
-              x: 100,
-              autoAlpha: 0,
-              rotate: 10,
-            },
-            {
-              duration: 1.25,
-              x: 0,
-              autoAlpha: 1,
-              rotate: 0,
-              ease: 'back',
-              overwrite: 'auto',
-            },
-          )
-        },
-      })
-    })
-
-    // Left animation
-    window.gsap.utils.toArray('.slide-right').forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        markers: true,
-        onEnter() {
-          window.gsap.fromTo(
-            element,
-            {
-              x: -100,
-              autoAlpha: 0,
-              rotate: -10,
-            },
-            {
-              duration: 1.25,
-              x: 0,
-              autoAlpha: 1,
-              rotate: 0,
-              ease: 'back',
-              overwrite: 'auto',
-            },
-          )
-        },
-      })
-    })
-
-    // Left animation
-    window.gsap.utils.toArray('.title-right').forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        markers: true,
-        onEnter() {
-          window.gsap.fromTo(
-            element,
-            {
-              x: -300,
-              autoAlpha: 0,
-              rotate: -10,
-            },
-            {
-              duration: 2,
-              x: 0,
-              autoAlpha: 1,
-              rotate: 0,
-              ease: 'back',
-              overwrite: 'auto',
-            },
-          )
-        },
-      })
-    })
-  }, [])
 
   // Move the cursor
   function handleOnMouseMove() {
@@ -142,7 +36,7 @@ export const DevelopmentAreas = () => {
     <div className="w-full">
       {/* Start banner slide */}
       <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center slide-right">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center rotate-right">
           We&apos;re an Integral services development company
         </div>
       </div>
@@ -170,10 +64,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Technological Development
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md text-justify md:text-left slide-left">
+              <p className="font-sofia font-light font-md text-justify md:text-left rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod
@@ -218,10 +112,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Art and Entretainment
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md slide-left">
+              <p className="font-sofia font-light font-md rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod
@@ -266,10 +160,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Smart Wearables
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md slide-left">
+              <p className="font-sofia font-light font-md rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod
@@ -314,10 +208,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Sports
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md slide-left">
+              <p className="font-sofia font-light font-md rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod
@@ -362,10 +256,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Health
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md slide-left">
+              <p className="font-sofia font-light font-md rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod
@@ -410,10 +304,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Education
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md slide-left">
+              <p className="font-sofia font-light font-md rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod
@@ -458,10 +352,10 @@ export const DevelopmentAreas = () => {
               <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
                 Feeding
               </p>
-              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+              <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="font-sofia font-light font-md slide-left">
+              <p className="font-sofia font-light font-md rotate-left">
                 Donec blandit, sem eget eleifend sagittis, ante est iaculis
                 lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
                 amet nisi fermentum cursus tempor non mauris. Nulla euismod

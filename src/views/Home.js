@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Section } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
+import Draggable from 'react-draggable';
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
@@ -16,6 +17,17 @@ export const Home = () => {
   // const ourTec = useScrollSection('ourTec')
   // const devAreas = useScrollSection('devAreas')
   const [scrollDir, setScrollDir] = useState('scrolling down')
+
+  const jsRef = useRef(null)
+  const pythonRef = useRef(null)
+  const jiraRef = useRef(null)
+  const awsRef = useRef(null)
+  const unityRef = useRef(null)
+  const flutterRef = useRef(null)
+  const djangoRef = useRef(null)
+  const angularRef = useRef(null)
+  const reactRef = useRef(null)
+  const githubRef = useRef(null)
 
   useEffect(() => {
     const threshold = 0
@@ -74,14 +86,14 @@ export const Home = () => {
         id="whoWeAre"
         className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
         <div className="self-center">
-          <div className="text-6xl md:p-8">WHO WE ARE</div>
+          <div className="text-6xl md:p-8 reveal-up">WHO WE ARE</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
-            <div className="pr-8">
+            <div className="pr-8 reveal-up">
               We are the company that make real the technological ventures,
               developing technological starups at early stages and generating
               MVPs.
             </div>
-            <div className="pr-8">
+            <div className="pr-8 reveal-up">
               Reinvention moves the world forward. And that&apos;s what we do
               best. We help organizations reinvent themselves through digital
               and cognitive transformation.
@@ -95,7 +107,7 @@ export const Home = () => {
       <Section
         id="stuff"
         className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center reveal-up">
           We team up with you to develop the products that you need
         </div>
       </Section>
@@ -105,14 +117,14 @@ export const Home = () => {
       <Section
         id="services"
         className="justify-center md:p-20 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase reveal-up">
           WHAT DO WE DO?
         </div>
         <div className="text-xl md:text-4xl md:px-20">
           <div className="md:flex my-3">
             <NavLink
               to="/web-3-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left">
               3.0 WEB DEVELOPMENT
             </NavLink>
             <div className="mr-10 hidden md:block">
@@ -120,7 +132,7 @@ export const Home = () => {
             </div>
             <NavLink
               to="/ar-vr-mr-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right">
               AR / VR /MR DEVELOPMENT
             </NavLink>
           </div>
@@ -128,9 +140,7 @@ export const Home = () => {
           <div className="flex my-5">
             <NavLink
               to="/inmersive-web-development"
-              className="
-                  hover:text-base-yellow cursor-pointer md:self-center text-left duration-300
-                ">
+              className="hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left">
               INMERSIVE WEB DEVELOPMENT
             </NavLink>
             <div className="hidden md:block">
@@ -141,7 +151,7 @@ export const Home = () => {
           <div className="md:flex my-5">
             <NavLink
               to="/web-2-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right">
               2.0 WEB DEVELOPMENT
             </NavLink>
             <div className="hidden md:block">
@@ -149,13 +159,13 @@ export const Home = () => {
             </div>
             <NavLink
               to="/app-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5">
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left">
               CROSS-PLATFORM MOBILE DEVELOPMENTS
             </NavLink>
           </div>
         </div>
         <div className="text-lg md:p-8 uppercase text-right my-5">
-          <button type="button" className="hover:text-base-yellow duration-300">
+          <button type="button" className="hover:text-base-yellow duration-300 reveal-up">
             EXPLORE ALL EXPERTISE
           </button>
         </div>
@@ -171,17 +181,17 @@ export const Home = () => {
             <img src={howWeDoItImg} alt="How we do it" />
           </div>
           <div className="md:p-8">
-            <p className="uppercase text-6xl mb-12">HOW WE DO IT?</p>
-            <p className="font-sofia font-light text-lg">
+            <p className="uppercase text-6xl mb-12 reveal-up">HOW WE DO IT?</p>
+            <p className="font-sofia font-light text-lg rotate-left">
               Our experience combined with a vast and diverse team of
               professionals, allows us to give you what you need, while building
               a structured growth map for the future.
             </p>
-            <p className="my-8 font-sofia font-light text-lg">
+            <p className="my-8 font-sofia font-light text-lg rotate-right">
               We apply the best practices to create well-structured products,
               with a solid architecture and very intuitive for the user.
             </p>
-            <p className="font-sofia font-light text-lg">
+            <p className="font-sofia font-light text-lg rotate-left">
               We use the most innovative technologies in all our solutions, from
               the simplest websites to the most complex native applications.
             </p>
@@ -195,40 +205,110 @@ export const Home = () => {
         id="ourTec"
         className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat px-10">
         <div className="self-center md:p-20">
-          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12">
+          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12 reveal-up">
             OUR TECNOLOGY
           </div>
-          <div className="flex flex-wrap gap-8 ">
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
-            <div className="bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52">
-              BRAND
-            </div>
+          <div className="flex flex-wrap gap-8 relative">
+            <Draggable nodeRef={jsRef}>
+              <div
+                ref={jsRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab 
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={pythonRef}>
+              <div
+                ref={pythonRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={jiraRef}>
+              <div
+                ref={jiraRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={awsRef}>
+              <div
+                ref={awsRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={unityRef}>
+              <div
+                ref={unityRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={flutterRef}>
+              <div
+                ref={flutterRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={djangoRef}>
+              <div
+                ref={djangoRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={angularRef}>
+              <div
+                ref={angularRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={reactRef}>
+              <div
+                ref={reactRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
+            <Draggable nodeRef={githubRef}>
+              <div
+                ref={githubRef}
+                className="
+                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                "
+              >
+                BRAND
+              </div>
+            </Draggable>
           </div>
         </div>
       </Section>
@@ -237,63 +317,63 @@ export const Home = () => {
       {/* Start dev areas slide */}
       <Section id="devAreas" className="justify-center md:p-20 h-full px-10">
         <div className="self-center grid grid-cols-1 md:grid-cols-3">
-          <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8">
+          <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8 reveal-up">
             we invest efforts in different areas that take us to the next level.
           </div>
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 Research and technological development
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 SMART WEARABLES
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 SPORTS
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 ART AND ENTRETAINMENT
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 EDUCATION
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 HEALTH
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>
             <button type="button" className="mb-10 text-left">
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 FEEDING
               </p>
-              <p className="font-sofia font-light text-md">
+              <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </button>

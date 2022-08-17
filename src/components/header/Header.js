@@ -119,29 +119,26 @@ export const Header = () => {
               <a
                 href="/"
                 onClick={handleMenu}
-                className="
-                  text-white text-2xl hover:text-base-blue duration-300
-                  
-                ">
-                <FacebookIcon className="w-4" />
+                className="text-white text-2xl hover:text-base-blue">
+                <FacebookIcon className="w-4 hover:w-6 duration-300" />
               </a>
               <a
                 href="/"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue duration-300">
-                <TwitterIcon className="w-6 mt-1" />
+                className="text-white text-2xl hover:text-base-blue">
+                <TwitterIcon className="w-6 hover:w-8 duration-300 mt-1" />
               </a>
               <a
                 href="/"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue duration-300">
-                <InstagramIcon className="w-6 mt-1" />
+                className="text-white text-2xl hover:text-base-blue">
+                <InstagramIcon className="w-6 hover:w-8 duration-300 mt-1" />
               </a>
               <a
                 href="/"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue duration-300">
-                <LinkedinIcon className="w-6 mt-2" />
+                className="text-white text-2xl hover:text-base-blue">
+                <LinkedinIcon className="w-6 hover:w-8 duration-300 mt-2" />
               </a>
             </div>
           </div>
