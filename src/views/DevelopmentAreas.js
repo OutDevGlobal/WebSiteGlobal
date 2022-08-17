@@ -1,303 +1,515 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
-import artAndEntretainmentImg from '../assets/img/development-areas/art_and_entretainment.png'
-import smartWearablesImg from '../assets/img/development-areas/smart_wearables.png'
-import sportsImg from '../assets/img/development-areas/sports.png'
-import healthImg from '../assets/img/development-areas/health.png'
-import educationImg from '../assets/img/development-areas/education.png'
-import feedingImg from '../assets/img/development-areas/feeding.png'
 
 export const DevelopmentAreas = () => {
+  useEffect(() => {
+    window.gsap.registerPlugin(ScrollTrigger)
 
+    // Reveal animation
+    window.gsap.utils.toArray('.reveal-up').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          window.gsap.fromTo(
+            element,
+            {
+              y: 100,
+              autoAlpha: 0,
+            },
+            {
+              duration: 1.25,
+              y: 0,
+              autoAlpha: 1,
+              ease: 'back',
+              overwrite: 'auto',
+            },
+          )
+        },
+      })
+    })
+
+    // Left animation
+    window.gsap.utils.toArray('.slide-left').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          window.gsap.fromTo(
+            element,
+            {
+              x: 100,
+              autoAlpha: 0,
+              rotate: 10,
+            },
+            {
+              duration: 1.25,
+              x: 0,
+              autoAlpha: 1,
+              rotate: 0,
+              ease: 'back',
+              overwrite: 'auto',
+            },
+          )
+        },
+      })
+    })
+
+    // Left animation
+    window.gsap.utils.toArray('.slide-right').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          window.gsap.fromTo(
+            element,
+            {
+              x: -100,
+              autoAlpha: 0,
+              rotate: -10,
+            },
+            {
+              duration: 1.25,
+              x: 0,
+              autoAlpha: 1,
+              rotate: 0,
+              ease: 'back',
+              overwrite: 'auto',
+            },
+          )
+        },
+      })
+    })
+
+    // Left animation
+    window.gsap.utils.toArray('.title-right').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          window.gsap.fromTo(
+            element,
+            {
+              x: -300,
+              autoAlpha: 0,
+              rotate: -10,
+            },
+            {
+              duration: 2,
+              x: 0,
+              autoAlpha: 1,
+              rotate: 0,
+              ease: 'back',
+              overwrite: 'auto',
+            },
+          )
+        },
+      })
+    })
+  }, [])
 
   // Move the cursor
-  function handleOnMouseMove(e) {
-    let section = e.currentTarget.querySelector('.highlight-section')
-    if (section !== null) {
-      const rect = e.currentTarget.getBoundingClientRect()
-      section.style.backgroundPosition = (-e.clientX + rect.left + 20)+'px ' + (-e.clientY + rect.top + 20)+'px'
-      window.gsap.to(section, {
-        x: e.clientX - rect.left - 20,
-        y: e.clientY - rect.top - 20,
-      })
-    }
+  function handleOnMouseMove() {
+    // let section = e.currentTarget.querySelector('.highlight-section')
+    // if (section !== null) {
+    //   const rect = e.currentTarget.getBoundingClientRect()
+    //   section.style.backgroundPosition = (-e.clientX + rect.left + 20)+'px ' + (-e.clientY + rect.top + 20)+'px'
+    //   window.gsap.to(section, {
+    //     x: e.clientX - rect.left - 20,
+    //     y: e.clientY - rect.top - 20,
+    //   })
+    // }
   }
 
-  function handleOnMouseEnter(e) {
-    document.querySelector('#custom-cursor').classList.remove("border-2")
-    let section = e.currentTarget.querySelector('.highlight-section')
-    if (section !== null) {
-      section.classList.remove("hidden")
-    }
+  function handleOnMouseEnter() {
+    // document.querySelector('#custom-cursor').classList.remove("border-2")
+    // let section = e.currentTarget.querySelector('.highlight-section')
+    // if (section !== null) {
+    //   section.classList.remove("hidden")
+    // }
   }
 
-  function handleOnMouseLeave(e) {
-    document.querySelector('#custom-cursor').classList.add("border-2")
-    let section = e.currentTarget.querySelector('.highlight-section')
-    if (section !== null) {
-      section.classList.add("hidden")
-    }
+  function handleOnMouseLeave() {
+    // document.querySelector('#custom-cursor').classList.add("border-2")
+    // let section = e.currentTarget.querySelector('.highlight-section')
+    // if (section !== null) {
+    //   section.classList.add("hidden")
+    // }
   }
 
-return (
-  <div className="w-full">
-    {/* Start banner slide */}
-    <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
-      <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
-        We&apos;re an Integral services development company
-      </div>
-    </div>
-    {/* Ends banner slide */}
-
-    {/* Start subtitle slide */}
-    <div className="mx-14 md:mx-20 mb-40">
-      <div className="text-2xl md:text-6xl uppercase md:w-1/2">
-        Research and Development
-      </div>
-      <p className="text-lg mt-10 md:w-2/3">
-        The future is now and there are infinite opportunities, that is why we
-        invest part of our efforts in different areas that take us to the next
-        level.
-      </p>
-    </div>
-    {/* Ends subtitle slide */}
-
-    {/* Start content slide */}
-    <div className="mx-14 md:mx-20">
-      {/* Start Technological Development */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
-          <div className="md:col-start-2 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Technological Development</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
-          </div>
+  return (
+    <div className="w-full">
+      {/* Start banner slide */}
+      <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center slide-right">
+          We&apos;re an Integral services development company
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
-        
-          <div
-            className="
+      </div>
+      {/* Ends banner slide */}
+
+      {/* Start subtitle slide */}
+      <div className="mx-14 md:mx-20 mb-40">
+        <div className="text-2xl md:text-6xl uppercase md:w-1/2 reveal-up">
+          Research and Development
+        </div>
+        <p className="text-lg mt-10 md:w-2/3 reveal-up">
+          The future is now and there are infinite opportunities, that is why we
+          invest part of our efforts in different areas that take us to the next
+          level.
+        </p>
+      </div>
+      {/* Ends subtitle slide */}
+
+      {/* Start content slide */}
+      <div className="mx-14 md:mx-20">
+        {/* Start Technological Development */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-2 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Technological Development
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md text-justify md:text-left slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
               md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
               mt-4 md:mt-0
             "
-            onMouseMove={handleOnMouseMove}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          >
-            <div
-              className="
-                bg-technological-dev bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide 
-                top-0 grayscale
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-left-image bg-fixed
+                bg-technological-dev bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
               "
-            />
-            <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
-            <div
-              className="
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
                 hidden highlight-section
                 bg-technological-dev bg-no-repeat
                 border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
                 top-0 absolute pointer-events-none
               "
-            />
+              />
+            </div>
           </div>
         </div>
-      </div>
-      {/* Ends Technological Development */}
+        {/* Ends Technological Development */}
 
-      {/* Start Art and Entretainment */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Art and Entretainment</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
+        {/* Start Art and Entretainment */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-3 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Art and Entretainment
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-right-image bg-fixed
+                bg-art-and-entretainment bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
+                hidden highlight-section
+                bg-art-and-entretainment bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
+                top-0 absolute pointer-events-none
+              "
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={artAndEntretainmentImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Art and Entretainment"
-            />
-          </div>
-        </div>
-      </div>
-      {/* Ends Art and Entretainment */}
+        {/* Ends Art and Entretainment */}
 
-      {/* Start Smart Wearables */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Smart Wearables</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
+        {/* Start Smart Wearables */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-2 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Smart Wearables
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-left-image bg-fixed
+                bg-smart-wearables bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
+                hidden highlight-section
+                bg-smart-wearables bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
+                top-0 absolute pointer-events-none
+              "
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={smartWearablesImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Smart Wearables"
-            />
-          </div>
-        </div>
-      </div>
-      {/* Ends Technological Development */}
+        {/* Ends Technological Development */}
 
-      {/* Start Sports */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Sports</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
+        {/* Start Sports */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-3 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Sports
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-right-image bg-fixed
+                bg-sports bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
+                hidden highlight-section
+                bg-sports bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
+                top-0 absolute pointer-events-none
+              "
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={sportsImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Sports"
-            />
-          </div>
-        </div>
-      </div>
-      {/* Ends Sports */}
+        {/* Ends Sports */}
 
-      {/* Start Health */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Health</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
+        {/* Start Health */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-2 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Health
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-left-image bg-fixed
+                bg-health bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
+                hidden highlight-section
+                bg-health bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
+                top-0 absolute pointer-events-none
+              "
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={healthImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Health"
-            />
-          </div>
-        </div>
-      </div>
-      {/* Ends Health */}
+        {/* Ends Health */}
 
-      {/* Start Education */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Education</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
+        {/* Start Education */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-3 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Education
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-right-image bg-fixed
+                bg-education bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
+                hidden highlight-section
+                bg-education bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
+                top-0 absolute pointer-events-none
+              "
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={educationImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Education"
-            />
-          </div>
-        </div>
-      </div>
-      {/* Ends Education */}
+        {/* Ends Education */}
 
-      {/* Start Feeding */}
-      <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5">Feeding</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="font-sofia font-light font-md">
-              Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-              ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-              fermentum cursus tempor non mauris. Nulla euismod risus libero,
-              semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-              rhoncus nulla eleifend, ultrices enim.
-            </p>
+        {/* Start Feeding */}
+        <div className="relative w-full mb-40">
+          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+            <div className="md:col-start-2 md:col-span-2">
+              <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+                Feeding
+              </p>
+              <p className="font-sofia font-thin text-2xl mb-5 slide-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="font-sofia font-light font-md slide-left">
+                Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
+                amet nisi fermentum cursus tempor non mauris. Nulla euismod
+                risus libero, semper fringilla felis tincidunt vitae. Nunc et
+                sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div
+              className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <div
+                className="
+                bg-left-image bg-fixed
+                bg-feeding bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
+              />
+              <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
+              <div
+                className="
+                hidden highlight-section
+                bg-feeding bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
+                top-0 absolute pointer-events-none
+              "
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={feedingImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Feeding"
-            />
-          </div>
-        </div>
+        {/* Ends Feeding */}
       </div>
-      {/* Ends Feeding */}
-    </div>
-    {/* Ends content slide */}
+      {/* Ends content slide */}
 
-    <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
-      <button type="button" className="sticky">
-        <IconArrowDown
-          className="
+      <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+        <button type="button" className="sticky">
+          <IconArrowDown
+            className="
               text-transparent hover:text-base-yellow hover:translate hover:scale-110 duration-300
             "
-        />
-      </button>
+          />
+        </button>
+      </div>
     </div>
-  </div>
-)
-
+  )
 }

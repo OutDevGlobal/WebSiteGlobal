@@ -1,10 +1,9 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
-import { ReactComponent as AttachIcon } from "../assets/svg/attach.svg"
+import { ReactComponent as AttachIcon } from '../assets/svg/attach.svg'
 
 export const ContactUs = () => (
   <div className="w-full relative p-10">
-
     {/* Start banner slide */}
     <div className="grid grid-cols-1 md:grid-cols-3 justify-center md:justify-end h-screen">
       <div className="md:col-start-3 text-2xl md:text-6xl uppercase self-center md:self-end md:mr-20 md:mb-40">
@@ -59,14 +58,10 @@ export const ContactUs = () => (
               "
             />
             <div className="flex">
-              <label for="file" className="pt-4 pl-4 cursor-ponter flex">
-                <AttachIcon/>
+              <label htmlFor="file" className="pt-4 pl-4 cursor-ponter flex">
+                <AttachIcon />
                 <span className="ml-4">Add Attachment</span>
-                <input
-                  type="file"
-                  id="file"
-                  class="hidden"
-                />
+                <input type="file" id="file" className="hidden" />
               </label>
             </div>
             <button

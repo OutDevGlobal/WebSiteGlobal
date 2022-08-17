@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MainLogo } from './MainLogo'
 
-import { ReactComponent as FacebookIcon } from "../../assets/svg/facebook.svg"
-import { ReactComponent as TwitterIcon } from "../../assets/svg/twitter.svg"
-import { ReactComponent as InstagramIcon } from "../../assets/svg/instagram.svg"
-import { ReactComponent as LinkedinIcon } from "../../assets/svg/linkedin.svg"
+import { ReactComponent as FacebookIcon } from '../../assets/svg/facebook.svg'
+import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg'
+import { ReactComponent as InstagramIcon } from '../../assets/svg/instagram.svg'
+import { ReactComponent as LinkedinIcon } from '../../assets/svg/linkedin.svg'
 
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
 
@@ -116,37 +116,32 @@ export const Header = () => {
               Say Hello
             </NavLink>
             <div className="text-center flex gap-8 justify-center md:justify-start">
-              
               <a
                 href="/"
                 onClick={handleMenu}
                 className="
                   text-white text-2xl hover:text-base-blue duration-300
                   
-                "
-              >
-                <FacebookIcon className="w-4"/>
+                ">
+                <FacebookIcon className="w-4" />
               </a>
               <a
                 href="/"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue duration-300"
-              >
-                <TwitterIcon className="w-6 mt-1"/>
+                className="text-white text-2xl hover:text-base-blue duration-300">
+                <TwitterIcon className="w-6 mt-1" />
               </a>
               <a
                 href="/"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue duration-300"
-              >
-                <InstagramIcon className="w-6 mt-1"/>
+                className="text-white text-2xl hover:text-base-blue duration-300">
+                <InstagramIcon className="w-6 mt-1" />
               </a>
               <a
                 href="/"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue duration-300"
-              >
-                <LinkedinIcon className="w-6 mt-2"/>
+                className="text-white text-2xl hover:text-base-blue duration-300">
+                <LinkedinIcon className="w-6 mt-2" />
               </a>
             </div>
           </div>
