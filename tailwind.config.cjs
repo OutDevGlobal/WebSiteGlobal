@@ -7,10 +7,12 @@ module.exports = {
     },
     extend: {
       width: {
-        'image': '450px',
+        'image-mobile': '18rem',
+        'image-wide': '450px',
       },
       height: {
-        'image': '600px',
+        'image-mobile': '25rem',
+        'image-wide': '600px',
       },
       colors: {
         "base-blue": '#3013E4',

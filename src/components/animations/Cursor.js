@@ -22,7 +22,7 @@ export const Cursor = () => {
       id="custom-cursor"
       className="
         fixed top-0 left-0 pointer-events-none
-        hidden md:block h-16 w-16 rounded-full border-2 border-base-yellow duration-800
+        md:block h-16 w-16 rounded-full border-2 border-base-yellow duration-800
       "
       style={{ zIndex: '100' }}
     />

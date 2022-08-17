@@ -24,6 +24,7 @@ export const DevelopmentAreas = () => {
   }
 
   function handleOnMouseEnter(e) {
+    document.querySelector('#custom-cursor').classList.remove("border-2")
     let section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
       section.classList.remove("hidden")
@@ -31,6 +32,7 @@ export const DevelopmentAreas = () => {
   }
 
   function handleOnMouseLeave(e) {
+    document.querySelector('#custom-cursor').classList.add("border-2")
     let section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
       section.classList.add("hidden")
@@ -38,9 +40,9 @@ export const DevelopmentAreas = () => {
   }
 
 return (
-  <div className="w-full relative px-10">
+  <div className="w-full">
     {/* Start banner slide */}
-    <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
+    <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
       <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
         We&apos;re an Integral services development company
       </div>
@@ -48,7 +50,7 @@ return (
     {/* Ends banner slide */}
 
     {/* Start subtitle slide */}
-    <div className="md:m-20 mb-40">
+    <div className="mx-14 md:mx-20 mb-40">
       <div className="text-2xl md:text-6xl uppercase md:w-1/2">
         Research and Development
       </div>
@@ -61,12 +63,12 @@ return (
     {/* Ends subtitle slide */}
 
     {/* Start content slide */}
-    <div>
+    <div className="mx-14 md:mx-20">
       {/* Start Technological Development */}
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Technological Development</p>
+          <div className="md:col-start-2 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5">Technological Development</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -82,16 +84,26 @@ return (
         <div className="grid grid-cols-1 md:grid-cols-6 z-0">
         
           <div
-            className="md:col-start-3 md:col-span-2 w-image h-image relative mt-4 md:mt-0"
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            "
             onMouseMove={handleOnMouseMove}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           >
-            <div className="bg-technological-dev bg-no-repeat w-image h-image top-0 grayscale" />
+            <div
+              className="
+                bg-technological-dev bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide 
+                top-0 grayscale
+              "
+            />
             <div className="absolute bg-gradient-to-t from-base-dark-blue z-5 w-full h-full top-0" />
             <div
               className="
-                bg-technological-dev bg-no-repeat highlight-section rounded-full h-16 w-16 
+                hidden highlight-section
+                bg-technological-dev bg-no-repeat
+                border-2 border-base-yellow h-24 w-24 duration-800 rounded-full 
                 top-0 absolute pointer-events-none
               "
             />
@@ -104,7 +116,7 @@ return (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
-            <p className="uppercase text-3xl mb-5">Art and Entretainment</p>
+            <p className="uppercase text-2xl md:text-3xl mb-5">Art and Entretainment</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -133,7 +145,7 @@ return (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Smart Wearables</p>
+            <p className="uppercase text-2xl md:text-3xl mb-5">Smart Wearables</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -162,7 +174,7 @@ return (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
-            <p className="uppercase text-3xl mb-5">Sports</p>
+            <p className="uppercase text-2xl md:text-3xl mb-5">Sports</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -191,7 +203,7 @@ return (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Health</p>
+            <p className="uppercase text-2xl md:text-3xl mb-5">Health</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -220,7 +232,7 @@ return (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-3 col-span-2">
-            <p className="uppercase text-3xl mb-5">Education</p>
+            <p className="uppercase text-2xl md:text-3xl mb-5">Education</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -249,7 +261,7 @@ return (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
           <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Feeding</p>
+            <p className="uppercase text-2xl md:text-3xl mb-5">Feeding</p>
             <p className="font-sofia font-thin text-2xl mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
