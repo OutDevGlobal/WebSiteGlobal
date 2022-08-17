@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Section } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
-import Draggable from 'react-draggable';
+import Draggable from 'react-draggable'
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
@@ -165,7 +165,9 @@ export const Home = () => {
           </div>
         </div>
         <div className="text-lg md:p-8 uppercase text-right my-5">
-          <button type="button" className="hover:text-base-yellow duration-300 reveal-up">
+          <button
+            type="button"
+            className="hover:text-base-yellow duration-300 reveal-up">
             EXPLORE ALL EXPERTISE
           </button>
         </div>
@@ -214,8 +216,7 @@ export const Home = () => {
                 ref={jsRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab 
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -224,8 +225,7 @@ export const Home = () => {
                 ref={pythonRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -234,8 +234,7 @@ export const Home = () => {
                 ref={jiraRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -244,8 +243,7 @@ export const Home = () => {
                 ref={awsRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -254,8 +252,7 @@ export const Home = () => {
                 ref={unityRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -264,8 +261,7 @@ export const Home = () => {
                 ref={flutterRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -274,8 +270,7 @@ export const Home = () => {
                 ref={djangoRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -284,8 +279,7 @@ export const Home = () => {
                 ref={angularRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -294,8 +288,7 @@ export const Home = () => {
                 ref={reactRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>
@@ -304,8 +297,7 @@ export const Home = () => {
                 ref={githubRef}
                 className="
                   bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
-                "
-              >
+                ">
                 BRAND
               </div>
             </Draggable>

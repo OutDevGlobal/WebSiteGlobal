@@ -2,7 +2,6 @@ import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 
 export const DevelopmentAreas = () => {
-
   // Move the cursor
   function handleOnMouseMove() {
     // let section = e.currentTarget.querySelector('.highlight-section')
