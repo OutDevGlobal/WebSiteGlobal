@@ -11,10 +11,12 @@ module.exports = {
         'right-image': 'center right 32%',
       },
       width: {
+        'image-service': '300px',
         'image-mobile': '18rem',
         'image-wide': '450px',
       },
       height: {
+        'image-service': '450px',
         'image-mobile': '25rem',
         'image-wide': '600px',
       },
@@ -39,6 +41,14 @@ module.exports = {
         'purple': '0 0px 20px 0px #645DC7',
       },
       backgroundImage: {
+
+        // Services
+        "web3-service": "url('./src/assets/img/web-3-development/header.png')",
+        "inmersive-service": "url('./src/assets/img/inmersive-web-development/header.png')",
+        "web2-service": "url('./src/assets/img/web-2-development/header.png')",
+        "app-service": "url('./src/assets/img/app-development/header.png')",
+        "ar-vr-mr-service": "url('./src/assets/img/ar-vr-mr-development/header.png')",
+
         // Development Areas
         "technological-dev": "url('./src/assets/img/development-areas/technological_development.png')",
         "art-and-entretainment": "url('./src/assets/img/development-areas/art_and_entretainment.png')",

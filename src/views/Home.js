@@ -61,6 +61,50 @@ export const Home = () => {
 
   const changeSection = () => {}
 
+  const handleOnMouseMove = (e) => {
+    const section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      const rect = e.currentTarget.getBoundingClientRect()
+      const { clientX } = e
+      const { clientY } = e
+      section.style.backgroundPosition = `${-clientX + rect.left + 210}px ${
+        -clientY + rect.top - 140
+      }px`
+      window.gsap.to(section, {
+        x: clientX - rect.left - 60,
+        y: clientY - rect.top + 140,
+      })
+    }
+  }
+
+  const handleOnMouseEnter = (e) => {
+    document.querySelector('#custom-cursor').classList.remove('border-2')
+    e.currentTarget.classList.add('relative', 'z-50')
+    e.currentTarget.querySelector('.grayscale').classList.remove('w-0', 'h-0')
+    e.currentTarget
+      .querySelector('.grayscale')
+      .classList.add('w-image-service', 'h-image-service')
+
+    const section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      section.classList.remove('hidden')
+    }
+  }
+
+  const handleOnMouseLeave = (e) => {
+    document.querySelector('#custom-cursor').classList.add('border-2')
+    e.currentTarget.classList.remove('relative', 'z-50')
+    e.currentTarget
+      .querySelector('.grayscale')
+      .classList.remove('w-image-service', 'h-image-service')
+    e.currentTarget.querySelector('.grayscale').classList.add('w-0', 'h-0')
+
+    const section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      section.classList.add('hidden')
+    }
+  }
+
   return (
     <div className="w-full relative">
       {/* Start home slide */}
@@ -124,24 +168,89 @@ export const Home = () => {
           <div className="md:flex my-3">
             <NavLink
               to="/web-3-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left">
-              3.0 WEB DEVELOPMENT
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <span className="relative z-50">3.0 WEB DEVELOPMENT</span>
+              <div className="w-image-service h-image-service absolute">
+                <div
+                  className="
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
             </NavLink>
             <div className="mr-10 hidden md:block">
               <IconSlashDivider />
             </div>
             <NavLink
               to="/ar-vr-mr-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right">
-              AR / VR /MR DEVELOPMENT
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <span className="relative z-50">AR / VR / MR DEVELOPMENT</span>
+              <div className="w-image-service h-image-service absolute">
+                <div
+                  className="
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-ar-vr-mr-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-ar-vr-mr-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
             </NavLink>
           </div>
 
           <div className="flex my-5">
             <NavLink
               to="/inmersive-web-development"
-              className="hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left">
-              INMERSIVE WEB DEVELOPMENT
+              className="
+                hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left
+              "
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <span className="relative z-50">INMERSIVE WEB DEVELOPMENT</span>
+              <div className="w-image-service h-image-service absolute">
+                <div
+                  className="
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-inmersive-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-inmersive-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
             </NavLink>
             <div className="hidden md:block">
               <IconSlashDivider />
@@ -151,16 +260,60 @@ export const Home = () => {
           <div className="md:flex my-5">
             <NavLink
               to="/web-2-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right">
-              2.0 WEB DEVELOPMENT
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <span className="relative z-50">2.0 WEB DEVELOPMENT</span>
+              <div className="w-image-service h-image-service absolute">
+                <div
+                  className="
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web2-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web2-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
             </NavLink>
             <div className="hidden md:block">
               <IconSlashDivider className="mr-10" />
             </div>
             <NavLink
               to="/app-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left">
-              CROSS-PLATFORM MOBILE DEVELOPMENTS
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
+              onMouseMove={handleOnMouseMove}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}>
+              <span className="relative z-50">
+                CROSS-PLATFORM MOBILE DEVELOPMENTS
+              </span>
+              <div className="w-image-service h-image-service absolute">
+                <div
+                  className="
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-app-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-app-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
             </NavLink>
           </div>
         </div>
