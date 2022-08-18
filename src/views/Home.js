@@ -7,16 +7,16 @@ import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
 
 // Technology
-import { ReactComponent as AngularIcon } from '../assets/svg/technology/angular.svg'
-import { ReactComponent as AwsIcon } from '../assets/svg/technology/aws.svg'
-import { ReactComponent as DjangoIcon } from '../assets/svg/technology/django.svg'
-import { ReactComponent as FlutterIcon } from '../assets/svg/technology/flutter.svg'
-import { ReactComponent as GithubIcon } from '../assets/svg/technology/github.svg'
-import { ReactComponent as JiraIcon } from '../assets/svg/technology/jira.svg'
-import { ReactComponent as JsIcon } from '../assets/svg/technology/js.svg'
-import { ReactComponent as PythonIcon } from '../assets/svg/technology/python.svg'
-import { ReactComponent as ReactIcon } from '../assets/svg/technology/react.svg'
-import { ReactComponent as UnityIcon } from '../assets/svg/technology/unity.svg'
+import angularIcon from '../assets/svg/technology/angular.svg'
+import awsIcon from '../assets/svg/technology/aws.svg'
+import djangoIcon from '../assets/svg/technology/django.svg'
+import flutterIcon from '../assets/svg/technology/flutter.svg'
+import githubIcon from '../assets/svg/technology/github.svg'
+import jiraIcon from '../assets/svg/technology/jira.svg'
+import jsIcon from '../assets/svg/technology/js.svg'
+import pythonIcon from '../assets/svg/technology/python.svg'
+import reactIcon from '../assets/svg/technology/react.svg'
+import unityIcon from '../assets/svg/technology/unity.svg'
 
 import shape1 from '../assets/img/shape_test_1.png'
 
@@ -413,22 +413,22 @@ export const Home = () => {
             OUR TECNOLOGY
           </div>
           <div className="flex flex-wrap gap-4 relative">
-            <Draggable nodeRef={jsRef}>
-              <div
-                ref={jsRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <JsIcon className="w-full h-full" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={pythonRef}>
+            <Draggable ref={pythonRef} nodeRef={pythonRef}>
               <div
                 ref={pythonRef}
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <PythonIcon className="w-full h-full" />
+                <img src={pythonIcon} alt="python" />
+              </div>
+            </Draggable>
+            <Draggable ref={jsRef} nodeRef={jsRef}>
+              <div
+                ref={jsRef}
+                className="
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                ">
+                <img src={jsIcon} alt="JS" />
               </div>
             </Draggable>
             <Draggable nodeRef={jiraRef}>
@@ -437,7 +437,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <JiraIcon className="w-full h-full" />
+                <img src={jiraIcon} alt="Jira" />
               </div>
             </Draggable>
             <Draggable nodeRef={awsRef}>
@@ -446,7 +446,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <AwsIcon className="w-full h-full" />
+                <img src={awsIcon} alt="AWS" />
               </div>
             </Draggable>
             <Draggable nodeRef={unityRef}>
@@ -455,7 +455,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <UnityIcon className="w-full h-full" />
+                <img src={unityIcon} alt="Unity" />
               </div>
             </Draggable>
             <Draggable nodeRef={flutterRef}>
@@ -464,7 +464,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <FlutterIcon className="w-full h-full" />
+                <img src={flutterIcon} alt="Flutter" />
               </div>
             </Draggable>
             <Draggable nodeRef={djangoRef}>
@@ -473,7 +473,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <DjangoIcon className="w-full h-full" />
+                <img src={djangoIcon} alt="Django" />
               </div>
             </Draggable>
             <Draggable nodeRef={angularRef}>
@@ -482,7 +482,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <AngularIcon className="w-full h-full" />
+                <img src={angularIcon} alt="Angular" />
               </div>
             </Draggable>
             <Draggable nodeRef={reactRef}>
@@ -491,7 +491,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <ReactIcon className="w-full h-full" />
+                <img src={reactIcon} alt="React" />
               </div>
             </Draggable>
             <Draggable nodeRef={githubRef}>
@@ -500,7 +500,7 @@ export const Home = () => {
                 className="
                   bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                <GithubIcon className="w-full h-full" />
+                <img src={githubIcon} alt="Github" />
               </div>
             </Draggable>
           </div>
