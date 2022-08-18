@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MainLogo } from './MainLogo'
 
-import { ReactComponent as FacebookIcon } from '../../assets/svg/facebook.svg'
-import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg'
-import { ReactComponent as InstagramIcon } from '../../assets/svg/instagram.svg'
-import { ReactComponent as LinkedinIcon } from '../../assets/svg/linkedin.svg'
+import { ReactComponent as FacebookIcon } from '../../assets/svg/social/facebook.svg'
+import { ReactComponent as TwitterIcon } from '../../assets/svg/social/twitter.svg'
+import { ReactComponent as InstagramIcon } from '../../assets/svg/social/instagram.svg'
+import { ReactComponent as LinkedinIcon } from '../../assets/svg/social/linkedin.svg'
 
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
 
@@ -40,12 +40,15 @@ export const Header = () => {
 
   return (
     <>
-      <nav className="sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50">
+      <nav
+        className="
+          sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50 pointer-events-none
+        ">
         <MainLogo />
         <div
           className="
             flex items-center justify-center bg-navIconBorder hover:bg-navIconBorderEmpty bg-cover bg-no-repeat 
-            w-10 h-10 sm:w-16 sm:h-16
+            w-10 h-10 sm:w-16 sm:h-16 pointer-events-auto
           ">
           <div className="card rotate-45">
             <button

@@ -5,6 +5,19 @@ import Draggable from 'react-draggable'
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
+
+// Technology
+import { ReactComponent as AngularIcon } from '../assets/svg/technology/angular.svg'
+import { ReactComponent as AwsIcon } from '../assets/svg/technology/aws.svg'
+import { ReactComponent as DjangoIcon } from '../assets/svg/technology/django.svg'
+import { ReactComponent as FlutterIcon } from '../assets/svg/technology/flutter.svg'
+import { ReactComponent as GithubIcon } from '../assets/svg/technology/github.svg'
+import { ReactComponent as JiraIcon } from '../assets/svg/technology/jira.svg'
+import { ReactComponent as JsIcon } from '../assets/svg/technology/js.svg'
+import { ReactComponent as PythonIcon } from '../assets/svg/technology/python.svg'
+import { ReactComponent as ReactIcon } from '../assets/svg/technology/react.svg'
+import { ReactComponent as UnityIcon } from '../assets/svg/technology/unity.svg'
+
 import howWeDoItImg from '../assets/img/how_we_do_it.png'
 import shape1 from '../assets/img/shape_test_1.png'
 
@@ -368,95 +381,95 @@ export const Home = () => {
           <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12 reveal-up">
             OUR TECNOLOGY
           </div>
-          <div className="flex flex-wrap gap-8 relative">
+          <div className="flex flex-wrap gap-4 relative">
             <Draggable nodeRef={jsRef}>
               <div
                 ref={jsRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab 
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <JsIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={pythonRef}>
               <div
                 ref={pythonRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <PythonIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={jiraRef}>
               <div
                 ref={jiraRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <JiraIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={awsRef}>
               <div
                 ref={awsRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <AwsIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={unityRef}>
               <div
                 ref={unityRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <UnityIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={flutterRef}>
               <div
                 ref={flutterRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <FlutterIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={djangoRef}>
               <div
                 ref={djangoRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <DjangoIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={angularRef}>
               <div
                 ref={angularRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <AngularIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={reactRef}>
               <div
                 ref={reactRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <ReactIcon className="w-full h-full" />
               </div>
             </Draggable>
             <Draggable nodeRef={githubRef}>
               <div
                 ref={githubRef}
                 className="
-                  bg-black shadow-purple w-1/4 md:w-1/6 h-24 md:h-52 cursor-grab
+                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
                 ">
-                BRAND
+                <GithubIcon className="w-full h-full" />
               </div>
             </Draggable>
           </div>
