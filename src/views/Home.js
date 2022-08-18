@@ -173,9 +173,10 @@ export const Home = () => {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}>
               <span className="relative z-50">3.0 WEB DEVELOPMENT</span>
-              <div className="w-image-service h-image-service absolute">
+              <div className="absolute pointer-events-none">
                 <div
                   className="
+                    pointer-events-auto
                     relative left-1/2 transform -translate-y-1/2
                     bg-fixed bg-web3-service bg-no-repeat w-0 h-0
                     grayscale duration-300
@@ -202,9 +203,10 @@ export const Home = () => {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}>
               <span className="relative z-50">AR / VR / MR DEVELOPMENT</span>
-              <div className="w-image-service h-image-service absolute">
+              <div className="absolute pointer-events-none">
                 <div
                   className="
+                    pointer-events-auto
                     relative left-1/2 transform -translate-y-1/2
                     bg-fixed bg-ar-vr-mr-service bg-no-repeat w-0 h-0
                     grayscale duration-300
@@ -233,9 +235,10 @@ export const Home = () => {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}>
               <span className="relative z-50">INMERSIVE WEB DEVELOPMENT</span>
-              <div className="w-image-service h-image-service absolute">
+              <div className="absolute pointer-events-none">
                 <div
                   className="
+                    pointer-events-auto
                     relative left-1/2 transform -translate-y-1/2
                     bg-fixed bg-inmersive-service bg-no-repeat w-0 h-0
                     grayscale duration-300
@@ -265,9 +268,10 @@ export const Home = () => {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}>
               <span className="relative z-50">2.0 WEB DEVELOPMENT</span>
-              <div className="w-image-service h-image-service absolute">
+              <div className="absolute pointer-events-none">
                 <div
                   className="
+                    pointer-events-auto
                     relative left-1/2 transform -translate-y-1/2
                     bg-fixed bg-web2-service bg-no-repeat w-0 h-0
                     grayscale duration-300
@@ -296,9 +300,10 @@ export const Home = () => {
               <span className="relative z-50">
                 CROSS-PLATFORM MOBILE DEVELOPMENTS
               </span>
-              <div className="w-image-service h-image-service absolute">
+              <div className="absolute pointer-events-none">
                 <div
                   className="
+                    pointer-events-auto
                     relative left-1/2 transform -translate-y-1/2
                     bg-fixed bg-app-service bg-no-repeat w-0 h-0
                     grayscale duration-300
