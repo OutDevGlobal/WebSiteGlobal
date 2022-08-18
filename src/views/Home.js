@@ -73,7 +73,7 @@ export const Home = () => {
 
   const changeSection = () => {}
 
-  const handleOnMouseMove = (e) => {
+  const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
       const rect = e.currentTarget.getBoundingClientRect()
@@ -89,7 +89,7 @@ export const Home = () => {
     }
   }
 
-  const handleOnMouseEnter = (e) => {
+  const showGrayImage = (e) => {
     document.querySelector('#custom-cursor').classList.remove('border-2')
     e.currentTarget.classList.add('relative', 'z-50')
     e.currentTarget.querySelector('.grayscale').classList.remove('w-0', 'h-0')
@@ -103,7 +103,7 @@ export const Home = () => {
     }
   }
 
-  const handleOnMouseLeave = (e) => {
+  const hiddeGrayImage = (e) => {
     document.querySelector('#custom-cursor').classList.add('border-2')
     e.currentTarget.classList.remove('relative', 'z-50')
     e.currentTarget
@@ -114,6 +114,40 @@ export const Home = () => {
     const section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
       section.classList.add('hidden')
+    }
+  }
+
+  const moveRoundImage = (e) => {
+    const section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      const rect = e.currentTarget.getBoundingClientRect()
+      const { clientX } = e
+      const { clientY } = e
+      window.gsap.to(section, {
+        x: clientX - rect.left - 60,
+        y: clientY - rect.top,
+      })
+    }
+  }
+
+  const showRoundImage = (e) => {
+    document.querySelector('#custom-cursor').classList.remove('border-2')
+    e.currentTarget.classList.add('relative', 'z-50')
+    const section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      section.classList.remove('w-0', 'h-0')
+      section.classList.add('w-40', 'h-40')
+    }
+  }
+
+  const hideRoundImage = (e) => {
+    document.querySelector('#custom-cursor').classList.add('border-2')
+    e.currentTarget.classList.remove('relative', 'z-50')
+
+    const section = e.currentTarget.querySelector('.highlight-section')
+    if (section !== null) {
+      section.classList.remove('w-40', 'h-40')
+      section.classList.add('w-0', 'h-0')
     }
   }
 
@@ -181,9 +215,9 @@ export const Home = () => {
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">3.0 WEB DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -211,9 +245,9 @@ export const Home = () => {
             <NavLink
               to="/ar-vr-mr-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">AR / VR / MR DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -243,9 +277,9 @@ export const Home = () => {
               className="
                 hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left
               "
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">INMERSIVE WEB DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -276,9 +310,9 @@ export const Home = () => {
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">2.0 WEB DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -306,9 +340,9 @@ export const Home = () => {
             <NavLink
               to="/app-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">
                 CROSS-PLATFORM MOBILE DEVELOPMENTS
               </span>
@@ -481,61 +515,159 @@ export const Home = () => {
             we invest efforts in different areas that take us to the next level.
           </div>
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 Research and technological development
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-technological-dev bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 SMART WEARABLES
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-smart-wearables bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 SPORTS
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-sports bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 ART AND ENTRETAINMENT
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-art-and-entretainment bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 EDUCATION
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-education bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 HEALTH
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-health bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
-            <button type="button" className="mb-10 text-left">
+            <button
+              type="button"
+              className="mb-10 text-left"
+              onMouseMove={moveRoundImage}
+              onMouseEnter={showRoundImage}
+              onMouseLeave={hideRoundImage}>
               <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
                 FEEDING
               </p>
               <p className="font-sofia font-light text-md slide-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
+              <div
+                className="
+                  absolute -top-1/2 duration-300
+                  highlight-section
+                  bg-feeding bg-no-repeat bg-cover
+                  border-2 border-base-yellow h-0 w-0 rounded-full
+                  pointer-events-none
+                "
+              />
             </button>
           </div>
         </div>

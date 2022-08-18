@@ -26,13 +26,13 @@ export const Header = () => {
     }
   }
 
-  const handleOnMouseEnter = () => {
+  const showGrayImage = () => {
     const cursor = document.getElementById('custom-cursor')
     cursor.classList.remove('p-5')
     cursor.classList.add('p-7')
   }
 
-  const handleOnMouseLeave = () => {
+  const hiddeGrayImage = () => {
     const cursor = document.getElementById('custom-cursor')
     cursor.classList.remove('p-7')
     cursor.classList.add('p-5')
@@ -54,8 +54,8 @@ export const Header = () => {
             <button
               type="button"
               onClick={handleMenu}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}
               className="flex justify-center rotate-45 w-6 h-6 sm:w-10 sm:h-10">
               <img
                 src={navigationIcon}

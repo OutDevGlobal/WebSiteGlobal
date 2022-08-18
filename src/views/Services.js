@@ -5,7 +5,7 @@ import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
 
 export const Services = () => {
-  const handleOnMouseMove = (e) => {
+  const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
       const rect = e.currentTarget.getBoundingClientRect()
@@ -21,7 +21,7 @@ export const Services = () => {
     }
   }
 
-  const handleOnMouseEnter = (e) => {
+  const showGrayImage = (e) => {
     document.querySelector('#custom-cursor').classList.remove('border-2')
     e.currentTarget.classList.add('relative', 'z-50')
     e.currentTarget.querySelector('.grayscale').classList.remove('w-0', 'h-0')
@@ -35,7 +35,7 @@ export const Services = () => {
     }
   }
 
-  const handleOnMouseLeave = (e) => {
+  const hiddeGrayImage = (e) => {
     document.querySelector('#custom-cursor').classList.add('border-2')
     e.currentTarget.classList.remove('relative', 'z-50')
     e.currentTarget
@@ -71,9 +71,9 @@ export const Services = () => {
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">3.0 WEB DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -101,9 +101,9 @@ export const Services = () => {
             <NavLink
               to="/ar-vr-mr-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">AR / VR / MR DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -133,9 +133,9 @@ export const Services = () => {
               className="
               hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left
             "
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">INMERSIVE WEB DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -166,9 +166,9 @@ export const Services = () => {
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">2.0 WEB DEVELOPMENT</span>
               <div className="absolute pointer-events-none">
                 <div
@@ -196,9 +196,9 @@ export const Services = () => {
             <NavLink
               to="/app-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
-              onMouseMove={handleOnMouseMove}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}>
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
               <span className="relative z-50">
                 CROSS-PLATFORM MOBILE DEVELOPMENTS
               </span>
