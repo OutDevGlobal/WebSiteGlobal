@@ -42,6 +42,10 @@ module.exports = {
       },
       backgroundImage: {
 
+        // How we do it
+        "how-section": "url('./src/assets/img/how-we-do-it/how_we_do_it.png')",
+        "waves-how": "url('./src/assets/img/how-we-do-it/waves_how.png')",
+
         // Services
         "web3-service": "url('./src/assets/img/web-3-development/header.png')",
         "inmersive-service": "url('./src/assets/img/inmersive-web-development/header.png')",
@@ -58,7 +62,6 @@ module.exports = {
         "education": "url('./src/assets/img/development-areas/education.png')",
         "feeding": "url('./src/assets/img/development-areas/feeding.png')",
 
-        "waves-how": "url('./src/assets/img/waves_how.png')",
         "waves-technology": "url('./src/assets/img/waves_technology.png')",
         navIconBorder: "url('./src/assets/svg/brand/navigationIconBorder.svg')",
         navIconBorderEmpty:

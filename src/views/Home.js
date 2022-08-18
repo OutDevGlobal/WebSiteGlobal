@@ -18,7 +18,6 @@ import { ReactComponent as PythonIcon } from '../assets/svg/technology/python.sv
 import { ReactComponent as ReactIcon } from '../assets/svg/technology/react.svg'
 import { ReactComponent as UnityIcon } from '../assets/svg/technology/unity.svg'
 
-import howWeDoItImg from '../assets/img/how_we_do_it.png'
 import shape1 from '../assets/img/shape_test_1.png'
 
 export const Home = () => {
@@ -350,9 +349,7 @@ export const Home = () => {
         id="howWeDoIt"
         className="justify-center md:p-20 px-10 bg-waves-how bg-no-repeat">
         <div className="self-center grid grid-cols-1 md:grid-cols-2">
-          <div className="">
-            <img src={howWeDoItImg} alt="How we do it" />
-          </div>
+          <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
           <div className="md:p-8">
             <p className="uppercase text-6xl mb-12 reveal-up">HOW WE DO IT?</p>
             <p className="font-sofia font-light text-lg rotate-left">
