@@ -6,8 +6,23 @@ module.exports = {
       "sofia" : ['"Sofia Sans"', 'serif']
     },
     extend: {
+      backgroundPosition: {
+        'left-image': 'center left 48%',
+        'right-image': 'center right 32%',
+      },
+      width: {
+        'image-service': '300px',
+        'image-mobile': '18rem',
+        'image-wide': '450px',
+      },
+      height: {
+        'image-service': '450px',
+        'image-mobile': '25rem',
+        'image-wide': '600px',
+      },
       colors: {
         "base-blue": '#3013E4',
+        "base-dark-blue": '#090F26',
         "base-purple": '#645DC7',
         "base-yellow": '#F1BA2B',
         heading: '#C94141',
@@ -25,18 +40,32 @@ module.exports = {
       boxShadow: {
         'purple': '0 0px 20px 0px #645DC7',
       },
-      backgroundColor: {
-        thead: '#f6f7f9',
-      },
       backgroundImage: {
+
+        // How we do it
+        "how-section": "url('./src/assets/img/how-we-do-it/how_we_do_it.png')",
+        "waves-how": "url('./src/assets/img/how-we-do-it/waves_how.png')",
+
+        // Services
+        "web3-service": "url('./src/assets/img/web-3-development/header.png')",
+        "inmersive-service": "url('./src/assets/img/inmersive-web-development/header.png')",
+        "web2-service": "url('./src/assets/img/web-2-development/header.png')",
+        "app-service": "url('./src/assets/img/app-development/header.png')",
+        "ar-vr-mr-service": "url('./src/assets/img/ar-vr-mr-development/header.png')",
+
+        // Development Areas
+        "technological-dev": "url('./src/assets/img/development-areas/technological_development.png')",
+        "art-and-entretainment": "url('./src/assets/img/development-areas/art_and_entretainment.png')",
+        "smart-wearables": "url('./src/assets/img/development-areas/smart_wearables.png')",
+        "sports": "url('./src/assets/img/development-areas/sports.png')",
+        "health": "url('./src/assets/img/development-areas/health.png')",
+        "education": "url('./src/assets/img/development-areas/education.png')",
+        "feeding": "url('./src/assets/img/development-areas/feeding.png')",
+
+        "waves-technology": "url('./src/assets/img/waves_technology.png')",
         navIconBorder: "url('./src/assets/svg/brand/navigationIconBorder.svg')",
         navIconBorderEmpty:
           "url('./src/assets/svg/brand/navigationIconBorderEmpty.svg')",
-        navIconBorderBlack:
-          "url('./src/assets/svg/brand/navigationIconBorderBGBlack.svg')",
-        navIconBorderWhite:
-          "url('./src/assets/svg/brand/navigationIconBorderBGWhite.svg')",
-        navIcon: "url('./src/assets/svg/brand/navigationIcon.svg')",
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

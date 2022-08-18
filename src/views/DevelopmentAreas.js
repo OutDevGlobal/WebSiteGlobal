@@ -1,29 +1,22 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
-import tecnologicalDevImg from '../assets/img/development-areas/technological_development.png'
-import artAndEntretainmentImg from '../assets/img/development-areas/art_and_entretainment.png'
-import smartWearablesImg from '../assets/img/development-areas/smart_wearables.png'
-import sportsImg from '../assets/img/development-areas/sports.png'
-import healthImg from '../assets/img/development-areas/health.png'
-import educationImg from '../assets/img/development-areas/education.png'
-import feedingImg from '../assets/img/development-areas/feeding.png'
 
 export const DevelopmentAreas = () => (
-  <div className="w-full relative px-10">
+  <div className="w-full">
     {/* Start banner slide */}
-    <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
-      <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
+    <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
+      <div className="text-2xl md:text-6xl md:p-8 uppercase self-center rotate-right">
         We&apos;re an Integral services development company
       </div>
     </div>
     {/* Ends banner slide */}
 
     {/* Start subtitle slide */}
-    <div className="md:m-20 mb-40">
-      <div className="text-2xl md:text-6xl uppercase md:w-1/2">
+    <div className="mx-14 md:mx-20 mb-40">
+      <div className="text-2xl md:text-6xl uppercase md:w-1/2 reveal-up">
         Research and Development
       </div>
-      <p className="text-lg mt-10 md:w-2/3">
+      <p className="text-lg mt-10 md:w-2/3 reveal-up">
         The future is now and there are infinite opportunities, that is why we
         invest part of our efforts in different areas that take us to the next
         level.
@@ -32,16 +25,18 @@ export const DevelopmentAreas = () => (
     {/* Ends subtitle slide */}
 
     {/* Start content slide */}
-    <div>
+    <div className="mx-14 md:mx-20">
       {/* Start Technological Development */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Technological Development</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-2 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Technological Development
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md text-justify md:text-left rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -50,12 +45,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={tecnologicalDevImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Technological Development"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-technological-dev bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -64,13 +64,15 @@ export const DevelopmentAreas = () => (
 
       {/* Start Art and Entretainment */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="uppercase text-3xl mb-5">Art and Entretainment</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-3 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Art and Entretainment
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -79,12 +81,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={artAndEntretainmentImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Art and Entretainment"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-art-and-entretainment bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
             />
           </div>
         </div>
@@ -93,13 +100,15 @@ export const DevelopmentAreas = () => (
 
       {/* Start Smart Wearables */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Smart Wearables</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-2 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Smart Wearables
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -108,12 +117,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={smartWearablesImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Smart Wearables"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-smart-wearables bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -122,13 +136,15 @@ export const DevelopmentAreas = () => (
 
       {/* Start Sports */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="uppercase text-3xl mb-5">Sports</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-3 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Sports
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -137,12 +153,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={sportsImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Sports"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-sports bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -151,13 +172,15 @@ export const DevelopmentAreas = () => (
 
       {/* Start Health */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Health</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-2 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Health
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -166,12 +189,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={healthImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Health"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-health bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -180,13 +208,15 @@ export const DevelopmentAreas = () => (
 
       {/* Start Education */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <p className="uppercase text-3xl mb-5">Education</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-3 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Education
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -195,12 +225,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={educationImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Education"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-education bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -209,13 +244,15 @@ export const DevelopmentAreas = () => (
 
       {/* Start Feeding */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-2 col-span-2">
-            <p className="uppercase text-3xl mb-5">Feeding</p>
-            <p className="font-sofia font-thin text-2xl mb-5">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
+          <div className="md:col-start-2 md:col-span-2">
+            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+              Feeding
+            </p>
+            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md">
+            <p className="font-sofia font-light font-md rotate-left">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -224,12 +261,17 @@ export const DevelopmentAreas = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={feedingImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Feeding"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-feeding bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>

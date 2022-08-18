@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MainLogo } from './MainLogo'
+
+import { ReactComponent as FacebookIcon } from '../../assets/svg/social/facebook.svg'
+import { ReactComponent as TwitterIcon } from '../../assets/svg/social/twitter.svg'
+import { ReactComponent as InstagramIcon } from '../../assets/svg/social/instagram.svg'
+import { ReactComponent as LinkedinIcon } from '../../assets/svg/social/linkedin.svg'
+
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
 
 export const Header = () => {
@@ -20,13 +26,13 @@ export const Header = () => {
     }
   }
 
-  const handleOnMouseEnter = () => {
+  const showGrayImage = () => {
     const cursor = document.getElementById('custom-cursor')
     cursor.classList.remove('p-5')
     cursor.classList.add('p-7')
   }
 
-  const handleOnMouseLeave = () => {
+  const hiddeGrayImage = () => {
     const cursor = document.getElementById('custom-cursor')
     cursor.classList.remove('p-7')
     cursor.classList.add('p-5')
@@ -34,19 +40,22 @@ export const Header = () => {
 
   return (
     <>
-      <nav className="sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50">
+      <nav
+        className="
+          sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50 pointer-events-none
+        ">
         <MainLogo />
         <div
           className="
             flex items-center justify-center bg-navIconBorder hover:bg-navIconBorderEmpty bg-cover bg-no-repeat 
-            w-10 h-10 sm:w-16 sm:h-16
+            w-10 h-10 sm:w-16 sm:h-16 pointer-events-auto
           ">
           <div className="card rotate-45">
             <button
               type="button"
               onClick={handleMenu}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}
               className="flex justify-center rotate-45 w-6 h-6 sm:w-10 sm:h-10">
               <img
                 src={navigationIcon}
@@ -63,38 +72,11 @@ export const Header = () => {
           fixed z-10 flex h-0 w-screen justify-center items-center bg-black opacity-0 duration-700
           overflow-hidden bottom-0
         ">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-          <div className="text-white grid md:grid-cols-2 md:pt-10 pt-10 order-2 md:order-1">
-            <div className="md:col-start-2 flex flex-col w-full text-center">
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Linkedin
-              </a>
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Facebook
-              </a>
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Instagram
-              </a>
-              <a
-                href="/"
-                onClick={handleMenu}
-                className="text-white text-2xl hover:text-3xl hover:text-base-purple duration-300">
-                Twitter
-              </a>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full">
           <div
             className="
-              flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left order-1 md:order-2
+              flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left
+              col-start-2 col-span-2
             ">
             <NavLink
               to="/"
@@ -126,8 +108,8 @@ export const Header = () => {
               ">
               Development Areas
             </NavLink>
-            <a
-              href="/"
+            <NavLink
+              to="/contact-us"
               onClick={handleMenu}
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
@@ -135,7 +117,33 @@ export const Header = () => {
                 duration-300
               ">
               Say Hello
-            </a>
+            </NavLink>
+            <div className="text-center flex gap-8 justify-center md:justify-start">
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue">
+                <FacebookIcon className="w-4 hover:w-6 duration-300" />
+              </a>
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue">
+                <TwitterIcon className="w-6 hover:w-8 duration-300 mt-1" />
+              </a>
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue">
+                <InstagramIcon className="w-6 hover:w-8 duration-300 mt-1" />
+              </a>
+              <a
+                href="/"
+                onClick={handleMenu}
+                className="text-white text-2xl hover:text-base-blue">
+                <LinkedinIcon className="w-6 hover:w-8 duration-300 mt-2" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
