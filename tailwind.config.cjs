@@ -12,11 +12,13 @@ module.exports = {
       },
       width: {
         'image-service': '300px',
+        'image-service-full': '500px',
         'image-mobile': '18rem',
         'image-wide': '450px',
       },
       height: {
         'image-service': '450px',
+        'image-service-full': '650px',
         'image-mobile': '25rem',
         'image-wide': '600px',
       },
@@ -41,7 +43,6 @@ module.exports = {
         'purple': '0 0px 20px 0px #645DC7',
       },
       backgroundImage: {
-
         // How we do it
         "how-section": "url('./src/assets/img/how-we-do-it/how_we_do_it.png')",
         "waves-how": "url('./src/assets/img/how-we-do-it/waves_how.png')",
@@ -61,6 +62,34 @@ module.exports = {
         "health": "url('./src/assets/img/development-areas/health.png')",
         "education": "url('./src/assets/img/development-areas/education.png')",
         "feeding": "url('./src/assets/img/development-areas/feeding.png')",
+
+        // App Service
+        "android": "url('./src/assets/img/app-development/android.png')",
+        "hybrid": "url('./src/assets/img/app-development/hybrid.png')",
+        "ios": "url('./src/assets/img/app-development/ios.png')",
+
+        // AR / VR / MR Service
+        "agile-education": "url('./src/assets/img/ar-vr-mr-development/agile_education.png')",
+        "art-preservation": "url('./src/assets/img/ar-vr-mr-development/art_preservation.png')",
+        "body-analysis": "url('./src/assets/img/ar-vr-mr-development/body_analysis.png')",
+        "medical-checkup": "url('./src/assets/img/ar-vr-mr-development/medical_checkup.png')",
+
+        // Inmersive Web Service
+        "data-visualization": "url('./src/assets/img/inmersive-web-development/data_visualization.png')",
+        "digital-art": "url('./src/assets/img/inmersive-web-development/digital_art.png')",
+        "home-stores": "url('./src/assets/img/inmersive-web-development/home_stores.png')",
+        "video-360": "url('./src/assets/img/inmersive-web-development/video_360.png')",
+
+        // Web 2 Service
+        "content-managment": "url('./src/assets/img/web-2-development/content_managment_system.png')",
+        "custom-software": "url('./src/assets/img/web-2-development/custom_software_development.png')",
+        "e-commerce": "url('./src/assets/img/web-2-development/e_commerce.png')",
+        "landing-pages": "url('./src/assets/img/web-2-development/landing_pages.png')",
+
+        // Web 3 Service
+        "crypto-tokens": "url('./src/assets/img/web-3-development/crypto_tokens.png')",
+        "decentralized-solutions": "url('./src/assets/img/web-3-development/decentralized_solutions.png')",
+        "nft": "url('./src/assets/img/web-3-development/nft.png')",
 
         "waves-technology": "url('./src/assets/img/waves_technology.png')",
         navIconBorder: "url('./src/assets/svg/brand/navigationIconBorder.svg')",

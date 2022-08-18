@@ -1,11 +1,6 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-import eCommerceImg from '../../assets/img/web-2-development/e_commerce.png'
-import landingPagesImg from '../../assets/img/web-2-development/landing_pages.png'
-import contentManagmentImg from '../../assets/img/web-2-development/content_managment_system.png'
-import customSoftwareImg from '../../assets/img/web-2-development/custom_software_development.png'
-
 export const Web2Development = () => (
   <div className="w-full relative px-10">
     {/* Start banner slide */}
@@ -36,7 +31,7 @@ export const Web2Development = () => (
     <div>
       {/* Start e-Commerce */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — 2.0 Web Development
@@ -54,12 +49,17 @@ export const Web2Development = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={eCommerceImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="e-Commerce"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-e-commerce bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -68,7 +68,7 @@ export const Web2Development = () => (
 
       {/* Start Landing Pages */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — 2.0 Web Development
@@ -86,12 +86,17 @@ export const Web2Development = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={landingPagesImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Landing Pages"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-landing-pages bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
             />
           </div>
         </div>
@@ -100,7 +105,7 @@ export const Web2Development = () => (
 
       {/* Start Content Managment System */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — 2.0 Web Development
@@ -118,12 +123,17 @@ export const Web2Development = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={contentManagmentImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Content Managment System"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-content-managment bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -132,7 +142,7 @@ export const Web2Development = () => (
 
       {/* Start Custom Software Development */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — 2.0 Web Development
@@ -152,12 +162,17 @@ export const Web2Development = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={customSoftwareImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Custom Software Development"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-custom-software bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
             />
           </div>
         </div>

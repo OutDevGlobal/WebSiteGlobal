@@ -1,11 +1,6 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-import artPreservationImg from '../../assets/img/ar-vr-mr-development/art_preservation.png'
-import medicalCheckupImg from '../../assets/img/ar-vr-mr-development/medical_checkup.png'
-import bodyAnalysisImg from '../../assets/img/ar-vr-mr-development/body_analysis.png'
-import agileEducationImg from '../../assets/img/ar-vr-mr-development/agile_education.png'
-
 export const ArVrMrDevelopment = () => (
   <div className="w-full relative px-10">
     {/* Start banner slide */}
@@ -36,7 +31,7 @@ export const ArVrMrDevelopment = () => (
     <div>
       {/* Start Art Preservation */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — AR/VR/MR Development
@@ -54,12 +49,17 @@ export const ArVrMrDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={artPreservationImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Art Preservation"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-art-preservation bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -68,7 +68,7 @@ export const ArVrMrDevelopment = () => (
 
       {/* Start Medical Check Up */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — AR/VR/MR Development
@@ -86,12 +86,17 @@ export const ArVrMrDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={medicalCheckupImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Medical Check Up"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-medical-checkup bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
             />
           </div>
         </div>
@@ -100,7 +105,7 @@ export const ArVrMrDevelopment = () => (
 
       {/* Start Body Analysis With VR / MR / AR */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — AR/VR/MR Development
@@ -120,12 +125,17 @@ export const ArVrMrDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={bodyAnalysisImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Body Analysis With VR / MR / AR"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-body-analysis bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -134,7 +144,7 @@ export const ArVrMrDevelopment = () => (
 
       {/* Start Agile Education Processes with VR / MR / AR */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — AR/VR/MR Development
@@ -154,12 +164,17 @@ export const ArVrMrDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={agileEducationImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Agile Education Processes with VR / MR / AR"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-agile-education bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
             />
           </div>
         </div>

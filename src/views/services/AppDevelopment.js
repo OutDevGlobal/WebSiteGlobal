@@ -1,10 +1,6 @@
 import React from 'react'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-import androidImg from '../../assets/img/app-development/android.png'
-import iosImg from '../../assets/img/app-development/ios.png'
-import hybridImg from '../../assets/img/app-development/hybrid.png'
-
 export const AppDevelopment = () => (
   <div className="w-full relative px-10">
     {/* Start banner slide */}
@@ -35,7 +31,7 @@ export const AppDevelopment = () => (
     <div>
       {/* Start Android */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — App Development
@@ -53,12 +49,17 @@ export const AppDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={androidImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Android"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-android bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
@@ -67,7 +68,7 @@ export const AppDevelopment = () => (
 
       {/* Start IOS */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-3 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — App Development
@@ -85,12 +86,17 @@ export const AppDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-4 col-span-2">
-            <img
-              src={iosImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="IOS"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-right-image bg-fixed
+                bg-ios bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+              "
             />
           </div>
         </div>
@@ -99,7 +105,7 @@ export const AppDevelopment = () => (
 
       {/* Start Hybrid */}
       <div className="relative w-full mb-40">
-        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6">
+        <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
           <div className="col-start-2 col-span-2">
             <p className="text-md md:text-2xl self-center font-sofia font-thin">
               / Expertise — App Development
@@ -117,12 +123,17 @@ export const AppDevelopment = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-start-3 col-span-2">
-            <img
-              src={hybridImg}
-              className="w-full md:h-[500px] mt-5 md:mt-0"
-              alt="Hybrid"
+        <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+          <div
+            className="
+              md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+              mt-4 md:mt-0
+            ">
+            <div
+              className="
+                bg-left-image bg-fixed
+                bg-hybrid bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+              "
             />
           </div>
         </div>
