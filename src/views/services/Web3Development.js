@@ -9,9 +9,9 @@ export const Web3Development = () => {
       const rect = e.currentTarget.getBoundingClientRect()
       const { clientX } = e
       const { clientY } = e
-      section.style.backgroundPosition = `${-clientX + rect.left + 280}px ${-clientY + rect.top - 80}px`
+      section.style.backgroundPosition = `${-clientX + rect.left + 300}px ${-clientY + rect.top - 100}px`
       window.gsap.to(section, {
-        x: clientX - rect.left - 600,
+        x: clientX - rect.left - 50,
         y: clientY - rect.top,
       })
     }
@@ -46,7 +46,7 @@ export const Web3Development = () => {
             / Expertise — 3.0 Web develpment
           </p>
           <p className="relative z-50">We dive into the blockchain with you</p>
-          <div className="pointer-events-none w-image-service-full h-image-service-full">
+          <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
             <div
               className="
                 pointer-events-auto
@@ -57,7 +57,7 @@ export const Web3Development = () => {
             />
             <div
               className="
-                absolute left-1/2 top-0
+                absolute top-0
                 highlight-section
                 bg-web3-service bg-no-repeat
                 border-2 border-base-yellow h-24 w-24 duration-800 rounded-full

@@ -50,7 +50,7 @@ export const Services = () => {
   }
 
   return (
-    <div className="w-full relative px-10">
+    <div className="w-full relative px-1">
       {/* Start banner slide */}
       <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
         <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
@@ -67,7 +67,7 @@ export const Services = () => {
           WHAT DO WE DO?
         </div>
         <div className="text-xl md:text-4xl md:px-20">
-          <div className="md:flex my-3">
+          <div className="grid md:flex my-5 relative z-0">
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
@@ -127,7 +127,7 @@ export const Services = () => {
             </NavLink>
           </div>
 
-          <div className="flex my-5">
+          <div className="grid md:flex my-5 relative z-0">
             <NavLink
               to="/inmersive-web-development"
               className="
@@ -162,7 +162,7 @@ export const Services = () => {
             </div>
           </div>
 
-          <div className="md:flex my-5">
+          <div className="grid md:flex my-5 relative z-0">
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
