@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 
 export const DevelopmentAreas = () => (
-  <div className="w-full">
+  <div className="w-full bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
     {/* Start banner slide */}
     <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
       <div className="text-2xl md:text-6xl md:p-8 uppercase self-center rotate-right">

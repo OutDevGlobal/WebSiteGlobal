@@ -34,7 +34,7 @@ export const ArVrMrDevelopment = () => {
   }
 
   return (
-    <div className="w-full relative px-10">
+    <div className="w-full relative px-10 bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       {/* Start banner slide */}
       <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
         <div
