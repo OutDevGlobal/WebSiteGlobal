@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Section } from 'react-scroll-section'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { Section, useScrollSection } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
 import Draggable from 'react-draggable'
 import MovingText from 'react-moving-text'
@@ -22,14 +22,18 @@ import unityIcon from '../assets/svg/technology/unity.svg'
 import shape1 from '../assets/img/shape_test_1.png'
 
 export const Home = () => {
-  // const home = useScrollSection('home')
-  // const whoWeAre = useScrollSection('whoWeAre')
-  // const stuff = useScrollSection('stuff')
-  // const services = useScrollSection('services')
-  // const howWeDoIt = useScrollSection('howWeDoIt')
-  // const ourTec = useScrollSection('ourTec')
-  // const devAreas = useScrollSection('devAreas')
-  const [scrollDir, setScrollDir] = useState('scrolling down')
+
+  const home = useScrollSection('home')
+  const whoWeAre = useScrollSection('whoWeAre')
+  const stuff = useScrollSection('stuff')
+  const services = useScrollSection('services')
+  const howWeDoIt = useScrollSection('howWeDoIt')
+  const ourTec = useScrollSection('ourTec')
+  const devAreas = useScrollSection('devAreas')
+
+  const sections = [home, whoWeAre, stuff, services, howWeDoIt, ourTec, devAreas]
+  const [currentSection, setCurrentSection] = useState(0)
+  const [changeSection, setChangeSection] = useState(false)
 
   const jsRef = useRef(null)
   const pythonRef = useRef(null)
@@ -42,36 +46,56 @@ export const Home = () => {
   const reactRef = useRef(null)
   const githubRef = useRef(null)
 
+  const handleNavigation = useCallback((e) => {
+
+    e.preventDefault()
+    e.stopPropagation()
+
+    if (e.deltaY < 0 && sectionChanged)
+    {
+      if ((currentSection - 1) > -1) {
+        console.log("A")
+        setSectionChanged(false)
+        const section = sections[currentSection - 1]
+        section.onClick()
+        setCurrentSection(currentSection - 1)
+      }
+    }
+    else if (e.deltaY > 0 && sectionChanged)
+    {
+      if ((currentSection + 1) < sections.length) {
+        console.log("B")
+        setSectionChanged(false)
+        const section = sections[currentSection + 1]
+        section.onClick()
+        setCurrentSection(currentSection + 1)
+      }
+    }
+  }, [])
+
+
+  // Scroll detection
   useEffect(() => {
-    const threshold = 0
-    let lastScrollY = window.pageYOffset
-    let ticking = false
 
-    const updateScrollDir = () => {
-      const scrollY = window.pageYOffset
+    window.addEventListener("wheel", handleNavigation, {passive:false})
 
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
-        ticking = false
-        return
-      }
-      setScrollDir(scrollY > lastScrollY ? 'scrolling down' : 'scrolling up')
-      lastScrollY = scrollY > 0 ? scrollY : 0
-      ticking = false
+  }, [handleNavigation])
+
+  useEffect(() => {
+
+    console.log("YES")
+    setSectionChanged(true)
+
+  }, [sections])
+
+
+  const handleChangeSection = () => {
+    if ((currentSection + 1) !== sections.length) {
+      const section = sections[currentSection + 1]
+      section.onClick()
+      setCurrentSection(currentSection + 1)
     }
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir)
-        ticking = true
-      }
-    }
-
-    window.addEventListener('scroll', onScroll)
-
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [scrollDir])
-
-  const changeSection = () => {}
+  }
 
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
@@ -699,7 +723,7 @@ export const Home = () => {
       {/* Ends dev areas slide */}
 
       <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
-        <button type="button" onClick={changeSection} className="sticky">
+        <button type="button" onClick={handleChangeSection} className="sticky">
           <IconArrowDown
             className="
                 text-transparent hover:text-base-yellow hover:translate hover:scale-110 duration-300
