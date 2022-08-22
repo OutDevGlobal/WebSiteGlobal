@@ -66,7 +66,6 @@ export const Home = () => {
     }
 
     window.addEventListener('scroll', onScroll)
-    // console.log(scrollDir)
 
     return () => window.removeEventListener('scroll', onScroll)
   }, [scrollDir])
@@ -211,7 +210,7 @@ export const Home = () => {
           WHAT DO WE DO?
         </div>
         <div className="text-xl md:text-4xl md:px-20">
-          <div className="md:flex my-3">
+          <div className="grid md:flex my-5">
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
@@ -271,7 +270,7 @@ export const Home = () => {
             </NavLink>
           </div>
 
-          <div className="flex my-5">
+          <div className="grid md:flex my-5">
             <NavLink
               to="/inmersive-web-development"
               className="
@@ -306,7 +305,7 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="md:flex my-5">
+          <div className="grid md:flex my-5">
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
@@ -515,8 +514,8 @@ export const Home = () => {
             we invest efforts in different areas that take us to the next level.
           </div>
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <button
-              type="button"
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -536,9 +535,9 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
-            <button
-              type="button"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -558,9 +557,9 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
-            <button
-              type="button"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -580,9 +579,9 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
-            <button
-              type="button"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -602,9 +601,9 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
-            <button
-              type="button"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -624,9 +623,9 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
-            <button
-              type="button"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -646,9 +645,9 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
-            <button
-              type="button"
+            </NavLink>
+            <NavLink
+              to="/development-areas"
               className="mb-10 text-left"
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
@@ -668,7 +667,7 @@ export const Home = () => {
                   pointer-events-none
                 "
               />
-            </button>
+            </NavLink>
           </div>
         </div>
       </Section>

@@ -69,7 +69,7 @@ export const Header = () => {
       <div
         id="menu"
         className="
-          fixed z-10 flex h-0 w-screen justify-center items-center bg-black opacity-0 duration-700
+          fixed z-40 flex h-0 w-screen justify-center items-center bg-black opacity-0 duration-700
           overflow-hidden bottom-0
         ">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full">
@@ -84,7 +84,7 @@ export const Header = () => {
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
-                duration-300
+                duration-300 py-3
               ">
               Home
             </NavLink>
@@ -94,7 +94,7 @@ export const Header = () => {
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
-                duration-300
+                duration-300 py-3
               ">
               Services
             </NavLink>
@@ -104,7 +104,7 @@ export const Header = () => {
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
-                duration-300
+                duration-300 py-3
               ">
               Development Areas
             </NavLink>
@@ -114,11 +114,11 @@ export const Header = () => {
               className="
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
-                duration-300
+                duration-300 py-3
               ">
               Say Hello
             </NavLink>
-            <div className="text-center flex gap-8 justify-center md:justify-start">
+            <div className="text-center flex gap-8 justify-center md:justify-start py-3">
               <a
                 href="/"
                 onClick={handleMenu}
