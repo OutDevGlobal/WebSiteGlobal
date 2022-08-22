@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Section } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
 import Draggable from 'react-draggable'
+import MovingText from 'react-moving-text'
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
@@ -158,10 +159,34 @@ export const Home = () => {
           <img src={shape1} alt="Animation" className="w-[1000px]" />
           <div className="absolute bottom-20">
             <div className="grid grid-cols-1 md:grid-cols-2 text-lg">
-              <div className="text-center">FROM IMAGINATION TO REALITY</div>
+              <div className="text-center">
+
+                <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  FROM IMAGINATION TO REALITY
+                </MovingText>
+
+              </div>
               <div className="grid grid-cols-1 text-center">
                 <div className="font-sofia text-xl">
+                  <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="1000ms"
+                  delay="200ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
                   THE DEVELOPMENT YOUT SOFTWARE NEEDS
+                </MovingText>
                 </div>
               </div>
             </div>

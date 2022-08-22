@@ -111,55 +111,30 @@ const App = () => {
       })
     })
 
-    // Right linear animation
-    window.gsap.utils.toArray('.slide-right').forEach((element) => {
+    // Text animation
+    window.gsap.utils.toArray('.animated-text').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
         markers: true,
         onEnter() {
-          window.gsap.fromTo(
-            element,
-            {
-              x: 100,
-              autoAlpha: 0,
-            },
-            {
-              duration: 3,
-              x: 0,
-              autoAlpha: 1,
-              ease: 'back',
-              overwrite: 'auto',
-            },
-          )
+          element.classList.remove("hidden")
+          element.classList.add("block")
         },
+        onLeave() {
+          element.classList.remove("block")
+          element.classList.add("hidden")
+        },
+        onEnterBack() {
+          element.classList.remove("hidden")
+          element.classList.add("block")
+        },
+        onLeaveBack() {
+          element.classList.remove("block")
+          element.classList.add("hidden")
+        }
       })
     })
 
-    // Cards animation from bottom
-    window.gsap.utils.toArray('.cards-bottom').forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        markers: true,
-        onEnter() {
-          window.gsap.fromTo(
-            element,
-            {
-              y: 0,
-              x: 0,
-              autoAlpha: 0,
-            },
-            {
-              duration: 3,
-              y: 200,
-              x: 200,
-              autoAlpha: 1,
-              ease: 'back',
-              overwrite: 'auto',
-            },
-          )
-        },
-      })
-    })
   }, [])
 
   return (
