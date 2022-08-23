@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
 import Draggable from 'react-draggable'
@@ -22,7 +22,6 @@ import unityIcon from '../assets/svg/technology/unity.svg'
 import shape1 from '../assets/img/shape_test_1.png'
 
 export const Home = () => {
-
   const home = useScrollSection('home')
   const whoWeAre = useScrollSection('whoWeAre')
   const stuff = useScrollSection('stuff')
@@ -30,10 +29,22 @@ export const Home = () => {
   const howWeDoIt = useScrollSection('howWeDoIt')
   const ourTec = useScrollSection('ourTec')
   const devAreas = useScrollSection('devAreas')
+  const footer = useScrollSection('footer')
 
-  const sections = [home, whoWeAre, stuff, services, howWeDoIt, ourTec, devAreas]
+  const sections = [
+    home,
+    whoWeAre,
+    stuff,
+    services,
+    howWeDoIt,
+    ourTec,
+    devAreas,
+    footer,
+  ]
+  const sectionsLen = sections.length
+
+  const [isChanging, setIsChanging] = useState(false)
   const [currentSection, setCurrentSection] = useState(0)
-  const [changeSection, setChangeSection] = useState(false)
 
   const jsRef = useRef(null)
   const pythonRef = useRef(null)
@@ -46,56 +57,47 @@ export const Home = () => {
   const reactRef = useRef(null)
   const githubRef = useRef(null)
 
-  const handleNavigation = useCallback((e) => {
+  const handleChangeSection = () => {
+    if (currentSection + 1 !== sections.length) {
+      console.log('Changing to section ', currentSection + 1)
+      const section = sections[currentSection + 1]
+      section.onClick()
+      setCurrentSection(currentSection + 1)
+      setIsChanging(false)
+    }
+  }
 
+  const handleNavigation = useCallback((e) => {
     e.preventDefault()
     e.stopPropagation()
 
-    if (e.deltaY < 0 && sectionChanged)
-    {
-      if ((currentSection - 1) > -1) {
-        console.log("A")
-        setSectionChanged(false)
-        const section = sections[currentSection - 1]
-        section.onClick()
-        setCurrentSection(currentSection - 1)
+    if (e.deltaY <= 0) {
+      if (currentSection == 0) {
+        // handleChangeSection()
       }
-    }
-    else if (e.deltaY > 0 && sectionChanged)
-    {
-      if ((currentSection + 1) < sections.length) {
-        console.log("B")
-        setSectionChanged(false)
-        const section = sections[currentSection + 1]
-        section.onClick()
-        setCurrentSection(currentSection + 1)
+    } else if (e.deltaY > 0) {
+      console.log(isChanging)
+      if (currentSection < sectionsLen) {
+        if (!isChanging) {
+          setIsChanging(true)
+          handleChangeSection()
+          // console.log("Remove listener")
+          // window.removeEventListener("wheel", handleNavigation, {passive: false})
+        } else {
+          console.log('Change')
+        }
       }
     }
   }, [])
 
+  // useEffect(() => {
+  //   console.log(currentSectioRef.current)
+  // }, [currentSectioRef])
 
-  // Scroll detection
-  useEffect(() => {
-
-    window.addEventListener("wheel", handleNavigation, {passive:false})
-
-  }, [handleNavigation])
-
-  useEffect(() => {
-
-    console.log("YES")
-    setSectionChanged(true)
-
-  }, [sections])
-
-
-  const handleChangeSection = () => {
-    if ((currentSection + 1) !== sections.length) {
-      const section = sections[currentSection + 1]
-      section.onClick()
-      setCurrentSection(currentSection + 1)
-    }
-  }
+  // useEffect(() => {
+  //   sections[0].onClick()
+  // window.addEventListener("wheel", handleNavigation, {passive: false})
+  // }, [])
 
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
@@ -184,7 +186,6 @@ export const Home = () => {
           <div className="absolute bottom-20">
             <div className="grid grid-cols-1 md:grid-cols-2 text-lg">
               <div className="text-center">
-
                 <MovingText
                   className="animated-text hidden"
                   type="popIn"
@@ -196,21 +197,20 @@ export const Home = () => {
                   fillMode="none">
                   FROM IMAGINATION TO REALITY
                 </MovingText>
-
               </div>
               <div className="grid grid-cols-1 text-center">
                 <div className="font-sofia text-xl">
                   <MovingText
-                  className="animated-text hidden"
-                  type="popIn"
-                  duration="1000ms"
-                  delay="200ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  THE DEVELOPMENT YOUT SOFTWARE NEEDS
-                </MovingText>
+                    className="animated-text hidden"
+                    type="popIn"
+                    duration="1000ms"
+                    delay="200ms"
+                    direction="normal"
+                    timing="ease-out"
+                    iteration="1"
+                    fillMode="none">
+                    THE DEVELOPMENT YOUT SOFTWARE NEEDS
+                  </MovingText>
                 </div>
               </div>
             </div>

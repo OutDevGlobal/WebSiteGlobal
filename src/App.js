@@ -117,24 +117,23 @@ const App = () => {
         trigger: element,
         markers: true,
         onEnter() {
-          element.classList.remove("hidden")
-          element.classList.add("block")
+          element.classList.remove('hidden')
+          element.classList.add('block')
         },
         onLeave() {
-          element.classList.remove("block")
-          element.classList.add("hidden")
+          element.classList.remove('block')
+          element.classList.add('hidden')
         },
         onEnterBack() {
-          element.classList.remove("hidden")
-          element.classList.add("block")
+          element.classList.remove('hidden')
+          element.classList.add('block')
         },
         onLeaveBack() {
-          element.classList.remove("block")
-          element.classList.add("hidden")
-        }
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
       })
     })
-
   }, [])
 
   return (
