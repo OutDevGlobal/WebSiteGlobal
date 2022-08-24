@@ -116,25 +116,25 @@ export const Web2Development = () => {
       <Section id="content">
         {/* Start subtitle slide */}
         <div className="md:m-20 mb-40">
-        <MovingText
-          className="animated-text hidden"
-          type="popIn"
-          duration="2000ms"
-          delay="0ms"
-          direction="normal"
-          timing="ease-out"
-          iteration="1"
-          fillMode="none">
-          <p className="text-lg mt-10 md:w-2/3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
-            amet sapien ullamcorper, quis sagittis lacus vehicula. Pellentesque
-            in nisl ante. Nullam vitae quam semper metus vehicula gravida. Donec
-            quam tortor, suscipit sed suscipit eu, viverra eu nisi. In
-            pellentesque egestas odio. Suspendisse ac orci non nunc cursus
-            iaculis nec ut orci.
-          </p>
-        </MovingText>
+          <MovingText
+            className="animated-text hidden"
+            type="popIn"
+            duration="2000ms"
+            delay="0ms"
+            direction="normal"
+            timing="ease-out"
+            iteration="1"
+            fillMode="none">
+            <p className="text-lg mt-10 md:w-2/3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
+              amet sapien ullamcorper, quis sagittis lacus vehicula.
+              Pellentesque in nisl ante. Nullam vitae quam semper metus vehicula
+              gravida. Donec quam tortor, suscipit sed suscipit eu, viverra eu
+              nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
+              cursus iaculis nec ut orci.
+            </p>
+          </MovingText>
         </div>
         {/* Ends subtitle slide */}
 
@@ -192,10 +192,11 @@ export const Web2Development = () => {
                   fillMode="none">
                   <p className="font-sofia font-light font-md">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
-                    amet nisi fermentum cursus tempor non mauris. Nulla euismod
-                    risus libero, semper fringilla felis tincidunt vitae. Nunc et
-                    sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </p>
                 </MovingText>
               </div>
@@ -269,10 +270,11 @@ export const Web2Development = () => {
                   fillMode="none">
                   <p className="font-sofia font-light font-md">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
-                    amet nisi fermentum cursus tempor non mauris. Nulla euismod
-                    risus libero, semper fringilla felis tincidunt vitae. Nunc et
-                    sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </p>
                 </MovingText>
               </div>
@@ -348,10 +350,11 @@ export const Web2Development = () => {
                   fillMode="none">
                   <p className="font-sofia font-light font-md">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
-                    amet nisi fermentum cursus tempor non mauris. Nulla euismod
-                    risus libero, semper fringilla felis tincidunt vitae. Nunc et
-                    sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </p>
                 </MovingText>
               </div>
@@ -427,10 +430,11 @@ export const Web2Development = () => {
                   fillMode="none">
                   <p className="font-sofia font-light font-md">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula sit
-                    amet nisi fermentum cursus tempor non mauris. Nulla euismod
-                    risus libero, semper fringilla felis tincidunt vitae. Nunc et
-                    sapien fermentum, rhoncus nulla eleifend, ultrices enim.
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </p>
                 </MovingText>
               </div>

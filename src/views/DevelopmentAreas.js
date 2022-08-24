@@ -1,11 +1,10 @@
 import React from 'react'
-import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import MovingText from 'react-moving-text'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { HideScroll } from 'react-hide-on-scroll'
+import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 
 export const DevelopmentAreas = () => {
-
   const content = useScrollSection('content')
 
   const handleChangeSection = () => {
@@ -32,7 +31,7 @@ export const DevelopmentAreas = () => {
       </div>
       {/* Ends banner slide */}
 
-      <Section id="content" className='pt-40'>
+      <Section id="content" className="pt-40">
         {/* Start subtitle slide */}
         <div className="mx-14 md:mx-20 mb-40">
           <div className="text-2xl md:text-6xl uppercase md:w-1/2 ">
@@ -58,9 +57,9 @@ export const DevelopmentAreas = () => {
               timing="ease-out"
               iteration="1"
               fillMode="none">
-              The future is now and there are infinite opportunities, that is why we
-              invest part of our efforts in different areas that take us to the next
-              level.
+              The future is now and there are infinite opportunities, that is
+              why we invest part of our efforts in different areas that take us
+              to the next level.
             </MovingText>
           </p>
         </div>
@@ -108,11 +107,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>
@@ -174,11 +174,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>
@@ -240,11 +241,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>
@@ -306,11 +308,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>
@@ -372,11 +375,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>
@@ -438,11 +442,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>
@@ -504,11 +509,12 @@ export const DevelopmentAreas = () => {
                     timing="ease-out"
                     iteration="1"
                     fillMode="none">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
-                    ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
-                    fermentum cursus tempor non mauris. Nulla euismod risus libero,
-                    semper fringilla felis tincidunt vitae. Nunc et sapien fermentum,
-                    rhoncus nulla eleifend, ultrices enim.
+                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
+                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
+                    sit amet nisi fermentum cursus tempor non mauris. Nulla
+                    euismod risus libero, semper fringilla felis tincidunt
+                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
+                    ultrices enim.
                   </MovingText>
                 </p>
               </div>

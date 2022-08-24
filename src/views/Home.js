@@ -494,17 +494,17 @@ export const Home = () => {
           <button
             type="button"
             className="hover:text-base-yellow duration-300 ">
-              <MovingText
-                className="animated-text hidden"
-                type="rotateCW"
-                duration="1000ms"
-                delay="2s"
-                direction="normal"
-                timing="ease"
-                iteration="1"
-                fillMode="none">
-                EXPLORE ALL EXPERTISE
-              </MovingText>
+            <MovingText
+              className="animated-text hidden"
+              type="rotateCW"
+              duration="1000ms"
+              delay="2s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              EXPLORE ALL EXPERTISE
+            </MovingText>
           </button>
         </div>
       </Section>
@@ -541,8 +541,8 @@ export const Home = () => {
               fillMode="none">
               <p className="font-sofia font-light text-lg ">
                 Our experience combined with a vast and diverse team of
-                professionals, allows us to give you what you need, while building
-                a structured growth map for the future.
+                professionals, allows us to give you what you need, while
+                building a structured growth map for the future.
               </p>
             </MovingText>
             <MovingText
@@ -569,8 +569,9 @@ export const Home = () => {
               iteration="1"
               fillMode="none">
               <p className="font-sofia font-light text-lg ">
-                We use the most innovative technologies in all our solutions, from
-                the simplest websites to the most complex native applications.
+                We use the most innovative technologies in all our solutions,
+                from the simplest websites to the most complex native
+                applications.
               </p>
             </MovingText>
           </div>
@@ -705,7 +706,8 @@ export const Home = () => {
               timing="ease"
               iteration="1"
               fillMode="none">
-              we invest efforts in different areas that take us to the next level
+              we invest efforts in different areas that take us to the next
+              level
             </MovingText>
           </div>
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">

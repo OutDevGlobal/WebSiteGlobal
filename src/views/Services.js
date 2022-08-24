@@ -2,9 +2,9 @@ import React from 'react'
 import { HideScroll } from 'react-hide-on-scroll'
 import { NavLink } from 'react-router-dom'
 import { Section, useScrollSection } from 'react-scroll-section'
+import MovingText from 'react-moving-text'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
-import MovingText from 'react-moving-text'
 
 export const Services = () => {
   const services = useScrollSection('services')
@@ -71,7 +71,8 @@ export const Services = () => {
             timing="ease-in"
             iteration="1"
             fillMode="none">
-            we solve your challenges with excelent desing and innovate technology
+            we solve your challenges with excelent desing and innovate
+            technology
           </MovingText>
         </div>
       </div>
@@ -314,17 +315,17 @@ export const Services = () => {
           <button
             type="button"
             className="hover:text-base-yellow duration-300 ">
-              <MovingText
-                className="animated-text hidden"
-                type="rotateCW"
-                duration="1000ms"
-                delay="2s"
-                direction="normal"
-                timing="ease"
-                iteration="1"
-                fillMode="none">
-                EXPLORE ALL EXPERTISE
-              </MovingText>
+            <MovingText
+              className="animated-text hidden"
+              type="rotateCW"
+              duration="1000ms"
+              delay="2s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              EXPLORE ALL EXPERTISE
+            </MovingText>
           </button>
         </div>
       </Section>

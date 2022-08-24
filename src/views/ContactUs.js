@@ -1,12 +1,11 @@
 import React from 'react'
 import MovingText from 'react-moving-text'
 import { Section, useScrollSection } from 'react-scroll-section'
+import { HideScroll } from 'react-hide-on-scroll'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as AttachIcon } from '../assets/svg/attach.svg'
-import { HideScroll } from 'react-hide-on-scroll'
 
 export const ContactUs = () => {
-
   const content = useScrollSection('content')
 
   const handleChangeSection = () => {
@@ -62,8 +61,8 @@ export const ContactUs = () => {
                 iteration="1"
                 fillMode="none">
                 <p className="font-sofia font-light text-lg">
-                  Just fill this form and we will contact you promptly to discuss your
-                  project. Hate forms? Drop us a message at
+                  Just fill this form and we will contact you promptly to
+                  discuss your project. Hate forms? Drop us a message at
                   <span className="text-base-purple"> info@outdev.com</span> or
                   <span className="text-base-purple"> hello@outdev.com</span>
                 </p>
@@ -109,7 +108,9 @@ export const ContactUs = () => {
                     "
                   />
                   <div className="flex">
-                    <label htmlFor="file" className="pt-4 pl-4 cursor-ponter flex">
+                    <label
+                      htmlFor="file"
+                      className="pt-4 pl-4 cursor-ponter flex">
                       <AttachIcon />
                       <span className="ml-4">Add Attachment</span>
                       <input type="file" id="file" className="hidden" />
