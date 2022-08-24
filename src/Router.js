@@ -15,26 +15,29 @@ import { InmersiveWebDevelopment } from './views/services/InmersiveWebDevelopmen
 import { Web2Development } from './views/services/Web2Development'
 import { Web3Development } from './views/services/Web3Development'
 
-export const SiteRouter = () => (
-  <Router>
-    <ScrollToTop />
-    <ScrollingProvider>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/development-areas" element={<DevelopmentAreas />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/web-3-development" element={<Web3Development />} />
-        <Route
-          path="/inmersive-web-development"
-          element={<InmersiveWebDevelopment />}
-        />
-        <Route path="/web-2-development" element={<Web2Development />} />
-        <Route path="/app-development" element={<AppDevelopment />} />
-        <Route path="/ar-vr-mr-development" element={<ArVrMrDevelopment />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-      </Routes>
-      <Footer />
-    </ScrollingProvider>
-  </Router>
-)
+export const SiteRouter = () => {
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <ScrollingProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/development-areas" element={<DevelopmentAreas />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/web-3-development" element={<Web3Development />} />
+          <Route
+            path="/inmersive-web-development"
+            element={<InmersiveWebDevelopment />}
+          />
+          <Route path="/web-2-development" element={<Web2Development />} />
+          <Route path="/app-development" element={<AppDevelopment />} />
+          <Route path="/ar-vr-mr-development" element={<ArVrMrDevelopment />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </ScrollingProvider>
+    </Router>
+  )
+}

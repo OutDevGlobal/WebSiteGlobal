@@ -8,7 +8,10 @@ import { SiteRouter } from './Router'
 window.gsap = gsap
 
 const App = () => {
+
   useEffect(() => {
+
+    console.log("Triggers")
     window.gsap.registerPlugin(ScrollTrigger)
 
     // Text animation

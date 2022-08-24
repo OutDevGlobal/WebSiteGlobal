@@ -153,7 +153,7 @@ export const Home = () => {
                 <MovingText
                   className="animated-text hidden"
                   type="popIn"
-                  duration="1000ms"
+                  duration="2000ms"
                   delay="0s"
                   direction="normal"
                   timing="ease"
@@ -167,7 +167,7 @@ export const Home = () => {
                   <MovingText
                     className="animated-text hidden"
                     type="popIn"
-                    duration="1000ms"
+                    duration="2000ms"
                     delay="200ms"
                     direction="normal"
                     timing="ease-out"
@@ -202,15 +202,35 @@ export const Home = () => {
             </MovingText>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
-            <div className="pr-8 ">
-              We are the company that make real the technological ventures,
-              developing technological starups at early stages and generating
-              MVPs.
+            <div className="pr-8">
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="0ms"
+                direction="normal"
+                timing="ease-out"
+                iteration="1"
+                fillMode="none">
+                We are the company that make real the technological ventures,
+                developing technological starups at early stages and generating
+                MVPs.
+              </MovingText>
             </div>
-            <div className="pr-8 ">
-              Reinvention moves the world forward. And that&apos;s what we do
-              best. We help organizations reinvent themselves through digital
-              and cognitive transformation.
+            <div className="pr-8">
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="0ms"
+                direction="normal"
+                timing="ease-out"
+                iteration="1"
+                fillMode="none">
+                Reinvention moves the world forward. And that&apos;s what we do
+                best. We help organizations reinvent themselves through digital
+                and cognitive transformation.
+              </MovingText>
             </div>
           </div>
         </div>
@@ -222,7 +242,17 @@ export const Home = () => {
         id="stuff"
         className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
         <div className="text-2xl md:text-6xl md:p-8 uppercase self-center ">
-          We team up with you to develop the products that you need
+          <MovingText
+            className="animated-text hidden"
+            type="flip"
+            duration="500ms"
+            delay="0ms"
+            direction="normal"
+            timing="ease-in"
+            iteration="1"
+            fillMode="none">
+            We team up with you to develop the products that you need
+          </MovingText>
         </div>
       </Section>
       {/* Ends stuff slide */}
@@ -231,8 +261,18 @@ export const Home = () => {
       <Section
         id="services"
         className="justify-center md:p-20 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase ">
-          WHAT DO WE DO?
+        <div className="text-2xl md:text-6xl md:p-8 uppercase">
+          <MovingText
+            className="animated-text hidden"
+            type="fadeInFromLeft"
+            duration="1000ms"
+            delay="0s"
+            direction="normal"
+            timing="ease"
+            iteration="1"
+            fillMode="none">
+            WHAT DO WE DO?
+          </MovingText>
         </div>
         <div className="text-xl md:text-4xl md:px-20">
           <div className="grid md:flex my-5">
@@ -242,7 +282,19 @@ export const Home = () => {
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
-              <span className="relative z-50">3.0 WEB DEVELOPMENT</span>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  3.0 WEB DEVELOPMENT
+                </MovingText>
+              </span>
               <div className="absolute pointer-events-none">
                 <div
                   className="
@@ -272,7 +324,19 @@ export const Home = () => {
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
-              <span className="relative z-50">AR / VR / MR DEVELOPMENT</span>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  AR / VR / MR DEVELOPMENT
+                </MovingText>
+              </span>
               <div className="absolute pointer-events-none">
                 <div
                   className="
@@ -304,7 +368,19 @@ export const Home = () => {
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
-              <span className="relative z-50">INMERSIVE WEB DEVELOPMENT</span>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  INMERSIVE WEB DEVELOPMENT
+                </MovingText>
+              </span>
               <div className="absolute pointer-events-none">
                 <div
                   className="
@@ -337,7 +413,19 @@ export const Home = () => {
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
-              <span className="relative z-50">2.0 WEB DEVELOPMENT</span>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  2.0 WEB DEVELOPMENT
+                </MovingText>
+              </span>
               <div className="absolute pointer-events-none">
                 <div
                   className="
@@ -367,8 +455,18 @@ export const Home = () => {
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
-              <span className="relative z-50">
-                CROSS-PLATFORM MOBILE DEVELOPMENTS
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  CROSS-PLATFORM MOBILE DEVELOPMENTS
+                </MovingText>
               </span>
               <div className="absolute pointer-events-none">
                 <div
@@ -396,7 +494,17 @@ export const Home = () => {
           <button
             type="button"
             className="hover:text-base-yellow duration-300 ">
-            EXPLORE ALL EXPERTISE
+              <MovingText
+                className="animated-text hidden"
+                type="rotateCW"
+                duration="1000ms"
+                delay="2s"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                EXPLORE ALL EXPERTISE
+              </MovingText>
           </button>
         </div>
       </Section>
@@ -405,24 +513,66 @@ export const Home = () => {
       {/* Start how we do it slide */}
       <Section
         id="howWeDoIt"
-        className="justify-center md:p-20 px-10 bg-waves-how bg-no-repeat">
-        <div className="self-center grid grid-cols-1 md:grid-cols-2">
+        className="justify-center md:p-20 px-10 bg-waves-how bg-no-repeat h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 content-center h-full">
           <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
           <div className="md:p-8">
-            <p className="uppercase text-6xl mb-12 ">HOW WE DO IT?</p>
-            <p className="font-sofia font-light text-lg ">
-              Our experience combined with a vast and diverse team of
-              professionals, allows us to give you what you need, while building
-              a structured growth map for the future.
-            </p>
-            <p className="my-8 font-sofia font-light text-lg ">
-              We apply the best practices to create well-structured products,
-              with a solid architecture and very intuitive for the user.
-            </p>
-            <p className="font-sofia font-light text-lg ">
-              We use the most innovative technologies in all our solutions, from
-              the simplest websites to the most complex native applications.
-            </p>
+            <div className="uppercase text-6xl mb-12 ">
+              <MovingText
+                className="animated-text hidden"
+                type="fadeInFromRight"
+                duration="1000ms"
+                delay="0s"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                HOW WE DO IT?
+              </MovingText>
+            </div>
+            <MovingText
+              className="animated-text hidden"
+              type="popIn"
+              duration="2000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              <p className="font-sofia font-light text-lg ">
+                Our experience combined with a vast and diverse team of
+                professionals, allows us to give you what you need, while building
+                a structured growth map for the future.
+              </p>
+            </MovingText>
+            <MovingText
+              className="animated-text hidden"
+              type="popIn"
+              duration="2000ms"
+              delay="250ms"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              <p className="my-8 font-sofia font-light text-lg ">
+                We apply the best practices to create well-structured products,
+                with a solid architecture and very intuitive for the user.
+              </p>
+            </MovingText>
+            <MovingText
+              className="animated-text hidden"
+              type="popIn"
+              duration="2000ms"
+              delay="500ms"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              <p className="font-sofia font-light text-lg ">
+                We use the most innovative technologies in all our solutions, from
+                the simplest websites to the most complex native applications.
+              </p>
+            </MovingText>
           </div>
         </div>
       </Section>
@@ -433,8 +583,18 @@ export const Home = () => {
         id="ourTec"
         className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat px-10">
         <div className="self-center md:p-20">
-          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12 ">
-            OUR TECNOLOGY
+          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12">
+            <MovingText
+              className="animated-text hidden"
+              type="fadeInFromLeft"
+              duration="1000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              OUR TECNOLOGY
+            </MovingText>
           </div>
           <div className="flex flex-wrap gap-4 relative">
             <Draggable ref={pythonRef} nodeRef={pythonRef}>
@@ -536,7 +696,17 @@ export const Home = () => {
       <Section id="devAreas" className="justify-center md:p-20 h-full px-10">
         <div className="self-center grid grid-cols-1 md:grid-cols-3">
           <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8 ">
-            we invest efforts in different areas that take us to the next level.
+            <MovingText
+              className="animated-text hidden"
+              type="fadeInFromLeft"
+              duration="1000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              we invest efforts in different areas that take us to the next level
+            </MovingText>
           </div>
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
             <NavLink
@@ -545,12 +715,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                Research and technological development
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="200ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  Research and technological development
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
@@ -567,12 +747,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                SMART WEARABLES
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="4000ms"
+                delay="500ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  SMART WEARABLES
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
@@ -589,12 +779,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                SPORTS
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="600ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  SPORTS
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
@@ -611,12 +811,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                ART AND ENTRETAINMENT
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="800ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  ART AND ENTRETAINMENT
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
@@ -633,12 +843,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                EDUCATION
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="1000ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  EDUCATION
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
@@ -655,12 +875,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                HEALTH
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="1200ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  HEALTH
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
@@ -677,12 +907,22 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
-                FEEDING
-              </p>
-              <p className="font-sofia font-light text-md slide-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="1300ms"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                  FEEDING
+                </p>
+                <p className="font-sofia font-light text-md slide-right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                </p>
+              </MovingText>
               <div
                 className="
                   absolute -top-1/2 duration-300
