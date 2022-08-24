@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
 import Draggable from 'react-draggable'
@@ -41,9 +41,7 @@ export const Home = () => {
     devAreas,
     footer,
   ]
-  const sectionsLen = sections.length
 
-  const [isChanging, setIsChanging] = useState(false)
   const [currentSection, setCurrentSection] = useState(0)
 
   const jsRef = useRef(null)
@@ -59,45 +57,11 @@ export const Home = () => {
 
   const handleChangeSection = () => {
     if (currentSection + 1 !== sections.length) {
-      console.log('Changing to section ', currentSection + 1)
       const section = sections[currentSection + 1]
       section.onClick()
       setCurrentSection(currentSection + 1)
-      setIsChanging(false)
     }
   }
-
-  const handleNavigation = useCallback((e) => {
-    e.preventDefault()
-    e.stopPropagation()
-
-    if (e.deltaY <= 0) {
-      if (currentSection == 0) {
-        // handleChangeSection()
-      }
-    } else if (e.deltaY > 0) {
-      console.log(isChanging)
-      if (currentSection < sectionsLen) {
-        if (!isChanging) {
-          setIsChanging(true)
-          handleChangeSection()
-          // console.log("Remove listener")
-          // window.removeEventListener("wheel", handleNavigation, {passive: false})
-        } else {
-          console.log('Change')
-        }
-      }
-    }
-  }, [])
-
-  // useEffect(() => {
-  //   console.log(currentSectioRef.current)
-  // }, [currentSectioRef])
-
-  // useEffect(() => {
-  //   sections[0].onClick()
-  // window.addEventListener("wheel", handleNavigation, {passive: false})
-  // }, [])
 
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
@@ -224,14 +188,26 @@ export const Home = () => {
         id="whoWeAre"
         className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
         <div className="self-center">
-          <div className="text-6xl md:p-8 reveal-up">WHO WE ARE</div>
+          <div className="text-6xl md:p-8 ">
+            <MovingText
+              className="animated-text hidden"
+              type="fadeInFromLeft"
+              duration="1000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              WHO WE ARE
+            </MovingText>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
-            <div className="pr-8 reveal-up">
+            <div className="pr-8 ">
               We are the company that make real the technological ventures,
               developing technological starups at early stages and generating
               MVPs.
             </div>
-            <div className="pr-8 reveal-up">
+            <div className="pr-8 ">
               Reinvention moves the world forward. And that&apos;s what we do
               best. We help organizations reinvent themselves through digital
               and cognitive transformation.
@@ -245,7 +221,7 @@ export const Home = () => {
       <Section
         id="stuff"
         className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center reveal-up">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center ">
           We team up with you to develop the products that you need
         </div>
       </Section>
@@ -255,14 +231,14 @@ export const Home = () => {
       <Section
         id="services"
         className="justify-center md:p-20 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase reveal-up">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase ">
           WHAT DO WE DO?
         </div>
         <div className="text-xl md:text-4xl md:px-20">
           <div className="grid md:flex my-5">
             <NavLink
               to="/web-3-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -292,7 +268,7 @@ export const Home = () => {
             </div>
             <NavLink
               to="/ar-vr-mr-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -323,7 +299,7 @@ export const Home = () => {
             <NavLink
               to="/inmersive-web-development"
               className="
-                hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left
+                hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 
               "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
@@ -357,7 +333,7 @@ export const Home = () => {
           <div className="grid md:flex my-5">
             <NavLink
               to="/web-2-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -387,7 +363,7 @@ export const Home = () => {
             </div>
             <NavLink
               to="/app-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -419,7 +395,7 @@ export const Home = () => {
         <div className="text-lg md:p-8 uppercase text-right my-5">
           <button
             type="button"
-            className="hover:text-base-yellow duration-300 reveal-up">
+            className="hover:text-base-yellow duration-300 ">
             EXPLORE ALL EXPERTISE
           </button>
         </div>
@@ -433,17 +409,17 @@ export const Home = () => {
         <div className="self-center grid grid-cols-1 md:grid-cols-2">
           <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
           <div className="md:p-8">
-            <p className="uppercase text-6xl mb-12 reveal-up">HOW WE DO IT?</p>
-            <p className="font-sofia font-light text-lg rotate-left">
+            <p className="uppercase text-6xl mb-12 ">HOW WE DO IT?</p>
+            <p className="font-sofia font-light text-lg ">
               Our experience combined with a vast and diverse team of
               professionals, allows us to give you what you need, while building
               a structured growth map for the future.
             </p>
-            <p className="my-8 font-sofia font-light text-lg rotate-right">
+            <p className="my-8 font-sofia font-light text-lg ">
               We apply the best practices to create well-structured products,
               with a solid architecture and very intuitive for the user.
             </p>
-            <p className="font-sofia font-light text-lg rotate-left">
+            <p className="font-sofia font-light text-lg ">
               We use the most innovative technologies in all our solutions, from
               the simplest websites to the most complex native applications.
             </p>
@@ -457,7 +433,7 @@ export const Home = () => {
         id="ourTec"
         className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat px-10">
         <div className="self-center md:p-20">
-          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12 reveal-up">
+          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12 ">
             OUR TECNOLOGY
           </div>
           <div className="flex flex-wrap gap-4 relative">
@@ -559,7 +535,7 @@ export const Home = () => {
       {/* Start dev areas slide */}
       <Section id="devAreas" className="justify-center md:p-20 h-full px-10">
         <div className="self-center grid grid-cols-1 md:grid-cols-3">
-          <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8 reveal-up">
+          <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8 ">
             we invest efforts in different areas that take us to the next level.
           </div>
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -569,7 +545,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 Research and technological development
               </p>
               <p className="font-sofia font-light text-md slide-right">
@@ -591,7 +567,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 SMART WEARABLES
               </p>
               <p className="font-sofia font-light text-md slide-right">
@@ -613,7 +589,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 SPORTS
               </p>
               <p className="font-sofia font-light text-md slide-right">
@@ -635,7 +611,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 ART AND ENTRETAINMENT
               </p>
               <p className="font-sofia font-light text-md slide-right">
@@ -657,7 +633,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 EDUCATION
               </p>
               <p className="font-sofia font-light text-md slide-right">
@@ -679,7 +655,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 HEALTH
               </p>
               <p className="font-sofia font-light text-md slide-right">
@@ -701,7 +677,7 @@ export const Home = () => {
               onMouseMove={moveRoundImage}
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
-              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 slide-left">
+              <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                 FEEDING
               </p>
               <p className="font-sofia font-light text-md slide-right">

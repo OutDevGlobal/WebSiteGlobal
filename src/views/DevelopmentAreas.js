@@ -5,7 +5,7 @@ export const DevelopmentAreas = () => (
   <div className="w-full bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
     {/* Start banner slide */}
     <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
-      <div className="text-2xl md:text-6xl md:p-8 uppercase self-center rotate-right">
+      <div className="text-2xl md:text-6xl md:p-8 uppercase self-center ">
         We&apos;re an Integral services development company
       </div>
     </div>
@@ -13,10 +13,10 @@ export const DevelopmentAreas = () => (
 
     {/* Start subtitle slide */}
     <div className="mx-14 md:mx-20 mb-40">
-      <div className="text-2xl md:text-6xl uppercase md:w-1/2 reveal-up">
+      <div className="text-2xl md:text-6xl uppercase md:w-1/2 ">
         Research and Development
       </div>
-      <p className="text-lg mt-10 md:w-2/3 reveal-up">
+      <p className="text-lg mt-10 md:w-2/3 ">
         The future is now and there are infinite opportunities, that is why we
         invest part of our efforts in different areas that take us to the next
         level.
@@ -30,13 +30,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-2 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Technological Development
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md text-justify md:text-left rotate-left">
+            <p className="font-sofia font-light font-md text-justify md:text-left ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -66,13 +66,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-3 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Art and Entretainment
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md rotate-left">
+            <p className="font-sofia font-light font-md ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -102,13 +102,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-2 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Smart Wearables
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md rotate-left">
+            <p className="font-sofia font-light font-md ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -138,13 +138,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-3 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Sports
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md rotate-left">
+            <p className="font-sofia font-light font-md ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -174,13 +174,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-2 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Health
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md rotate-left">
+            <p className="font-sofia font-light font-md ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -210,13 +210,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-3 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Education
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md rotate-left">
+            <p className="font-sofia font-light font-md ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,
@@ -246,13 +246,13 @@ export const DevelopmentAreas = () => (
       <div className="relative w-full mb-40">
         <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
           <div className="md:col-start-2 md:col-span-2">
-            <p className="uppercase text-2xl md:text-3xl mb-5 reveal-up">
+            <p className="uppercase text-2xl md:text-3xl mb-5 ">
               Feeding
             </p>
-            <p className="font-sofia font-thin text-2xl mb-5 rotate-right">
+            <p className="font-sofia font-thin text-2xl mb-5 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <p className="font-sofia font-light font-md rotate-left">
+            <p className="font-sofia font-light font-md ">
               Donec blandit, sem eget eleifend sagittis, ante est iaculis lacus,
               ut malesuada urna lectus ut est. Etiam vitae ligula sit amet nisi
               fermentum cursus tempor non mauris. Nulla euismod risus libero,

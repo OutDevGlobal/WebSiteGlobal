@@ -1,10 +1,17 @@
 import React from 'react'
+import { HideScroll } from 'react-hide-on-scroll'
 import { NavLink } from 'react-router-dom'
-import { Section } from 'react-scroll-section'
+import { Section, useScrollSection } from 'react-scroll-section'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
 
 export const Services = () => {
+  const services = useScrollSection('services')
+
+  const handleChangeSection = () => {
+    services.onClick()
+  }
+
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
@@ -63,14 +70,14 @@ export const Services = () => {
       <Section
         id="services"
         className="justify-center md:p-20 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase reveal-up">
+        <div className="text-2xl md:text-6xl md:p-8 uppercase ">
           WHAT DO WE DO?
         </div>
         <div className="text-xl md:text-4xl md:px-20">
           <div className="grid md:flex my-5 relative z-0">
             <NavLink
               to="/web-3-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -100,7 +107,7 @@ export const Services = () => {
             </div>
             <NavLink
               to="/ar-vr-mr-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -131,7 +138,7 @@ export const Services = () => {
             <NavLink
               to="/inmersive-web-development"
               className="
-              hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 rotate-left
+              hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 
             "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
@@ -165,7 +172,7 @@ export const Services = () => {
           <div className="grid md:flex my-5 relative z-0">
             <NavLink
               to="/web-2-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-right"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -195,7 +202,7 @@ export const Services = () => {
             </div>
             <NavLink
               to="/app-development"
-              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 rotate-left"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
               onMouseMove={moveOnGrayImage}
               onMouseEnter={showGrayImage}
               onMouseLeave={hiddeGrayImage}>
@@ -227,22 +234,27 @@ export const Services = () => {
         <div className="text-lg md:p-8 uppercase text-right my-5">
           <button
             type="button"
-            className="hover:text-base-yellow duration-300 reveal-up">
+            className="hover:text-base-yellow duration-300 ">
             EXPLORE ALL EXPERTISE
           </button>
         </div>
       </Section>
       {/* Ends What We Do slide */}
 
-      <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
-        <button type="button" className="sticky">
-          <IconArrowDown
-            className="
-              text-transparent hover:text-base-yellow hover:translate hover:scale-110 duration-300
-            "
-          />
-        </button>
-      </div>
+      <HideScroll variant="down">
+        <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+          <button
+            type="button"
+            onClick={handleChangeSection}
+            className="sticky">
+            <IconArrowDown
+              className="
+                text-transparent hover:text-base-yellow hover:translate hover:scale-110 duration-300
+              "
+            />
+          </button>
+        </div>
+      </HideScroll>
     </div>
   )
 }

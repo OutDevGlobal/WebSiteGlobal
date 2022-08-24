@@ -1,5 +1,5 @@
 import React from 'react'
-import { HideOn } from 'react-hide-on-scroll'
+import { HideScroll } from 'react-hide-on-scroll'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
@@ -254,7 +254,7 @@ export const ArVrMrDevelopment = () => {
         {/* Ends content slide */}
       </Section>
 
-      <HideOn divID="content">
+      <HideScroll variant="down">
         <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
           <button
             type="button"
@@ -267,7 +267,7 @@ export const ArVrMrDevelopment = () => {
             />
           </button>
         </div>
-      </HideOn>
+      </HideScroll>
     </div>
   )
 }
