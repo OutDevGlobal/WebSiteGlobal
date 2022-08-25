@@ -91,8 +91,8 @@ export const Services = () => {
   return (
     <div className="w-full relative px-1">
       {/* Start banner slide */}
-      <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
+      <div className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen">
+        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase self-center">
           <MovingText
             className="animated-text-services hidden"
             type="flip"
@@ -109,11 +109,11 @@ export const Services = () => {
       </div>
       {/* Ends banner slide */}
 
-      {/* Start What We Do slide */}
+      {/* Start services slide */}
       <Section
         id="services"
-        className="justify-center md:p-20 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase">
+        className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
+        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase">
           <MovingText
             className="animated-text-services hidden"
             type="fadeInFromLeft"
@@ -127,7 +127,7 @@ export const Services = () => {
           </MovingText>
         </div>
         <div className="text-xl md:text-4xl md:px-20">
-          <div className="grid md:flex my-5">
+          <div className="grid md:flex my-5 gap-8">
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -210,8 +210,7 @@ export const Services = () => {
               </div>
             </NavLink>
           </div>
-
-          <div className="grid md:flex my-5">
+          <div className="grid md:flex my-5 gap-8">
             <NavLink
               to="/inmersive-web-development"
               className="
@@ -257,8 +256,7 @@ export const Services = () => {
               <IconSlashDivider />
             </div>
           </div>
-
-          <div className="grid md:flex my-5">
+          <div className="grid md:flex my-5 gap-8">
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -342,7 +340,7 @@ export const Services = () => {
             </NavLink>
           </div>
         </div>
-        <div className="text-lg md:p-8 uppercase text-right my-5">
+        <div className="text-lg xl:text-2xl md:p-8 uppercase text-right my-5">
           <button
             type="button"
             className="hover:text-base-yellow duration-300 ">
@@ -360,7 +358,7 @@ export const Services = () => {
           </button>
         </div>
       </Section>
-      {/* Ends What We Do slide */}
+      {/* Ends services slide */}
 
       <HideScroll variant="down">
         <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">

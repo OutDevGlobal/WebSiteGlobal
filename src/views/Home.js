@@ -179,8 +179,8 @@ export const Home = () => {
         <div className="self-center">
           <Star />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 text-lg w-full">
-          <div className="text-center self-end pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 text-lg lg:text-4xl w-full">
+          <div className="text-center self-end p-20 xl:px-40">
             <MovingText
               className="animated-text-home hidden"
               type="popIn"
@@ -193,20 +193,18 @@ export const Home = () => {
               FROM IMAGINATION TO REALITY
             </MovingText>
           </div>
-          <div className="grid grid-cols-1 text-center self-end pb-20">
-            <div className="font-sofia text-xl">
-              <MovingText
-                className="animated-text-home hidden"
-                type="popIn"
-                duration="2000ms"
-                delay="200ms"
-                direction="normal"
-                timing="ease-out"
-                iteration="1"
-                fillMode="none">
-                THE DEVELOPMENT YOUT SOFTWARE NEEDS
-              </MovingText>
-            </div>
+          <div className="text-center self-end p-20 xl:px-40 font-sofia">
+            <MovingText
+              className="animated-text-home hidden"
+              type="popIn"
+              duration="2000ms"
+              delay="200ms"
+              direction="normal"
+              timing="ease-out"
+              iteration="1"
+              fillMode="none">
+              THE DEVELOPMENT YOUT SOFTWARE NEEDS
+            </MovingText>
           </div>
         </div>
       </Section>
@@ -215,9 +213,9 @@ export const Home = () => {
       {/* Start who we are slide */}
       <Section
         id="whoWeAre"
-        className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
+        className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
         <div className="self-center">
-          <div className="text-6xl md:p-8 ">
+          <div className="text-6xl xl:text-8xl md:p-8 ">
             <MovingText
               className="animated-text-home hidden"
               type="fadeInFromLeft"
@@ -230,8 +228,8 @@ export const Home = () => {
               WHO WE ARE
             </MovingText>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
-            <div className="pr-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl xl:text-3xl">
+            <div className="pr-8 lg:pr-32">
               <MovingText
                 className="animated-text-home hidden"
                 type="popIn"
@@ -246,7 +244,7 @@ export const Home = () => {
                 MVPs.
               </MovingText>
             </div>
-            <div className="pr-8">
+            <div className="pr-8 lg:pr-32">
               <MovingText
                 className="animated-text-home hidden"
                 type="popIn"
@@ -269,8 +267,8 @@ export const Home = () => {
       {/* Start stuff slide */}
       <Section
         id="stuff"
-        className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase self-center ">
+        className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
+        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase self-center ">
           <MovingText
             className="animated-text-home hidden"
             type="flip"
@@ -289,8 +287,8 @@ export const Home = () => {
       {/* Start services slide */}
       <Section
         id="services"
-        className="justify-center md:p-20 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl md:p-8 uppercase">
+        className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
+        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase">
           <MovingText
             className="animated-text-home hidden"
             type="fadeInFromLeft"
@@ -304,7 +302,7 @@ export const Home = () => {
           </MovingText>
         </div>
         <div className="text-xl md:text-4xl md:px-20">
-          <div className="grid md:flex my-5">
+          <div className="grid md:flex my-5 gap-8">
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -387,8 +385,7 @@ export const Home = () => {
               </div>
             </NavLink>
           </div>
-
-          <div className="grid md:flex my-5">
+          <div className="grid md:flex my-5 gap-8">
             <NavLink
               to="/inmersive-web-development"
               className="
@@ -434,8 +431,7 @@ export const Home = () => {
               <IconSlashDivider />
             </div>
           </div>
-
-          <div className="grid md:flex my-5">
+          <div className="grid md:flex my-5 gap-8">
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -519,7 +515,7 @@ export const Home = () => {
             </NavLink>
           </div>
         </div>
-        <div className="text-lg md:p-8 uppercase text-right my-5">
+        <div className="text-lg xl:text-2xl md:p-8 uppercase text-right my-5">
           <button
             type="button"
             className="hover:text-base-yellow duration-300 ">
@@ -542,11 +538,11 @@ export const Home = () => {
       {/* Start how we do it slide */}
       <Section
         id="howWeDoIt"
-        className="justify-center md:p-20 px-10 bg-waves-how bg-no-repeat h-screen">
+        className="justify-center md:p-20 xl:p-32 px-10 bg-waves-how bg-no-repeat bg-bottom h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 content-center h-full">
           <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
           <div className="md:p-8">
-            <div className="uppercase text-6xl mb-12 ">
+            <div className="uppercase text-6xl xl:text-8xl mb-12 ">
               <MovingText
                 className="animated-text-home hidden"
                 type="fadeInFromRight"
@@ -568,7 +564,7 @@ export const Home = () => {
               timing="ease"
               iteration="1"
               fillMode="none">
-              <p className="font-sofia font-light text-lg ">
+              <p className="font-sofia font-light text-lg xl:text-2xl">
                 Our experience combined with a vast and diverse team of
                 professionals, allows us to give you what you need, while
                 building a structured growth map for the future.
@@ -583,7 +579,7 @@ export const Home = () => {
               timing="ease"
               iteration="1"
               fillMode="none">
-              <p className="my-8 font-sofia font-light text-lg ">
+              <p className="my-8 font-sofia font-light text-lg xl:text-2xl">
                 We apply the best practices to create well-structured products,
                 with a solid architecture and very intuitive for the user.
               </p>
@@ -597,7 +593,7 @@ export const Home = () => {
               timing="ease"
               iteration="1"
               fillMode="none">
-              <p className="font-sofia font-light text-lg ">
+              <p className="font-sofia font-light text-lg xl:text-2xl">
                 We use the most innovative technologies in all our solutions,
                 from the simplest websites to the most complex native
                 applications.
@@ -611,9 +607,9 @@ export const Home = () => {
       {/* Start out technology slide */}
       <Section
         id="ourTec"
-        className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat px-10">
-        <div className="self-center md:p-20">
-          <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12">
+        className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat bg-bottom px-10 h-screen">
+        <div className="self-center md:p-20 xl:p-32">
+          <div className="text-4xl md:text-6xl xl:text-8xl md:p-8 uppercase mb-12">
             <MovingText
               className="animated-text-home hidden"
               type="fadeInFromLeft"
@@ -723,9 +719,9 @@ export const Home = () => {
       {/* Ends out technology slide */}
 
       {/* Start dev areas slide */}
-      <Section id="devAreas" className="justify-center md:p-20 h-full px-10">
-        <div className="self-center grid grid-cols-1 md:grid-cols-3">
-          <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8 ">
+      <Section id="devAreas" className="justify-center md:p-24 xl:p-32 h-screen px-10">
+        <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-8 h-full">
+          <div className="text-2xl md:text-4xl xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
             <MovingText
               className="animated-text-home hidden"
               type="fadeInFromLeft"
@@ -755,10 +751,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   Research and technological development
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
@@ -787,10 +783,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   SMART WEARABLES
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
@@ -819,10 +815,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   SPORTS
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
@@ -851,10 +847,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   ART AND ENTRETAINMENT
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
@@ -883,10 +879,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   EDUCATION
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
@@ -915,10 +911,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   HEALTH
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
@@ -947,10 +943,10 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   FEEDING
                 </p>
-                <p className="font-sofia font-light text-md slide-right">
+                <p className="xl:text-xl font-sofia font-light text-md slide-right">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                 </p>
               </MovingText>
