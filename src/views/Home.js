@@ -20,6 +20,7 @@ import reactIcon from '../assets/svg/technology/react.svg'
 import unityIcon from '../assets/svg/technology/unity.svg'
 
 import shape1 from '../assets/img/shape_test_1.png'
+import { Star } from '../components/animations/Star'
 
 export const Home = () => {
   const home = useScrollSection('home')
@@ -145,38 +146,36 @@ export const Home = () => {
     <div className="w-full relative">
       {/* Start home slide */}
       <Section id="home" className="-mt-32 flex justify-center h-screen px-10">
-        <div className="self-center relative">
-          <img src={shape1} alt="Animation" className="w-[1000px]" />
-          <div className="absolute bottom-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 text-lg">
-              <div className="text-center">
-                <MovingText
-                  className="animated-text hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  FROM IMAGINATION TO REALITY
-                </MovingText>
-              </div>
-              <div className="grid grid-cols-1 text-center">
-                <div className="font-sofia text-xl">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="200ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
-                    THE DEVELOPMENT YOUT SOFTWARE NEEDS
-                  </MovingText>
-                </div>
-              </div>
+        <div className="self-center">
+          <Star />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 text-lg w-full">
+          <div className="text-center self-end pb-20">
+            <MovingText
+              className="animated-text hidden"
+              type="popIn"
+              duration="2000ms"
+              delay="0s"
+              direction="normal"
+              timing="ease"
+              iteration="1"
+              fillMode="none">
+              FROM IMAGINATION TO REALITY
+            </MovingText>
+          </div>
+          <div className="grid grid-cols-1 text-center self-end pb-20">
+            <div className="font-sofia text-xl">
+              <MovingText
+                className="animated-text hidden"
+                type="popIn"
+                duration="2000ms"
+                delay="200ms"
+                direction="normal"
+                timing="ease-out"
+                iteration="1"
+                fillMode="none">
+                THE DEVELOPMENT YOUT SOFTWARE NEEDS
+              </MovingText>
             </div>
           </div>
         </div>
