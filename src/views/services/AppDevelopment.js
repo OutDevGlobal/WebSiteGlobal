@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HideScroll } from 'react-hide-on-scroll'
 import MovingText from 'react-moving-text'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
@@ -10,6 +11,36 @@ export const AppDevelopment = () => {
   const handleChangeSection = () => {
     content.onClick()
   }
+
+  useEffect(() => {
+    window.gsap.registerPlugin(ScrollTrigger)
+
+    // Text animation
+    window.gsap.utils.toArray('.animated-text-app').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeave() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+        onEnterBack() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeaveBack() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+      })
+    })
+  }, [])
+
+  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
@@ -55,7 +86,7 @@ export const AppDevelopment = () => {
           onMouseLeave={hiddeColorCursor}
           className="text-2xl md:text-6xl uppercase self-center md:w-2/3">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-app hidden"
             type="fadeInFromRight"
             duration="1000ms"
             delay="0s"
@@ -68,7 +99,7 @@ export const AppDevelopment = () => {
             </p>
           </MovingText>
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-app hidden"
             type="fadeInFromLeft"
             duration="1000ms"
             delay="0s"
@@ -82,7 +113,7 @@ export const AppDevelopment = () => {
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-app hidden"
               type="fadeIn"
               duration="4000ms"
               delay="0s"
@@ -117,7 +148,7 @@ export const AppDevelopment = () => {
         {/* Start subtitle slide */}
         <div className="md:m-20 mb-40">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-app hidden"
             type="popIn"
             duration="2000ms"
             delay="0ms"
@@ -145,7 +176,7 @@ export const AppDevelopment = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -158,7 +189,7 @@ export const AppDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -169,7 +200,7 @@ export const AppDevelopment = () => {
                   <p className="uppercase text-3xl mb-5">Android</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -182,7 +213,7 @@ export const AppDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -223,7 +254,7 @@ export const AppDevelopment = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -236,7 +267,7 @@ export const AppDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -247,7 +278,7 @@ export const AppDevelopment = () => {
                   <p className="uppercase text-3xl mb-5">IOS</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -260,7 +291,7 @@ export const AppDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -301,7 +332,7 @@ export const AppDevelopment = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -314,7 +345,7 @@ export const AppDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -325,7 +356,7 @@ export const AppDevelopment = () => {
                   <p className="uppercase text-3xl mb-5">Hybrid</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -338,7 +369,7 @@ export const AppDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"

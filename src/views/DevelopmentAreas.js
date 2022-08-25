@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MovingText from 'react-moving-text'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { HideScroll } from 'react-hide-on-scroll'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 
 export const DevelopmentAreas = () => {
@@ -11,13 +12,43 @@ export const DevelopmentAreas = () => {
     content.onClick()
   }
 
+  useEffect(() => {
+    window.gsap.registerPlugin(ScrollTrigger)
+
+    // Text animation
+    window.gsap.utils.toArray('.animated-text-dev-areas').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeave() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+        onEnterBack() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeaveBack() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+      })
+    })
+  }, [])
+
+  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
+
   return (
     <div className="w-full bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       {/* Start banner slide */}
       <div className="mx-14 md:mx-20 grid grid-cols-1 justify-center h-screen">
         <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-dev-areas hidden"
             type="flip"
             duration="500ms"
             delay="0ms"
@@ -36,7 +67,7 @@ export const DevelopmentAreas = () => {
         <div className="mx-14 md:mx-20 mb-40">
           <div className="text-2xl md:text-6xl uppercase md:w-1/2 ">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-dev-areas hidden"
               type="fadeInFromLeft"
               duration="1000ms"
               delay="0s"
@@ -47,21 +78,21 @@ export const DevelopmentAreas = () => {
               Research and Development
             </MovingText>
           </div>
-          <p className="text-lg mt-10 md:w-2/3 ">
-            <MovingText
-              className="animated-text hidden"
-              type="popIn"
-              duration="2000ms"
-              delay="0ms"
-              direction="normal"
-              timing="ease-out"
-              iteration="1"
-              fillMode="none">
+          <MovingText
+            className="animated-text-dev-areas hidden"
+            type="popIn"
+            duration="2000ms"
+            delay="0ms"
+            direction="normal"
+            timing="ease-out"
+            iteration="1"
+            fillMode="none">
+              <p className="text-lg mt-10 md:w-2/3 ">
               The future is now and there are infinite opportunities, that is
               why we invest part of our efforts in different areas that take us
               to the next level.
-            </MovingText>
-          </p>
+            </p>
+          </MovingText>
         </div>
         {/* Ends subtitle slide */}
 
@@ -71,50 +102,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromLeft"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Technological Development
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md text-justify md:text-left ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -138,50 +169,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromRight"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Art and Entretainment
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -205,50 +236,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromLeft"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Smart Wearables
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -272,50 +303,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromRight"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Sports
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -339,50 +370,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromLeft"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Health
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -406,50 +437,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromRight"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Education
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -473,50 +504,50 @@ export const DevelopmentAreas = () => {
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <p className="uppercase text-2xl md:text-3xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="fadeInFromLeft"
-                    duration="1000ms"
-                    delay="0s"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="fadeInFromLeft"
+                  duration="1000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="uppercase text-2xl md:text-3xl mb-5 ">
                     Feeding
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-thin text-2xl mb-5 ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-thin text-2xl mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </MovingText>
-                </p>
-                <p className="font-sofia font-light font-md ">
-                  <MovingText
-                    className="animated-text hidden"
-                    type="popIn"
-                    duration="2000ms"
-                    delay="0ms"
-                    direction="normal"
-                    timing="ease-out"
-                    iteration="1"
-                    fillMode="none">
+                  </p>
+                </MovingText>
+                <MovingText
+                  className="animated-text-dev-areas hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0ms"
+                  direction="normal"
+                  timing="ease-out"
+                  iteration="1"
+                  fillMode="none">
+                  <p className="font-sofia font-light font-md text-justify md:text-left ">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
                     euismod risus libero, semper fringilla felis tincidunt
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
-                  </MovingText>
-                </p>
+                  </p>
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HideScroll } from 'react-hide-on-scroll'
 import { NavLink } from 'react-router-dom'
 import { Section, useScrollSection } from 'react-scroll-section'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import MovingText from 'react-moving-text'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
@@ -12,6 +13,36 @@ export const Services = () => {
   const handleChangeSection = () => {
     services.onClick()
   }
+
+  useEffect(() => {
+    window.gsap.registerPlugin(ScrollTrigger)
+
+    // Text animation
+    window.gsap.utils.toArray('.animated-text-services').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeave() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+        onEnterBack() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeaveBack() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+      })
+    })
+  }, [])
+
+  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
@@ -63,7 +94,7 @@ export const Services = () => {
       <div className="grid grid-cols-1 justify-center md:p-20 h-screen">
         <div className="text-2xl md:text-6xl md:p-8 uppercase self-center">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-services hidden"
             type="flip"
             duration="500ms"
             delay="0ms"
@@ -84,7 +115,7 @@ export const Services = () => {
         className="justify-center md:p-20 cursor-default h-screen px-10">
         <div className="text-2xl md:text-6xl md:p-8 uppercase">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-services hidden"
             type="fadeInFromLeft"
             duration="1000ms"
             delay="0s"
@@ -105,7 +136,7 @@ export const Services = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-services hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -147,7 +178,7 @@ export const Services = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-services hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -191,7 +222,7 @@ export const Services = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-services hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -236,7 +267,7 @@ export const Services = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-services hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -278,7 +309,7 @@ export const Services = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-services hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -316,7 +347,7 @@ export const Services = () => {
             type="button"
             className="hover:text-base-yellow duration-300 ">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-services hidden"
               type="rotateCW"
               duration="1000ms"
               delay="2s"

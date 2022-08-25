@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MovingText from 'react-moving-text'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { HideScroll } from 'react-hide-on-scroll'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as AttachIcon } from '../assets/svg/attach.svg'
 
@@ -12,13 +13,43 @@ export const ContactUs = () => {
     content.onClick()
   }
 
+  useEffect(() => {
+    window.gsap.registerPlugin(ScrollTrigger)
+
+    // Text animation
+    window.gsap.utils.toArray('.animated-text-contact').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeave() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+        onEnterBack() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeaveBack() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+      })
+    })
+  }, [])
+
+  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
+
   return (
     <div className="w-full relative">
       {/* Start banner slide */}
       <div className="grid grid-cols-1 md:grid-cols-3 md:justify-end h-screen">
         <div className="md:col-start-3 text-2xl md:text-6xl uppercase justify-center md:self-center md:mr-20">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-contact hidden"
             type="fadeInFromRight"
             duration="1000ms"
             delay="0s"
@@ -38,7 +69,7 @@ export const ContactUs = () => {
           <div className="md:col-start-2">
             <div className="uppercase text-2xl md:text-6xl">
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-contact hidden"
                 type="fadeInFromRight"
                 duration="1000ms"
                 delay="0s"
@@ -52,7 +83,7 @@ export const ContactUs = () => {
             </div>
             <div className="md:py-20">
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-contact hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="0ms"
@@ -70,7 +101,7 @@ export const ContactUs = () => {
             </div>
             <div>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-contact hidden"
                 type="shakeMix"
                 duration="1000ms"
                 delay="0ms"

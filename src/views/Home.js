@@ -1,8 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { NavLink } from 'react-router-dom'
 import Draggable from 'react-draggable'
 import MovingText from 'react-moving-text'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
@@ -54,6 +55,36 @@ export const Home = () => {
   const angularRef = useRef(null)
   const reactRef = useRef(null)
   const githubRef = useRef(null)
+
+  useEffect(() => {
+    window.gsap.registerPlugin(ScrollTrigger)
+
+    // Text animation
+    window.gsap.utils.toArray('.animated-text-home').forEach((element) => {
+      ScrollTrigger.create({
+        trigger: element,
+        markers: true,
+        onEnter() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeave() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+        onEnterBack() {
+          element.classList.remove('hidden')
+          element.classList.add('block')
+        },
+        onLeaveBack() {
+          element.classList.remove('block')
+          element.classList.add('hidden')
+        },
+      })
+    })
+  }, [])
+
+  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
   const handleChangeSection = () => {
     if (currentSection + 1 !== sections.length) {
@@ -151,7 +182,7 @@ export const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 text-lg w-full">
           <div className="text-center self-end pb-20">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="popIn"
               duration="2000ms"
               delay="0s"
@@ -165,7 +196,7 @@ export const Home = () => {
           <div className="grid grid-cols-1 text-center self-end pb-20">
             <div className="font-sofia text-xl">
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="200ms"
@@ -188,7 +219,7 @@ export const Home = () => {
         <div className="self-center">
           <div className="text-6xl md:p-8 ">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="fadeInFromLeft"
               duration="1000ms"
               delay="0s"
@@ -202,7 +233,7 @@ export const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-8 font-sofia font-light text-xl">
             <div className="pr-8">
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="0ms"
@@ -217,7 +248,7 @@ export const Home = () => {
             </div>
             <div className="pr-8">
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="0ms"
@@ -241,7 +272,7 @@ export const Home = () => {
         className="grid grid-cols-1 justify-center md:p-20 h-screen px-10">
         <div className="text-2xl md:text-6xl md:p-8 uppercase self-center ">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-home hidden"
             type="flip"
             duration="500ms"
             delay="0ms"
@@ -261,7 +292,7 @@ export const Home = () => {
         className="justify-center md:p-20 cursor-default h-screen px-10">
         <div className="text-2xl md:text-6xl md:p-8 uppercase">
           <MovingText
-            className="animated-text hidden"
+            className="animated-text-home hidden"
             type="fadeInFromLeft"
             duration="1000ms"
             delay="0s"
@@ -282,7 +313,7 @@ export const Home = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-home hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -324,7 +355,7 @@ export const Home = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-home hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -368,7 +399,7 @@ export const Home = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-home hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -413,7 +444,7 @@ export const Home = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-home hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -455,7 +486,7 @@ export const Home = () => {
               onMouseLeave={hiddeGrayImage}>
               <span className="relative z-30">
                 <MovingText
-                  className="animated-text hidden"
+                  className="animated-text-home hidden"
                   type="popIn"
                   duration="2000ms"
                   delay="0s"
@@ -493,7 +524,7 @@ export const Home = () => {
             type="button"
             className="hover:text-base-yellow duration-300 ">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="rotateCW"
               duration="1000ms"
               delay="2s"
@@ -517,7 +548,7 @@ export const Home = () => {
           <div className="md:p-8">
             <div className="uppercase text-6xl mb-12 ">
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="fadeInFromRight"
                 duration="1000ms"
                 delay="0s"
@@ -529,7 +560,7 @@ export const Home = () => {
               </MovingText>
             </div>
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="popIn"
               duration="2000ms"
               delay="0s"
@@ -544,7 +575,7 @@ export const Home = () => {
               </p>
             </MovingText>
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="popIn"
               duration="2000ms"
               delay="250ms"
@@ -558,7 +589,7 @@ export const Home = () => {
               </p>
             </MovingText>
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="popIn"
               duration="2000ms"
               delay="500ms"
@@ -584,7 +615,7 @@ export const Home = () => {
         <div className="self-center md:p-20">
           <div className="text-4xl md:text-6xl md:p-8 uppercase mb-12">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="fadeInFromLeft"
               duration="1000ms"
               delay="0s"
@@ -696,7 +727,7 @@ export const Home = () => {
         <div className="self-center grid grid-cols-1 md:grid-cols-3">
           <div className="text-2xl md:text-4xl md:p-8 uppercase text-left cursor-default mb-8 ">
             <MovingText
-              className="animated-text hidden"
+              className="animated-text-home hidden"
               type="fadeInFromLeft"
               duration="1000ms"
               delay="0s"
@@ -716,7 +747,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="200ms"
@@ -748,7 +779,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="4000ms"
                 delay="500ms"
@@ -780,7 +811,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="600ms"
@@ -812,7 +843,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="800ms"
@@ -844,7 +875,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="1000ms"
@@ -876,7 +907,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="1200ms"
@@ -908,7 +939,7 @@ export const Home = () => {
               onMouseEnter={showRoundImage}
               onMouseLeave={hideRoundImage}>
               <MovingText
-                className="animated-text hidden"
+                className="animated-text-home hidden"
                 type="popIn"
                 duration="2000ms"
                 delay="1300ms"

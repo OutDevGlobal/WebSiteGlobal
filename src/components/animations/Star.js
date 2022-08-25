@@ -5,7 +5,6 @@ import { degToRad } from "three/src/math/MathUtils"
 
 export const Star = () => {
 
-  let isLoaded = false
   let renderer, scene, camera
   const clock = new THREE.Clock()
   let shapeObj, meshObj
@@ -23,9 +22,7 @@ export const Star = () => {
 
   useEffect(() => {
 
-    if (!isLoaded){
-
-      isLoaded = true
+    if (document.getElementById('canvas-bg') === null){
 
       // renderer
       renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -100,7 +97,7 @@ export const Star = () => {
         particles.rotation.y = Math.random() * 6;
         particles.rotation.z = Math.random() * 6;
 
-        scene.add( particles );
+        // scene.add( particles );
 
       }
 
@@ -134,7 +131,7 @@ export const Star = () => {
         changeColor({ r: Math.random(), g: 0, b: 1 })
       })
     }
-    
+
   }, [])
 
   function changeColor(rgb) {
