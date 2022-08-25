@@ -126,20 +126,13 @@ export const Star = () => {
         console.log(error)
       })
 
-      /* document.addEventListener('click', accelAnimation) */
-
-      /* document.addEventListener('dblclick', scaleObjMax) */
-
-      /* document.addEventListener('dblclick', scaleObjMin) */
-
-      document.addEventListener('dblclick', (e) => {
-        changeColor({ r:0, g:1, b:1 })
-      })
-
-      document.addEventListener('mousemove', updatePointer)
-
       // listener
-      document.addEventListener('resize', onWindowResize);
+      document.addEventListener('mousemove', updatePointer)
+      document.addEventListener('resize', onWindowResize)
+      document.addEventListener('wheel', accelAnimation)
+      document.addEventListener('click', (e) => {
+        changeColor({ r: Math.random(), g: 0, b: 1 })
+      })
     }
     
   }, [])

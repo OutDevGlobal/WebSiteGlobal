@@ -19,7 +19,6 @@ import pythonIcon from '../assets/svg/technology/python.svg'
 import reactIcon from '../assets/svg/technology/react.svg'
 import unityIcon from '../assets/svg/technology/unity.svg'
 
-import shape1 from '../assets/img/shape_test_1.png'
 import { Star } from '../components/animations/Star'
 
 export const Home = () => {
