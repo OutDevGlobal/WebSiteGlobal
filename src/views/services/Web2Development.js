@@ -42,6 +42,12 @@ export const Web2Development = () => {
 
   useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
+  useEffect( () => {
+    if (location.pathname !== '/' &&  document.getElementById('canvas-bg') !== null) {
+      document.getElementById('canvas-bg').remove()
+    }
+  }, [] )
+
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
@@ -94,7 +100,7 @@ export const Web2Development = () => {
             timing="ease"
             iteration="1"
             fillMode="none">
-            <p className="text-md md:text-2xl self-center md:w-2/3 font-sofia font-thin relative z-30">
+            <p className="text-md md:text-2xl xl:text-4xl self-center md:w-2/3 font-sofia font-thin relative z-30">
               / Expertise — 2.0 Web Development
             </p>
           </MovingText>
@@ -107,7 +113,7 @@ export const Web2Development = () => {
             timing="ease"
             iteration="1"
             fillMode="none">
-            <p className="relative z-30">
+            <p className="relative z-30  text-2xl md:text-6xl xl:text-8xl">
               We create beautiful and interactive Website
             </p>
           </MovingText>
@@ -156,7 +162,7 @@ export const Web2Development = () => {
             timing="ease-out"
             iteration="1"
             fillMode="none">
-            <p className="text-lg mt-10 md:w-2/3">
+            <p className="text-lg lg:text-2xl xl:text-3xl mt-10 md:w-2/3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
               amet sapien ullamcorper, quis sagittis lacus vehicula.
@@ -184,7 +190,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="text-md md:text-2xl self-center font-sofia font-thin">
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
                     / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
@@ -197,7 +203,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl mb-5">e-Commerce</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">e-Commerce</p>
                 </MovingText>
                 <MovingText
                   className="animated-text-web2 hidden"
@@ -208,7 +214,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -221,7 +227,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md">
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -262,7 +268,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="text-md md:text-2xl self-center font-sofia font-thin">
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
                     / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
@@ -275,7 +281,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl mb-5">Landing Pages</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Landing Pages</p>
                 </MovingText>
                 <MovingText
                   className="animated-text-web2 hidden"
@@ -286,7 +292,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -299,7 +305,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md">
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -340,7 +346,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="text-md md:text-2xl self-center font-sofia font-thin">
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
                     / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
@@ -353,7 +359,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Content Managment System
                   </p>
                 </MovingText>
@@ -366,7 +372,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -379,7 +385,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md">
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -420,7 +426,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="text-md md:text-2xl self-center font-sofia font-thin">
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
                     / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
@@ -433,7 +439,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Custom Software Development
                   </p>
                 </MovingText>
@@ -446,7 +452,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -459,7 +465,7 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md">
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla

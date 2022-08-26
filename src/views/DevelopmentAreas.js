@@ -42,6 +42,12 @@ export const DevelopmentAreas = () => {
 
   useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
+  useEffect( () => {
+    if (location.pathname !== '/' &&  document.getElementById('canvas-bg') !== null) {
+      document.getElementById('canvas-bg').remove()
+    }
+  }, [] )
+
   return (
     <div className="w-full bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       {/* Start banner slide */}
@@ -111,7 +117,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
                     Technological Development
                   </p>
                 </MovingText>
@@ -124,7 +130,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -137,7 +143,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                  <p className="font-sofia font-light font-md text-justify md:text-left">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -178,7 +184,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
                     Art and Entretainment
                   </p>
                 </MovingText>
@@ -191,7 +197,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -204,7 +210,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                  <p className="font-sofia font-light font-md text-justify md:text-left">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -245,7 +251,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
                     Smart Wearables
                   </p>
                 </MovingText>
@@ -258,7 +264,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -271,7 +277,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                  <p className="font-sofia font-light font-md text-justify md:text-left">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -312,7 +318,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
                     Sports
                   </p>
                 </MovingText>
@@ -325,7 +331,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -338,7 +344,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                  <p className="font-sofia font-light font-md text-justify md:text-left">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla
@@ -379,7 +385,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
                     Health
                   </p>
                 </MovingText>
@@ -392,7 +398,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -405,7 +411,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                  <p className="font-sofia font-light font-md text-justify md:text-left">
                     Donec blandit, sem eget eleifend sagittis, ante est iaculis
                     lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
                     sit amet nisi fermentum cursus tempor non mauris. Nulla

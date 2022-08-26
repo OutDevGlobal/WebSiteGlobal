@@ -43,6 +43,12 @@ export const ContactUs = () => {
 
   useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
+  useEffect( () => {
+    if (location.pathname !== '/' &&  document.getElementById('canvas-bg') !== null) {
+      document.getElementById('canvas-bg').remove()
+    }
+  }, [] )
+
   return (
     <div className="w-full relative">
       {/* Start banner slide */}

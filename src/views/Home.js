@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Section, useScrollSection } from 'react-scroll-section'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import Draggable from 'react-draggable'
 import MovingText from 'react-moving-text'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -31,6 +31,7 @@ export const Home = () => {
   const ourTec = useScrollSection('ourTec')
   const devAreas = useScrollSection('devAreas')
   const footer = useScrollSection('footer')
+  const location = useLocation()
 
   const sections = [
     home,
@@ -44,6 +45,7 @@ export const Home = () => {
   ]
 
   const [currentSection, setCurrentSection] = useState(0)
+  const [isRemoved, setIsRemoved] = useState(0)
 
   const jsRef = useRef(null)
   const pythonRef = useRef(null)
@@ -84,7 +86,9 @@ export const Home = () => {
     })
   }, [])
 
-  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
+  useEffect( () => () => {
+    ScrollTrigger.getAll().forEach(st => st.kill())
+  }, [] )
 
   const handleChangeSection = () => {
     if (currentSection + 1 !== sections.length) {

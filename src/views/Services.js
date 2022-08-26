@@ -44,6 +44,12 @@ export const Services = () => {
 
   useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
+  useEffect( () => {
+    if (location.pathname !== '/' &&  document.getElementById('canvas-bg') !== null) {
+      document.getElementById('canvas-bg').remove()
+    }
+  }, [] )
+
   const moveOnGrayImage = (e) => {
     const section = e.currentTarget.querySelector('.highlight-section')
     if (section !== null) {
