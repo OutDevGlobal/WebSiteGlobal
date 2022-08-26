@@ -2716,6 +2716,11 @@ react-draggable@^4.4.5:
     clsx "^1.1.1"
     prop-types "^15.8.1"
 
+react-hide-on-scroll@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-hide-on-scroll/-/react-hide-on-scroll-1.1.4.tgz#62cc8c77ed175653996829ccb7ea2c2078fb157f"
+  integrity sha512-wN2Ubobr9s3DNp8ChWRZYlFhdb+vI1XmU01ssoe9lNV2F7rB8bjB10vfgjfOU2RTI+h74ncPZXcXFJivgA/UXA==
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -2730,6 +2735,11 @@ react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+
+react-moving-text@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-moving-text/-/react-moving-text-0.0.7.tgz#afa2e3d6a52cc6707bf869ce4d37d7df04993e75"
+  integrity sha512-WA72if8QS2/QVOmZ2mDnWu1UFkMqt7Y1TFLfKT3MDRwPbcpz2F7WAyGi349anuKth0bQKg0CQddlQLQQiII8zQ==
 
 react-particles@^2.1.4:
   version "2.1.4"
@@ -3138,6 +3148,11 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   integrity sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==
+
+three@^0.143.0:
+  version "0.143.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.143.0.tgz#1455bca132cc2b20beb7f41d313e10c29e5ed9df"
+  integrity sha512-oKcAGYHhJ46TGEuHjodo2n6TY2R6lbvrkp+feKZxqsUL/WkH7GKKaeu6RHeyb2Xjfk2dPLRKLsOP0KM2VgT8Zg==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

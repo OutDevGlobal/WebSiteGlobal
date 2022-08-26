@@ -45,7 +45,7 @@ module.exports = {
       backgroundImage: {
         // How we do it
         "how-section": "url('./src/assets/img/how-we-do-it/how_we_do_it.png')",
-        "waves-how": "url('./src/assets/img/how-we-do-it/waves_how.png')",
+        "waves-how": "url('./src/assets/img/how-we-do-it/waves.png')",
 
         // Services
         "web3-service": "url('./src/assets/img/web-3-development/header.png')",
