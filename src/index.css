@@ -2,7 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {  
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 100;
+  src: url(/fonts/Montserrat/Montserrat-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 200;
+  src: url(/fonts/Montserrat/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  src: url(/fonts/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url(/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  src: url(/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url(/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  src: url(/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  src: url(/fonts/Montserrat/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 100;
+  src: url(/fonts/SofiaSans/SofiaSans-Thin.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 200;
+  src: url(/fonts/SofiaSans/SofiaSans-ExtraLight.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 300;
+  src: url(/fonts/SofiaSans/SofiaSans-Light.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 400;
+  src: url(/fonts/SofiaSans/SofiaSans-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 500;
+  src: url(/fonts/SofiaSans/SofiaSans-Medium.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 600;
+  src: url(/fonts/SofiaSans/SofiaSans-SemiBold.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 700;
+  src: url(/fonts/SofiaSans/SofiaSans-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 800;
+  src: url(/fonts/SofiaSans/SofiaSans-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  font-weight: 900;
+  src: url(/fonts/SofiaSans/SofiaSans-Black.otf);
+}
+
+:root {
   font-family: 'Montserrat', 'Sofia Sans';
   font-size: 16px;
   line-height: 24px;
@@ -10,8 +118,7 @@
   width: 100% !important;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #090C10;
-  padding: 1rem 2rem 0 2rem;
+  background-color: transparent;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,14 +128,14 @@
   --card-height: 3.2rem;
   --card-width: 3.2rem;
 }
-body {    
+body {
   width: 100%;
   min-height: 100vh;
-  background-color: #090C10;
+  background-color: #090c10;
 }
 
 @property --rotate {
-  syntax: "<angle>";
+  syntax: '<angle>';
   initial-value: 132deg;
   inherits: false;
 }
@@ -42,8 +149,8 @@ body {
   }
 }
 
-.card{
-  background: #090C10;
+.card {
+  background: #090c10;
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -62,21 +169,26 @@ body {
 }
 */
 .card:hover:before {
-  content: "";
+  content: '';
   width: 104%;
   height: 104%;
   border-radius: 8px;
-  background-image: linear-gradient(var(--rotate), #3013E4, #0A182A 43%, #1B167B);
-    position: absolute;
-    z-index: -5;
-    /* top: -1% ;
+  background-image: linear-gradient(
+    var(--rotate),
+    #3013e4,
+    #0a182a 43%,
+    #1b167b
+  );
+  position: absolute;
+  z-index: -5;
+  /* top: -1% ;
     left: -2%; */
-    animation: customspin 2.5s linear infinite;
+  animation: customspin 2.5s linear infinite;
 }
 
 .card:hover:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(var(--card-height));
   left: 0;
   right: 0;
@@ -87,24 +199,25 @@ body {
   z-index: -5;
   transform: scale(0.8);
   filter: blur(calc(var(--card-height)));
-  background-image: linear-gradient(var(--rotate), #3013E4, #0A182A 43%, #1B167B);
-    opacity: 1;
-  transition: opacity .5s;
+  background-image: linear-gradient(
+    var(--rotate),
+    #3013e4,
+    #0a182a 43%,
+    #1b167b
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
   animation: customspin 2.5s linear infinite;
 }
 
+/* Canvas Particles */
 
-/* Canvas Particles */ 
-
-canvas{
+canvas {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;  
+  margin: auto;
 }
-
-
-/* Background Particles */ 
 
