@@ -113,7 +113,7 @@ export const AppDevelopment = () => {
             timing="ease"
             iteration="1"
             fillMode="none">
-            <p className="relative z-30 text-2xl md:text-6xl xl:text-8xl">
+            <p className="relative z-30 text-2xl md:text-6xl 2xl:text-8xl">
               Exceptional contents and world-class Visuals
             </p>
           </MovingText>
@@ -162,7 +162,7 @@ export const AppDevelopment = () => {
             timing="ease-out"
             iteration="1"
             fillMode="none">
-            <p className="text-lg lg:text-2xl xl:text-3xl mt-10 md:w-2/3">
+            <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
               amet sapien ullamcorper, quis sagittis lacus vehicula.
@@ -214,7 +214,7 @@ export const AppDevelopment = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -292,7 +292,7 @@ export const AppDevelopment = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -370,7 +370,7 @@ export const AppDevelopment = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>

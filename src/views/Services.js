@@ -98,7 +98,7 @@ export const Services = () => {
     <div className="w-full relative px-1">
       {/* Start banner slide */}
       <div className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen">
-        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase self-center">
+        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
           <MovingText
             className="animated-text-services hidden"
             type="flip"
@@ -119,7 +119,7 @@ export const Services = () => {
       <Section
         id="services"
         className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase">
+        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
           <MovingText
             className="animated-text-services hidden"
             type="fadeInFromLeft"

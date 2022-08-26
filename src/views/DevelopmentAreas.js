@@ -52,7 +52,7 @@ export const DevelopmentAreas = () => {
     <div className="w-full bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       {/* Start banner slide */}
       <div className="p-14 md:p-20 xl:p-32 grid grid-cols-1 justify-center h-screen">
-        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase self-center">
+        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
           <MovingText
             className="animated-text-dev-areas hidden"
             type="flip"
@@ -71,7 +71,7 @@ export const DevelopmentAreas = () => {
       <Section id="content" className="pt-40">
         {/* Start subtitle slide */}
         <div className="p-14 md:p-20 xl:p-32 mb-40">
-          <div className="text-2xl md:text-6xl xl:text-8xl uppercase md:w-1/2 ">
+          <div className="text-2xl md:text-6xl 2xl:text-8xl uppercase md:w-1/2 ">
             <MovingText
               className="animated-text-dev-areas hidden"
               type="fadeInFromLeft"
@@ -117,7 +117,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
                     Technological Development
                   </p>
                 </MovingText>
@@ -130,7 +130,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -184,7 +184,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
                     Art and Entretainment
                   </p>
                 </MovingText>
@@ -197,7 +197,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -251,7 +251,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
                     Smart Wearables
                   </p>
                 </MovingText>
@@ -264,7 +264,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -318,7 +318,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
                     Sports
                   </p>
                 </MovingText>
@@ -331,7 +331,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -385,7 +385,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
                     Health
                   </p>
                 </MovingText>
@@ -398,7 +398,7 @@ export const DevelopmentAreas = () => {
                   timing="ease-out"
                   iteration="1"
                   fillMode="none">
-                  <p className="font-sofia font-thin text-2xl xl:text-3xl mb-5">
+                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </MovingText>
@@ -452,7 +452,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5 ">
                     Education
                   </p>
                 </MovingText>
@@ -519,7 +519,7 @@ export const DevelopmentAreas = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl xl:text-6xl mb-5 ">
+                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5 ">
                     Feeding
                   </p>
                 </MovingText>

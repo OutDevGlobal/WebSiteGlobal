@@ -219,7 +219,7 @@ export const Home = () => {
         id="whoWeAre"
         className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
         <div className="self-center">
-          <div className="text-6xl xl:text-8xl md:p-8 ">
+          <div className="text-6xl 2xl:text-8xl md:p-8 ">
             <MovingText
               className="animated-text-home hidden"
               type="fadeInFromLeft"
@@ -272,7 +272,7 @@ export const Home = () => {
       <Section
         id="stuff"
         className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
-        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase self-center ">
+        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center ">
           <MovingText
             className="animated-text-home hidden"
             type="flip"
@@ -292,7 +292,7 @@ export const Home = () => {
       <Section
         id="services"
         className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl xl:text-8xl md:p-8 uppercase">
+        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
           <MovingText
             className="animated-text-home hidden"
             type="fadeInFromLeft"
@@ -546,7 +546,7 @@ export const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 content-center h-full">
           <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
           <div className="md:p-8">
-            <div className="uppercase text-6xl xl:text-8xl mb-12 ">
+            <div className="uppercase text-6xl 2xl:text-8xl mb-12 ">
               <MovingText
                 className="animated-text-home hidden"
                 type="fadeInFromRight"
@@ -612,8 +612,8 @@ export const Home = () => {
       <Section
         id="ourTec"
         className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat bg-bottom px-10 h-screen">
-        <div className="self-center md:p-20 xl:p-32">
-          <div className="text-4xl md:text-6xl xl:text-8xl md:p-8 uppercase mb-12">
+        <div className="self-center md:p-20 2xl:p-32">
+          <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase mb-12">
             <MovingText
               className="animated-text-home hidden"
               type="fadeInFromLeft"
@@ -725,7 +725,7 @@ export const Home = () => {
       {/* Start dev areas slide */}
       <Section id="devAreas" className="justify-center md:p-24 xl:p-32 h-screen px-10">
         <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-8 h-full">
-          <div className="text-2xl md:text-4xl xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
+          <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
             <MovingText
               className="animated-text-home hidden"
               type="fadeInFromLeft"
@@ -755,7 +755,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   Research and technological development
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
@@ -787,7 +787,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   SMART WEARABLES
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
@@ -819,7 +819,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   SPORTS
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
@@ -851,7 +851,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   ART AND ENTRETAINMENT
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
@@ -883,7 +883,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   EDUCATION
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
@@ -915,7 +915,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   HEALTH
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
@@ -947,7 +947,7 @@ export const Home = () => {
                 timing="ease"
                 iteration="1"
                 fillMode="none">
-                <p className="text-2xl xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                   FEEDING
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
