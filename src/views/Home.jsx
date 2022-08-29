@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { NavLink, useLocation } from 'react-router-dom'
 import Draggable from 'react-draggable'
-import MovingText from 'react-moving-text'
+import M from 'react-moving-text'
+const MovingText = M.default? M.default: M
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
@@ -178,6 +179,7 @@ export const Home = () => {
 
   return (
     <div className="w-full relative">
+
       {/* Start home slide */}
       <Section id="home" className="-mt-32 flex justify-center h-screen px-10">
         <div className="self-center">

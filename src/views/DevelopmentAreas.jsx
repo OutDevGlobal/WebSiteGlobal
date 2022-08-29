@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import MovingText from 'react-moving-text'
+import M from 'react-moving-text'
+const MovingText = M.default? M.default: M
 import { Section, useScrollSection } from 'react-scroll-section'
 import { HideScroll } from 'react-hide-on-scroll'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
