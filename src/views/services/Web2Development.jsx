@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { HideScroll } from 'react-hide-on-scroll'
-import MovingText from 'react-moving-text'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import M from 'react-moving-text'
+const MovingText = M.default? M.default: M
 import { Section, useScrollSection } from 'react-scroll-section'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-export const ArVrMrDevelopment = () => {
+export const Web2Development = () => {
   const content = useScrollSection('content')
 
   const handleChangeSection = () => {
@@ -16,7 +17,7 @@ export const ArVrMrDevelopment = () => {
     window.gsap.registerPlugin(ScrollTrigger)
 
     // Text animation
-    window.gsap.utils.toArray('.animated-text-arvrmr').forEach((element) => {
+    window.gsap.utils.toArray('.animated-text-web2').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
         markers: true,
@@ -92,7 +93,7 @@ export const ArVrMrDevelopment = () => {
           onMouseLeave={hiddeColorCursor}
           className="text-2xl md:text-6xl uppercase self-center md:w-2/3">
           <MovingText
-            className="animated-text-arvrmr hidden"
+            className="animated-text-web2 hidden"
             type="fadeInFromRight"
             duration="1000ms"
             delay="0s"
@@ -101,11 +102,11 @@ export const ArVrMrDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="text-md md:text-2xl xl:text-4xl self-center md:w-2/3 font-sofia font-thin relative z-30">
-              / Expertise — AR/VR/MR Development
+              / Expertise — 2.0 Web Development
             </p>
           </MovingText>
           <MovingText
-            className="animated-text-arvrmr hidden"
+            className="animated-text-web2 hidden"
             type="fadeInFromLeft"
             duration="1000ms"
             delay="0s"
@@ -113,13 +114,13 @@ export const ArVrMrDevelopment = () => {
             timing="ease"
             iteration="1"
             fillMode="none">
-            <p className="relative z-30 text-2xl md:text-6xl 2xl:text-8xl">
-              Exceptional contents and world-class Visuals
+            <p className="relative z-30  text-2xl md:text-6xl 2xl:text-8xl">
+              We create beautiful and interactive Website
             </p>
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
             <MovingText
-              className="animated-text-arvrmr hidden"
+              className="animated-text-web2 hidden"
               type="fadeIn"
               duration="4000ms"
               delay="0s"
@@ -131,7 +132,7 @@ export const ArVrMrDevelopment = () => {
                 className="
                   pointer-events-auto
                   relative left-1/2 transform -translate-y-1/2
-                  bg-ar-vr-mr-service bg-no-repeat w-image-service-full h-image-service-full
+                  bg-web2-service bg-no-repeat w-image-service-full h-image-service-full
                   grayscale
                 "
               />
@@ -140,7 +141,7 @@ export const ArVrMrDevelopment = () => {
               className="
                 absolute top-0
                 highlight-section
-                bg-ar-vr-mr-service bg-no-repeat
+                bg-web2-service bg-no-repeat
                 border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
                 pointer-events-none
               "
@@ -154,7 +155,7 @@ export const ArVrMrDevelopment = () => {
         {/* Start subtitle slide */}
         <div className="md:m-20 mb-40">
           <MovingText
-            className="animated-text-arvrmr hidden"
+            className="animated-text-web2 hidden"
             type="popIn"
             duration="2000ms"
             delay="0ms"
@@ -177,12 +178,12 @@ export const ArVrMrDevelopment = () => {
 
         {/* Start content slide */}
         <div>
-          {/* Start Art Preservation */}
+          {/* Start e-Commerce */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -191,11 +192,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — AR/VR/MR Development
+                    / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -203,10 +204,10 @@ export const ArVrMrDevelopment = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Art Preservation</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">e-Commerce</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -219,7 +220,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -247,20 +248,20 @@ export const ArVrMrDevelopment = () => {
                 <div
                   className="
                     bg-left-image bg-fixed
-                    bg-art-preservation bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                    bg-e-commerce bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Art Preservation */}
+          {/* Ends e-Commerce */}
 
-          {/* Start Medical Check Up */}
+          {/* Start Landing Pages */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -269,11 +270,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — AR/VR/MR Development
+                    / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -281,10 +282,10 @@ export const ArVrMrDevelopment = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Medical Check Up</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Landing Pages</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -297,7 +298,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -325,20 +326,20 @@ export const ArVrMrDevelopment = () => {
                 <div
                   className="
                     bg-right-image bg-fixed
-                    bg-medical-checkup bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+                    bg-landing-pages bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Medical Check Up */}
+          {/* Ends Landing Pages */}
 
-          {/* Start Body Analysis With VR / MR / AR */}
+          {/* Start Content Managment System */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -347,11 +348,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — AR/VR/MR Development
+                    / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -360,11 +361,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">
-                    Body Analysis With VR / MR / AR
+                    Content Managment System
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -377,7 +378,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -405,20 +406,20 @@ export const ArVrMrDevelopment = () => {
                 <div
                   className="
                     bg-left-image bg-fixed
-                    bg-body-analysis bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                    bg-content-managment bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Body Analysis With VR / MR / AR */}
+          {/* Ends Content Managment System */}
 
-          {/* Start Agile Education Processes with VR / MR / AR */}
+          {/* Start Custom Software Development */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -427,11 +428,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — AR/VR/MR Development
+                    / Expertise — 2.0 Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -440,11 +441,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">
-                    Agile Education Processes with VR / MR / AR
+                    Custom Software Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -457,7 +458,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-arvrmr hidden"
+                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -485,13 +486,13 @@ export const ArVrMrDevelopment = () => {
                 <div
                   className="
                     bg-right-image bg-fixed
-                    bg-agile-education bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+                    bg-custom-software bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Agile Education Processes with VR / MR / AR */}
+          {/* Ends Custom Software Development */}
         </div>
         {/* Ends content slide */}
       </Section>

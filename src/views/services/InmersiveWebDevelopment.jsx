@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { HideScroll } from 'react-hide-on-scroll'
-import MovingText from 'react-moving-text'
-import { Section, useScrollSection } from 'react-scroll-section'
+import M from 'react-moving-text'
+const MovingText = M.default? M.default: M
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Section, useScrollSection } from 'react-scroll-section'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
 
-export const Web2Development = () => {
+export const InmersiveWebDevelopment = () => {
   const content = useScrollSection('content')
 
   const handleChangeSection = () => {
@@ -16,7 +17,7 @@ export const Web2Development = () => {
     window.gsap.registerPlugin(ScrollTrigger)
 
     // Text animation
-    window.gsap.utils.toArray('.animated-text-web2').forEach((element) => {
+    window.gsap.utils.toArray('.animated-text-inmersive').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
         markers: true,
@@ -92,7 +93,7 @@ export const Web2Development = () => {
           onMouseLeave={hiddeColorCursor}
           className="text-2xl md:text-6xl uppercase self-center md:w-2/3">
           <MovingText
-            className="animated-text-web2 hidden"
+            className="animated-text-inmersive hidden"
             type="fadeInFromRight"
             duration="1000ms"
             delay="0s"
@@ -101,11 +102,11 @@ export const Web2Development = () => {
             iteration="1"
             fillMode="none">
             <p className="text-md md:text-2xl xl:text-4xl self-center md:w-2/3 font-sofia font-thin relative z-30">
-              / Expertise — 2.0 Web Development
+              / Expertise — Inmersive Web Development
             </p>
           </MovingText>
           <MovingText
-            className="animated-text-web2 hidden"
+            className="animated-text-inmersive hidden"
             type="fadeInFromLeft"
             duration="1000ms"
             delay="0s"
@@ -113,13 +114,13 @@ export const Web2Development = () => {
             timing="ease"
             iteration="1"
             fillMode="none">
-            <p className="relative z-30  text-2xl md:text-6xl 2xl:text-8xl">
-              We create beautiful and interactive Website
+            <p className="relative z-30 text-2xl md:text-6xl 2xl:text-8xl">
+              Exceptional contents and world-class Visuals
             </p>
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
             <MovingText
-              className="animated-text-web2 hidden"
+              className="animated-text-inmersive hidden"
               type="fadeIn"
               duration="4000ms"
               delay="0s"
@@ -131,7 +132,7 @@ export const Web2Development = () => {
                 className="
                   pointer-events-auto
                   relative left-1/2 transform -translate-y-1/2
-                  bg-web2-service bg-no-repeat w-image-service-full h-image-service-full
+                  bg-inmersive-service bg-no-repeat w-image-service-full h-image-service-full
                   grayscale
                 "
               />
@@ -140,7 +141,7 @@ export const Web2Development = () => {
               className="
                 absolute top-0
                 highlight-section
-                bg-web2-service bg-no-repeat
+                bg-inmersive-service bg-no-repeat
                 border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
                 pointer-events-none
               "
@@ -154,7 +155,7 @@ export const Web2Development = () => {
         {/* Start subtitle slide */}
         <div className="md:m-20 mb-40">
           <MovingText
-            className="animated-text-web2 hidden"
+            className="animated-text-inmersive hidden"
             type="popIn"
             duration="2000ms"
             delay="0ms"
@@ -177,12 +178,12 @@ export const Web2Development = () => {
 
         {/* Start content slide */}
         <div>
-          {/* Start e-Commerce */}
+          {/* Start 360º Video */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -191,11 +192,11 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — 2.0 Web Development
+                    / Expertise — Inmersive Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -203,10 +204,10 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">e-Commerce</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">360º Video</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -219,7 +220,7 @@ export const Web2Development = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -247,20 +248,20 @@ export const Web2Development = () => {
                 <div
                   className="
                     bg-left-image bg-fixed
-                    bg-e-commerce bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                    bg-video-360 bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends e-Commerce */}
+          {/* Ends 360º Video */}
 
-          {/* Start Landing Pages */}
+          {/* Start Data Visualization */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -269,11 +270,11 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — 2.0 Web Development
+                    / Expertise — Inmersive Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -281,10 +282,10 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Landing Pages</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Data Visualization</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -297,7 +298,7 @@ export const Web2Development = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -325,20 +326,20 @@ export const Web2Development = () => {
                 <div
                   className="
                     bg-right-image bg-fixed
-                    bg-landing-pages bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+                    bg-data-visualization bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Landing Pages */}
+          {/* Ends Data Visualization */}
 
-          {/* Start Content Managment System */}
+          {/* Start Home Stores */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -347,11 +348,11 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — 2.0 Web Development
+                    / Expertise — Inmersive Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -359,12 +360,10 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
-                    Content Managment System
-                  </p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Home Stores</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -377,7 +376,7 @@ export const Web2Development = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -405,20 +404,20 @@ export const Web2Development = () => {
                 <div
                   className="
                     bg-left-image bg-fixed
-                    bg-content-managment bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                    bg-home-stores bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Content Managment System */}
+          {/* Ends Home Stores */}
 
-          {/* Start Custom Software Development */}
+          {/* Start Digital Art */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -427,11 +426,11 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                    / Expertise — 2.0 Web Development
+                    / Expertise — Inmersive Web Development
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromLeft"
                   duration="1000ms"
                   delay="0s"
@@ -439,12 +438,10 @@ export const Web2Development = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
-                    Custom Software Development
-                  </p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Digital Art</p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
                   delay="0s"
@@ -457,7 +454,7 @@ export const Web2Development = () => {
                   </p>
                 </MovingText>
                 <MovingText
-                  className="animated-text-web2 hidden"
+                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -485,13 +482,13 @@ export const Web2Development = () => {
                 <div
                   className="
                     bg-right-image bg-fixed
-                    bg-custom-software bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+                    bg-digital-art bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
                   "
                 />
               </div>
             </div>
           </div>
-          {/* Ends Custom Software Development */}
+          {/* Ends Digital Art */}
         </div>
         {/* Ends content slide */}
       </Section>

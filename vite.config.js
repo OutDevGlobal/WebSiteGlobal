@@ -4,12 +4,15 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+  },
   plugins: [
-    react({
-      babel: {
-        plugins: ['@babel/plugin-transform-react-jsx'],
-      },
-    }),
+    react(),
     svgr(),
   ],
+  mode: "development",
+  build: {
+    minify: false,
+  }
 })

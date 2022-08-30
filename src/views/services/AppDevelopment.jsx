@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { HideScroll } from 'react-hide-on-scroll'
-import MovingText from 'react-moving-text'
+import M from 'react-moving-text'
+const MovingText = M.default? M.default: M
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Section, useScrollSection } from 'react-scroll-section'
 import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
