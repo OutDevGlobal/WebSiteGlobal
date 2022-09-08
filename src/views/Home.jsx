@@ -32,7 +32,6 @@ export const Home = () => {
   const ourTec = useScrollSection('ourTec')
   const devAreas = useScrollSection('devAreas')
   const footer = useScrollSection('footer')
-  const location = useLocation()
 
   const sections = [
     home,
@@ -46,7 +45,6 @@ export const Home = () => {
   ]
 
   const [currentSection, setCurrentSection] = useState(0)
-  const [isRemoved, setIsRemoved] = useState(0)
 
   const jsRef = useRef(null)
   const pythonRef = useRef(null)
@@ -66,7 +64,7 @@ export const Home = () => {
     window.gsap.utils.toArray('.animated-text-home').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -308,7 +306,7 @@ export const Home = () => {
           </MovingText>
         </div>
         <div className="text-xl md:text-4xl md:px-20">
-          <div className="grid md:flex my-5 gap-8">
+          <div className="grid md:flex my-1 gap-8">
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -325,7 +323,7 @@ export const Home = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  3.0 WEB DEVELOPMENT
+                  WEB 3.0
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -367,7 +365,7 @@ export const Home = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  AR / VR / MR DEVELOPMENT
+                  AR / VR / MR
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -391,7 +389,90 @@ export const Home = () => {
               </div>
             </NavLink>
           </div>
-          <div className="grid md:flex my-5 gap-8">
+          <div className="grid md:flex my-1 gap-8">
+            <NavLink
+              to="/web-3-development"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text-home hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  BLOCKCHAIN
+                </MovingText>
+              </span>
+              <div className="absolute pointer-events-none">
+                <div
+                  className="
+                    pointer-events-auto
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
+            </NavLink>
+            <div className="mr-10 hidden md:block">
+              <IconSlashDivider />
+            </div>
+            <NavLink
+              to="/web-3-development"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text-home hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  NFTS
+                </MovingText>
+              </span>
+              <div className="absolute pointer-events-none">
+                <div
+                  className="
+                    pointer-events-auto
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
+            </NavLink>
+          </div>
+          <div className="grid md:flex my-1 gap-8">
             <NavLink
               to="/inmersive-web-development"
               className="
@@ -410,7 +491,7 @@ export const Home = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  INMERSIVE WEB DEVELOPMENT
+                  INMERSIVE EXPERIENCE
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -433,11 +514,50 @@ export const Home = () => {
                 />
               </div>
             </NavLink>
-            <div className="hidden md:block">
+            <div className="mr-10 hidden md:block">
               <IconSlashDivider />
             </div>
+            <NavLink
+              to="/web-3-development"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text-home hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  CRYPTO
+                </MovingText>
+              </span>
+              <div className="absolute pointer-events-none">
+                <div
+                  className="
+                    pointer-events-auto
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
+            </NavLink>
           </div>
-          <div className="grid md:flex my-5 gap-8">
+          <div className="grid md:flex my-1 gap-8">
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -454,7 +574,7 @@ export const Home = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  2.0 WEB DEVELOPMENT
+                  WEB 2.0
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -496,7 +616,7 @@ export const Home = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  CROSS-PLATFORM MOBILE DEVELOPMENTS
+                  CRC MOBILE
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -521,9 +641,9 @@ export const Home = () => {
             </NavLink>
           </div>
         </div>
-        <div className="text-lg xl:text-2xl md:p-8 uppercase text-right my-5">
-          <button
-            type="button"
+        <div className="text-lg xl:text-2xl md:p-8 uppercase text-right my-5 lg:-mt-10">
+          <NavLink
+            to="/services"
             className="hover:text-base-yellow duration-300 ">
             <MovingText
               className="animated-text-home hidden"
@@ -536,7 +656,7 @@ export const Home = () => {
               fillMode="none">
               EXPLORE ALL EXPERTISE
             </MovingText>
-          </button>
+          </NavLink>
         </div>
       </Section>
       {/* Ends services slide */}
@@ -629,96 +749,76 @@ export const Home = () => {
             </MovingText>
           </div>
           <div className="flex flex-wrap gap-4 relative">
-            <Draggable ref={pythonRef} nodeRef={pythonRef}>
-              <div
-                ref={pythonRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={pythonIcon} alt="python" />
-              </div>
-            </Draggable>
-            <Draggable ref={jsRef} nodeRef={jsRef}>
-              <div
-                ref={jsRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={jsIcon} alt="JS" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={jiraRef}>
-              <div
-                ref={jiraRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={jiraIcon} alt="Jira" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={awsRef}>
-              <div
-                ref={awsRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={awsIcon} alt="AWS" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={unityRef}>
-              <div
-                ref={unityRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={unityIcon} alt="Unity" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={flutterRef}>
-              <div
-                ref={flutterRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={flutterIcon} alt="Flutter" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={djangoRef}>
-              <div
-                ref={djangoRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={djangoIcon} alt="Django" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={angularRef}>
-              <div
-                ref={angularRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={angularIcon} alt="Angular" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={reactRef}>
-              <div
-                ref={reactRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={reactIcon} alt="React" />
-              </div>
-            </Draggable>
-            <Draggable nodeRef={githubRef}>
-              <div
-                ref={githubRef}
-                className="
-                  bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
-                ">
-                <img src={githubIcon} alt="Github" />
-              </div>
-            </Draggable>
+            <div
+              ref={pythonRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={pythonIcon} alt="python" />
+            </div>
+            <div
+              ref={jsRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={jsIcon} alt="JS" />
+            </div>
+            <div
+              ref={jiraRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={jiraIcon} alt="Jira" />
+            </div>
+            <div
+              ref={awsRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={awsIcon} alt="AWS" />
+            </div>
+            <div
+              ref={unityRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={unityIcon} alt="Unity" />
+            </div>
+            <div
+              ref={flutterRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={flutterIcon} alt="Flutter" />
+            </div>
+            <div
+              ref={djangoRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={djangoIcon} alt="Django" />
+            </div>
+            <div
+              ref={angularRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={angularIcon} alt="Angular" />
+            </div>
+            <div
+              ref={reactRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={reactIcon} alt="React" />
+            </div>
+            <div
+              ref={githubRef}
+              className="
+                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+              ">
+              <img src={githubIcon} alt="Github" />
+            </div>
           </div>
         </div>
       </Section>
@@ -726,7 +826,7 @@ export const Home = () => {
 
       {/* Start dev areas slide */}
       <Section id="devAreas" className="justify-center md:p-24 xl:p-32 h-screen px-10">
-        <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-8 h-full">
+        <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4 h-full">
           <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
             <MovingText
               className="animated-text-home hidden"
@@ -741,7 +841,7 @@ export const Home = () => {
               level
             </MovingText>
           </div>
-          <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-3">
             <NavLink
               to="/development-areas"
               className="mb-10 text-left"
@@ -761,7 +861,7 @@ export const Home = () => {
                   Research and technological development
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  The future is now and there are infinite opportunities...
                 </p>
               </MovingText>
               <div
@@ -793,7 +893,7 @@ export const Home = () => {
                   SMART WEARABLES
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  Devices Accesories and Clothing...
                 </p>
               </MovingText>
               <div
@@ -825,7 +925,7 @@ export const Home = () => {
                   SPORTS
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  Computer vision reference Wearables body check...
                 </p>
               </MovingText>
               <div
@@ -857,7 +957,7 @@ export const Home = () => {
                   ART AND ENTRETAINMENT
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  New experiences are comming from real world to virtual world...
                 </p>
               </MovingText>
               <div
@@ -889,7 +989,8 @@ export const Home = () => {
                   EDUCATION
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  Learning is getting into an evolution, where virtual and mixed reality makes possible new 
+                  learning ways...
                 </p>
               </MovingText>
               <div
@@ -921,7 +1022,7 @@ export const Home = () => {
                   HEALTH
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  Know how things work and reduce the risk in real life...
                 </p>
               </MovingText>
               <div
@@ -953,7 +1054,7 @@ export const Home = () => {
                   FEEDING
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                  Food preservation, vertical planting with computer analysis and artificial intelligence...
                 </p>
               </MovingText>
               <div

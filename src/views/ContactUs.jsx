@@ -21,7 +21,7 @@ export const ContactUs = () => {
     window.gsap.utils.toArray('.animated-text-contact').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -88,7 +88,22 @@ export const ContactUs = () => {
                 <p>Let&apos;s Talk</p>
               </MovingText>
             </div>
-            <div className="md:py-20">
+            <div className="uppercase text-2xl md:text-7xl font-bold mt-10">
+              <MovingText
+                className="animated-text-contact hidden"
+                type="fadeInFromRight"
+                duration="1000ms"
+                delay="0s"
+                direction="normal"
+                timing="ease"
+                iteration="1"
+                fillMode="none">
+                <p>USA</p>
+                <p>MX</p>
+                <p>CANADA</p>
+              </MovingText>
+            </div>
+            <div className="md:py-5">
               <MovingText
                 className="animated-text-contact hidden"
                 type="popIn"
@@ -98,68 +113,21 @@ export const ContactUs = () => {
                 timing="ease-out"
                 iteration="1"
                 fillMode="none">
-                <p className="font-sofia font-light text-lg">
-                  Just fill this form and we will contact you promptly to
-                  discuss your project. Hate forms? Drop us a message at
-                  <span className="text-base-purple"> info@outdev.com</span> or
-                  <span className="text-base-purple"> hello@outdev.com</span>
+                <p className="font-sofia font-light text-xl">
+                  The Gas Company Tower 555 West 5th Street 35th Floor
                 </p>
-              </MovingText>
-            </div>
-            <div>
-              <MovingText
-                className="animated-text-contact hidden"
-                type="shakeMix"
-                duration="1000ms"
-                delay="0ms"
-                direction="normal"
-                timing="ease-out"
-                iteration="1"
-                fillMode="none">
-                <form>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    className="
-                      w-full md:w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl
-                      text-white outline-none focus:outline-none
-                      
-                    "
-                  />
-                  <input
-                    type="email"
-                    id="eamil"
-                    placeholder="Your Email"
-                    className="
-                      w-full md:w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl
-                      text-white outline-none focus:outline-none
-                    "
-                  />
-                  <textarea
-                    id="description"
-                    placeholder="Tell Us About Your Project"
-                    rows="1"
-                    className="
-                      w-full md:w-9/12 bg-transparent border-0 border-b-2 border-white rounded mx-3 pt-4 pb-3 text-xl
-                      text-white outline-none focus:outline-none
-                    "
-                  />
-                  <div className="flex">
-                    <label
-                      htmlFor="file"
-                      className="pt-4 pl-4 cursor-ponter flex">
-                      <AttachIcon />
-                      <span className="ml-4">Add Attachment</span>
-                      <input type="file" id="file" className="hidden" />
-                    </label>
-                  </div>
-                  <button
-                    type="submit"
-                    className="rounded-full border border-base-purple p-4 mt-10 hover:bg-base-purple duration-300">
-                    Send Request
-                  </button>
-                </form>
+                <p className="font-sofia font-bold text-lg">
+                  Los Angeles, California 90013
+                </p>
+                <p className="font-sofia text-lg">
+                  <span className="font-bold">USA Direct: </span> +1 (310) 910 9151
+                </p>
+                <p className="font-sofia text-lg">
+                  <span className="font-bold">México: </span> +52 (33) 2315 2303
+                </p>
+                <p className="font-sofia text-lg">
+                  <span className="font-bold">E.Mail: </span> contacto@outdev.com.mx
+                </p>
               </MovingText>
             </div>
           </div>

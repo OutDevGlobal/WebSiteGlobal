@@ -20,7 +20,7 @@ export const Web2Development = () => {
     window.gsap.utils.toArray('.animated-text-web2').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -164,13 +164,10 @@ export const Web2Development = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
-              amet sapien ullamcorper, quis sagittis lacus vehicula.
-              Pellentesque in nisl ante. Nullam vitae quam semper metus vehicula
-              gravida. Donec quam tortor, suscipit sed suscipit eu, viverra eu
-              nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
-              cursus iaculis nec ut orci.
+              Technology has helped build a platform that has enabled the businesses to cash in on the huge population
+              and market that is now accessible over the internet and sell to them. millions of users access and use
+              the internet for various purposes throughout the day. They use the internet for  browsing, writing
+              & communication, listening, watching news, videos, trading and selling.
             </p>
           </MovingText>
         </div>
@@ -208,19 +205,6 @@ export const Web2Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web2 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -229,12 +213,9 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Ecommerce operates in different types of market segments and can be conducted over computers, 
+                    tablets, smartphones, and other smart devices. Nearly every imaginable product and service is 
+                    available through ecommerce transactions.
                   </p>
                 </MovingText>
               </div>
@@ -286,19 +267,6 @@ export const Web2Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web2 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -307,12 +275,9 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Landing pages are an essential part of the user journey and have an important role to fulfill by 
+                    stimulating a predetermined conversion. With consideration and investment, they can be the 
+                    powerhouses of your content strategy.
                   </p>
                 </MovingText>
               </div>
@@ -366,19 +331,6 @@ export const Web2Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web2 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -387,12 +339,8 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    CMS are software application that allows users to build and manage a website without having to
+                    code it from scratch, or know how to code at all.
                   </p>
                 </MovingText>
               </div>
@@ -446,19 +394,6 @@ export const Web2Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web2 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web2 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -467,12 +402,8 @@ export const Web2Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Every business has particular business rules and operation process, in those cases custom 
+                    software development is the right way.
                   </p>
                 </MovingText>
               </div>

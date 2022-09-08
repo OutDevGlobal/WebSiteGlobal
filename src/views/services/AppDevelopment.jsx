@@ -20,7 +20,7 @@ export const AppDevelopment = () => {
     window.gsap.utils.toArray('.animated-text-app').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -164,13 +164,9 @@ export const AppDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
-              amet sapien ullamcorper, quis sagittis lacus vehicula.
-              Pellentesque in nisl ante. Nullam vitae quam semper metus vehicula
-              gravida. Donec quam tortor, suscipit sed suscipit eu, viverra eu
-              nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
-              cursus iaculis nec ut orci.
+              Mobile apps has its roots in more traditional software development. One critical difference, however,
+              is that mobile apps are often written specifically to take advantage of the unique features of a 
+              particular mobile device.
             </p>
           </MovingText>
         </div>
@@ -208,19 +204,6 @@ export const AppDevelopment = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-app hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -229,12 +212,8 @@ export const AppDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Android is an open source operating system with the highest community and developers reach which 
+                    is the highest reason for it having the increased marketing and inter-app integrations.
                   </p>
                 </MovingText>
               </div>
@@ -286,19 +265,6 @@ export const AppDevelopment = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-app hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -307,12 +273,9 @@ export const AppDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    IOS development is the process of creating applications for Apple’s mobile operating system—the 
+                    operating system used by the iPhone and iPod Touch. In this most fundamental sense, it has a lot 
+                    in common with other types of software or app development, but there are a few key differences.
                   </p>
                 </MovingText>
               </div>
@@ -362,20 +325,7 @@ export const AppDevelopment = () => {
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">Hybrid</p>
                 </MovingText>
-                <MovingText
-                  className="animated-text-app hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
@@ -392,7 +342,7 @@ export const AppDevelopment = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
