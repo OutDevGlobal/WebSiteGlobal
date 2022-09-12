@@ -22,7 +22,7 @@ export const Services = () => {
     window.gsap.utils.toArray('.animated-text-services').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -134,7 +134,7 @@ export const Services = () => {
           </MovingText>
         </div>
         <div className="text-xl md:text-4xl md:px-20">
-          <div className="grid md:flex my-5 gap-8">
+          <div className="grid md:flex my-1 gap-8">
             <NavLink
               to="/web-3-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -151,7 +151,7 @@ export const Services = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  3.0 WEB DEVELOPMENT
+                  WEB 3.0
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -193,7 +193,7 @@ export const Services = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  AR / VR / MR DEVELOPMENT
+                  AR / VR / MR
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -217,7 +217,90 @@ export const Services = () => {
               </div>
             </NavLink>
           </div>
-          <div className="grid md:flex my-5 gap-8">
+          <div className="grid md:flex my-1 gap-8">
+            <NavLink
+              to="/web-3-development"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text-services hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  BLOCKCHAIN
+                </MovingText>
+              </span>
+              <div className="absolute pointer-events-none">
+                <div
+                  className="
+                    pointer-events-auto
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
+            </NavLink>
+            <div className="mr-10 hidden md:block">
+              <IconSlashDivider />
+            </div>
+            <NavLink
+              to="/web-3-development"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text-services hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  NFTS
+                </MovingText>
+              </span>
+              <div className="absolute pointer-events-none">
+                <div
+                  className="
+                    pointer-events-auto
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
+            </NavLink>
+          </div>
+          <div className="grid md:flex my-1 gap-8">
             <NavLink
               to="/inmersive-web-development"
               className="
@@ -236,7 +319,7 @@ export const Services = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  INMERSIVE WEB DEVELOPMENT
+                  INMERSIVE EXPERIENCE
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -259,11 +342,50 @@ export const Services = () => {
                 />
               </div>
             </NavLink>
-            <div className="hidden md:block">
+            <div className="mr-10 hidden md:block">
               <IconSlashDivider />
             </div>
+            <NavLink
+              to="/web-3-development"
+              className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+              onMouseMove={moveOnGrayImage}
+              onMouseEnter={showGrayImage}
+              onMouseLeave={hiddeGrayImage}>
+              <span className="relative z-30">
+                <MovingText
+                  className="animated-text-services hidden"
+                  type="popIn"
+                  duration="2000ms"
+                  delay="0s"
+                  direction="normal"
+                  timing="ease"
+                  iteration="1"
+                  fillMode="none">
+                  CRYPTO
+                </MovingText>
+              </span>
+              <div className="absolute pointer-events-none">
+                <div
+                  className="
+                    pointer-events-auto
+                    relative left-1/2 transform -translate-y-1/2
+                    bg-fixed bg-web3-service bg-no-repeat w-0 h-0
+                    grayscale duration-300
+                  "
+                />
+                <div
+                  className="
+                    absolute -top-1/2
+                    hidden highlight-section
+                    bg-web3-service bg-no-repeat
+                    border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                    pointer-events-none
+                  "
+                />
+              </div>
+            </NavLink>
           </div>
-          <div className="grid md:flex my-5 gap-8">
+          <div className="grid md:flex my-1 gap-8">
             <NavLink
               to="/web-2-development"
               className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
@@ -280,7 +402,7 @@ export const Services = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  2.0 WEB DEVELOPMENT
+                  WEB 2.0
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -322,7 +444,7 @@ export const Services = () => {
                   timing="ease"
                   iteration="1"
                   fillMode="none">
-                  CROSS-PLATFORM MOBILE DEVELOPMENTS
+                  CRC MOBILE
                 </MovingText>
               </span>
               <div className="absolute pointer-events-none">
@@ -346,23 +468,6 @@ export const Services = () => {
               </div>
             </NavLink>
           </div>
-        </div>
-        <div className="text-lg xl:text-2xl md:p-8 uppercase text-right my-5">
-          <button
-            type="button"
-            className="hover:text-base-yellow duration-300 ">
-            <MovingText
-              className="animated-text-services hidden"
-              type="rotateCW"
-              duration="1000ms"
-              delay="2s"
-              direction="normal"
-              timing="ease"
-              iteration="1"
-              fillMode="none">
-              EXPLORE ALL EXPERTISE
-            </MovingText>
-          </button>
         </div>
       </Section>
       {/* Ends services slide */}

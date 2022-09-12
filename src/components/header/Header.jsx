@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MainLogo } from './MainLogo'
 
@@ -11,6 +11,21 @@ import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [addBackground, setAddBackground] = useState(false)
+
+  const changeBackground = () => {
+    console.log(window.scrollY)
+    if (window.scrollY >= 66) {
+      setAddBackground(true)
+    } else {
+      setAddBackground(false)
+    }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    window.addEventListener("scroll", changeBackground)
+  })
 
   const handleMenu = () => {
     const menu = document.getElementById('menu')
@@ -41,9 +56,10 @@ export const Header = () => {
   return (
     <>
       <nav
-        className="
-          sticky top-0 w-full flex items-center justify-between flex-wrap px-10 py-5 z-50 pointer-events-none
-        ">
+        className={`
+          ${addBackground && "bg-mainBackground"}
+          sticky top-0 w-full flex items-center justify-between flex-wrap px-10 z-50 pointer-events-none
+        `}>
         <MainLogo />
         <div
           className="

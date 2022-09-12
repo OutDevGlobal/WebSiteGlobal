@@ -20,7 +20,7 @@ export const DevelopmentAreas = () => {
     window.gsap.utils.toArray('.animated-text-dev-areas').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -132,7 +132,7 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Web 3.0 / Descentralized solutions Web 2.0 / Computer vision / Data science Custom developments
                   </p>
                 </MovingText>
                 <MovingText
@@ -145,12 +145,11 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    We develop your life project side by side with you, focusing on new technologies, so that you are 
+                    always up-to-date and can enter new markets in a better way.
+                    We give you the necessary tools so that your business can reach its maximum potential;
+                    simplify actions, speed up processes and reduce costs with a global solution that allows you to 
+                    control everything that happens in your company from the same place.
                   </p>
                 </MovingText>
               </div>
@@ -199,7 +198,7 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Art Preservation Synchronization of virtual reality with the real world
                   </p>
                 </MovingText>
                 <MovingText
@@ -212,12 +211,14 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Art is the way people perceive reality, we seek to preserve that expression and share it with the
+                    rest of the world.
+
+                    We seek to enhance the beauty of life in each of the pieces that the artist paints, draws, writes, 
+                    composes, sculpts, molds... creates.
+
+                    And the most important; we generate environments where people can appreciate the artist's 
+                    creations and have them for themselves, synchronizing virtual reality with physical reality in a harmonious and perfect way.
                   </p>
                 </MovingText>
               </div>
@@ -266,7 +267,7 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Devices / Accesories Clothing
                   </p>
                 </MovingText>
                 <MovingText
@@ -279,12 +280,12 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    The technology incorporated into the items we use daily allows us to make out day to day more 
+                    efficient; with the use of watches, glasses, bracelets and shirts we can know body indicators 
+                    or even generate actions such as listening to music or receiving messages.
+                    We believe that the technology must provide solutions to our personal benefit on the daily 
+                    activities, in this context we venture in the reseach of products that contribute to different 
+                    areas as health, safety, help for people with disabilities, location of older people, etc.
                   </p>
                 </MovingText>
               </div>
@@ -333,7 +334,7 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Computer vision reference Wearables body check,
                   </p>
                 </MovingText>
                 <MovingText
@@ -346,12 +347,10 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    We know that the world of sports is exciting, that’s why we are attracted to the idea of 
+                    implement artificial intelligence technology to recognize scenarios and include the games
+                    rules to help make sports more attractive and fais in their different modalities, while applying 
+                    sensors technology and performance measurement to help athletes to increase their performance.
                   </p>
                 </MovingText>
               </div>
@@ -400,7 +399,7 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sensors technology and performance measurement to help athletes to increase their performance.
                   </p>
                 </MovingText>
                 <MovingText
@@ -413,12 +412,12 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Throughout history a lo largo de la historia los avances de la tecnologia en tema de salud 
+                    siempre son bienvenidos, en Outdev queremos aportar soluciones implementando tecnologia 
+                    blockchain donde se pueda tener un registro global inmutable ayudando a la industria para 
+                    poner al alcance de los medicos informacion vital de una manera rapida y confiable, 
+                    tambien incursionamos en tecnologias Vr/mr/ar para facilitar a los medicos el uso de instrumentos
+                    a larga distancia y claridad en el aprendizaje de los nuevos talentos en el ambito de la medicina.
                   </p>
                 </MovingText>
               </div>
@@ -467,10 +466,10 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl mb-5 ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    More agile education preocesses with VR / MR / AR
                   </p>
                 </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-dev-areas hidden"
                   type="popIn"
                   duration="2000ms"
@@ -487,7 +486,7 @@ export const DevelopmentAreas = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -524,7 +523,7 @@ export const DevelopmentAreas = () => {
                     Feeding
                   </p>
                 </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-dev-areas hidden"
                   type="popIn"
                   duration="2000ms"
@@ -554,7 +553,7 @@ export const DevelopmentAreas = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">

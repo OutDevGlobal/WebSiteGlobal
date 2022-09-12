@@ -20,7 +20,7 @@ export const Web3Development = () => {
     window.gsap.utils.toArray('.animated-text-web3').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -164,13 +164,9 @@ export const Web3Development = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
-              amet sapien ullamcorper, quis sagittis lacus vehicula.
-              Pellentesque in nisl ante. Nullam vitae quam semper metus vehicula
-              gravida. Donec quam tortor, suscipit sed suscipit eu, viverra eu
-              nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
-              cursus iaculis nec ut orci.
+              Web 3.0  is an answer to the dilemma of the Web being monopolized by big corporations by giving the power
+              to individuals in the form of ownership. To achieve this, Web3 uses blockchains, cryptocurrencies, and 
+              NFTs and will be the “read-write-own” web.
             </p>
           </MovingText>
         </div>
@@ -208,19 +204,6 @@ export const Web3Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web3 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web3 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -229,12 +212,9 @@ export const Web3Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    A non-fungible token (NFT) is an approach to tracking as well as adding value to a unique piece of
+                    digital media. In essence, it is a digital version of a concrete collector’s item that is stored 
+                    in a digital wallet or blockchain, offering proof of unique ownership and authenticity.
                   </p>
                 </MovingText>
               </div>
@@ -286,19 +266,6 @@ export const Web3Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web3 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web3 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -307,12 +274,10 @@ export const Web3Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Token is a programmable digital unit of value that is recorded on a digital ledger,
+                    in this case crypto tokes are digital units used for transaction amoing decentrilized environments.
+                    These tokens are designed to be used for a particular purpose, usually within the 
+                    application/platform for which they are developed.
                   </p>
                 </MovingText>
               </div>
@@ -366,19 +331,6 @@ export const Web3Development = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-web3 hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-web3 hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -387,12 +339,10 @@ export const Web3Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Are applications or programs that exist and run on a blockchain network instead of a single
+                    computer. This kind of apps are outside the purview and control of a single authority. 
+                    One of their benefits  include the safeguarding of user privacy, the lack of censorship, and 
+                    the flexibility of development.
                   </p>
                 </MovingText>
               </div>

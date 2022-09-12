@@ -11,8 +11,4 @@ export default defineConfig({
     react(),
     svgr(),
   ],
-  mode: "development",
-  build: {
-    minify: false,
-  }
 })

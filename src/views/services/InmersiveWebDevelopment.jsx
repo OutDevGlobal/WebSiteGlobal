@@ -20,7 +20,7 @@ export const InmersiveWebDevelopment = () => {
     window.gsap.utils.toArray('.animated-text-inmersive').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -164,13 +164,9 @@ export const InmersiveWebDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
-              amet sapien ullamcorper, quis sagittis lacus vehicula.
-              Pellentesque in nisl ante. Nullam vitae quam semper metus vehicula
-              gravida. Donec quam tortor, suscipit sed suscipit eu, viverra eu
-              nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
-              cursus iaculis nec ut orci.
+              The COVID-19 pandemic changed the world in a number of ways, immersive technologies, 
+              have helped customers to see and understand how products work in a space. Or how important is the 
+              experience from your sit.
             </p>
           </MovingText>
         </div>
@@ -208,19 +204,6 @@ export const InmersiveWebDevelopment = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-inmersive hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -229,12 +212,8 @@ export const InmersiveWebDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    360 videos are recordings that include views from every direction, all shot at the same time, 
+                    using a rig of multiple cameras or an omnidirectional camera. 
                   </p>
                 </MovingText>
               </div>
@@ -286,19 +265,6 @@ export const InmersiveWebDevelopment = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-inmersive hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -307,12 +273,8 @@ export const InmersiveWebDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    This concept consist in merging logical data visualizations with empathetic stories to maximize 
+                    impact and understandability “Makes data sence”.
                   </p>
                 </MovingText>
               </div>
@@ -364,19 +326,6 @@ export const InmersiveWebDevelopment = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-inmersive hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -385,12 +334,9 @@ export const InmersiveWebDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Home shoppin are designed to digitally extend or replace reality for the user in order to 
+                    improve the overall experience. These can include: augmented reality (AR),  virtual reality (VR), 
+                    and mixed reality (MR), a blend of physical and digital worlds to produce new environments. 
                   </p>
                 </MovingText>
               </div>
@@ -442,19 +388,6 @@ export const InmersiveWebDevelopment = () => {
                 </MovingText>
                 <MovingText
                   className="animated-text-inmersive hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-inmersive hidden"
                   type="popIn"
                   duration="1000ms"
                   delay="0s"
@@ -463,12 +396,10 @@ export const InmersiveWebDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Immersive digital art experiences are becoming more and more popular and art galleries, 
+                    museums, and cultural spaces have started making use of Information and Communication Technologies,
+                    Virtual Reality, and Augmented Reality to innovate and differentiate their cultural services in
+                    the market.
                   </p>
                 </MovingText>
               </div>

@@ -2,9 +2,10 @@ import React from 'react'
 import { Section } from 'react-scroll-section'
 import logo from '../assets/svg/brand/mainLogoOutDev.svg'
 import background from '../assets/img/background_footer.png'
+import { NavLink } from 'react-router-dom'
 
 export const Footer = () => (
-  <Section id="footer">
+  <Section id="footer" className="pt-52 lg:mt-14"> 
     <footer className="md:flex justify-center">
       <div className="md:w-full relative">
         <img
@@ -18,60 +19,56 @@ export const Footer = () => (
           </div>
           <div className="z-10">
             <div className="flex flex-col font-sofia font-light gap-2 mb-4">
-              <a
-                href="/"
-                className="text-white text-xl hover:text-base-purple duration-300">
+              <div className="text-white text-xl hover:text-base-purple duration-300 cursor-default">
                 JOIN US
                 <p>CAREERS@OUTDEV.COM</p>
-              </a>
-              <a
-                href="/"
-                className="text-white text-xl hover:text-base-purple duration-300">
+              </div>
+              <div className="text-white text-xl hover:text-base-purple duration-300 cursor-default">
                 OUTDEV.MX
-              </a>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 font-sofia font-light">
             <div className="flex flex-col gap-2">
-              <a
-                href="/"
+              <NavLink
+                to="/"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 Home
-              </a>
-              <a
-                href="/"
+              </NavLink>
+              <NavLink
+                to="/"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 About us
-              </a>
-              <a
-                href="/"
+              </NavLink>
+              <NavLink
+                to="/"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 Our Tec
-              </a>
+              </NavLink>
             </div>
             <div className="flex flex-col gap-2">
-              <a
-                href="/"
+              <NavLink
+                to="/services"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 Services
-              </a>
-              <a
-                href="/"
+              </NavLink>
+              <NavLink
+                to="/development-areas"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 Research and Development
-              </a>
+              </NavLink>
             </div>
             <div className="flex flex-col gap-2">
-              <a
-                href="/"
+              <NavLink
+                to="/contact-us"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 Locations
-              </a>
-              <a
-                href="/"
+              </NavLink>
+              <NavLink
+                to="/"
                 className="text-white text-2xl hover:text-base-purple duration-300">
                 Contact us
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

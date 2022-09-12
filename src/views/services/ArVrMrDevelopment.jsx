@@ -20,7 +20,7 @@ export const ArVrMrDevelopment = () => {
     window.gsap.utils.toArray('.animated-text-arvrmr').forEach((element) => {
       ScrollTrigger.create({
         trigger: element,
-        markers: true,
+        markers: false,
         onEnter() {
           element.classList.remove('hidden')
           element.classList.add('block')
@@ -154,7 +154,7 @@ export const ArVrMrDevelopment = () => {
       <Section id="content">
         {/* Start subtitle slide */}
         <div className="md:m-20 mb-40">
-          <MovingText
+          {/* <MovingText
             className="animated-text-arvrmr hidden"
             type="popIn"
             duration="2000ms"
@@ -172,7 +172,7 @@ export const ArVrMrDevelopment = () => {
               nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
               cursus iaculis nec ut orci.
             </p>
-          </MovingText>
+          </MovingText> */}
         </div>
         {/* Ends subtitle slide */}
 
@@ -206,7 +206,7 @@ export const ArVrMrDevelopment = () => {
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">Art Preservation</p>
                 </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-arvrmr hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
@@ -236,7 +236,7 @@ export const ArVrMrDevelopment = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -284,7 +284,7 @@ export const ArVrMrDevelopment = () => {
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">Medical Check Up</p>
                 </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-arvrmr hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
@@ -314,7 +314,7 @@ export const ArVrMrDevelopment = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -364,7 +364,7 @@ export const ArVrMrDevelopment = () => {
                     Body Analysis With VR / MR / AR
                   </p>
                 </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-arvrmr hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
@@ -394,7 +394,7 @@ export const ArVrMrDevelopment = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -444,7 +444,7 @@ export const ArVrMrDevelopment = () => {
                     Agile Education Processes with VR / MR / AR
                   </p>
                 </MovingText>
-                <MovingText
+                {/* <MovingText
                   className="animated-text-arvrmr hidden"
                   type="fadeInFromRight"
                   duration="1000ms"
@@ -474,7 +474,7 @@ export const ArVrMrDevelopment = () => {
                     vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
                     ultrices enim.
                   </p>
-                </MovingText>
+                </MovingText> */}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
