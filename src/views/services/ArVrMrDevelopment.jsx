@@ -23,20 +23,20 @@ export const ArVrMrDevelopment = () => {
         markers: false,
         onEnter() {
           element.classList.remove('hidden')
-          element.classList.add('block')
+          element.classList.add('grid')
         },
-        onLeave() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
-        onEnterBack() {
-          element.classList.remove('hidden')
-          element.classList.add('block')
-        },
-        onLeaveBack() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
+        // onLeave() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
+        // onEnterBack() {
+        //   element.classList.remove('hidden')
+        //   element.classList.add('grid')
+        // },
+        // onLeaveBack() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
       })
     })
   }, [])
@@ -498,7 +498,7 @@ export const ArVrMrDevelopment = () => {
       </Section>
 
       <HideScroll variant="down">
-        <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+        <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
           <button
             type="button"
             onClick={handleChangeSection}

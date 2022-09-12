@@ -19,6 +19,7 @@
     "plugin-transform-react-jsx": "^0.0.1-security",
     "postcss": "^8.4.14",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.5",
     "react-hide-on-scroll": "^1.1.4",
@@ -56,6 +57,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jsdom": "^19.0.0",
     "prettier": "^2.6.1",
+    "react-error-overlay": "6.0.9",
     "vite": "^3.0.0"
   }
 }

@@ -22,14 +22,18 @@ import reactIcon from '../assets/svg/technology/react.svg'
 import unityIcon from '../assets/svg/technology/unity.svg'
 
 import { Star } from '../components/animations/Star'
+import { useDispatch, useSelector } from 'react-redux'
+import { setSection } from '../redux/sectionSlice'
 
 export const Home = () => {
+  const dispatch = useDispatch()
+  const section = useSelector((state) => state.section.section)
   const home = useScrollSection('home')
   const whoWeAre = useScrollSection('whoWeAre')
   const stuff = useScrollSection('stuff')
   const services = useScrollSection('services')
   const howWeDoIt = useScrollSection('howWeDoIt')
-  const ourTec = useScrollSection('ourTec')
+  const ourTech = useScrollSection('ourTech')
   const devAreas = useScrollSection('devAreas')
   const footer = useScrollSection('footer')
 
@@ -39,7 +43,7 @@ export const Home = () => {
     stuff,
     services,
     howWeDoIt,
-    ourTec,
+    ourTech,
     devAreas,
     footer,
   ]
@@ -58,6 +62,20 @@ export const Home = () => {
   const githubRef = useRef(null)
 
   useEffect(() => {
+    if (section !== ''){
+      if (section === 'whoWeAre'){
+        whoWeAre.onClick()
+      }
+
+      if (section === 'ourTech'){
+        ourTech.onClick()
+      }
+
+      dispatch(setSection(''))
+    }
+  }, [section])
+
+  useEffect(() => {
     window.gsap.registerPlugin(ScrollTrigger)
 
     // Text animation
@@ -67,20 +85,20 @@ export const Home = () => {
         markers: false,
         onEnter() {
           element.classList.remove('hidden')
-          element.classList.add('block')
+          element.classList.add('grid')
         },
-        onLeave() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
-        onEnterBack() {
-          element.classList.remove('hidden')
-          element.classList.add('block')
-        },
-        onLeaveBack() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
+        // onLeave() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
+        // onEnterBack() {
+        //   element.classList.remove('hidden')
+        //   element.classList.add('grid')
+        // },
+        // onLeaveBack() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
       })
     })
   }, [])
@@ -183,8 +201,8 @@ export const Home = () => {
         <div className="self-center">
           <Star />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 text-lg lg:text-4xl w-full">
-          <div className="text-center self-end p-20 xl:px-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 text-2xl lg:text-4xl w-full">
+          <div className="text-center self-end lg:p-20 xl:px-40">
             <MovingText
               className="animated-text-home hidden"
               type="popIn"
@@ -197,7 +215,7 @@ export const Home = () => {
               FROM IMAGINATION TO REALITY
             </MovingText>
           </div>
-          <div className="text-center self-end p-20 xl:px-40 font-sofia">
+          <div className="text-center self-end lg:p-20 xl:px-40 font-sofia">
             <MovingText
               className="animated-text-home hidden"
               type="popIn"
@@ -207,7 +225,7 @@ export const Home = () => {
               timing="ease-out"
               iteration="1"
               fillMode="none">
-              THE DEVELOPMENT YOUT SOFTWARE NEEDS
+              THE DEVELOPMENT YOUR SOFTWARE NEEDS
             </MovingText>
           </div>
         </div>
@@ -272,7 +290,7 @@ export const Home = () => {
       <Section
         id="stuff"
         className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
-        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center ">
+        <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center ">
           <MovingText
             className="animated-text-home hidden"
             type="flip"
@@ -291,8 +309,8 @@ export const Home = () => {
       {/* Start services slide */}
       <Section
         id="services"
-        className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
-        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
+        className="justify-center md:p-20 xl:p-32 cursor-default h-auto lg:h-screen px-10">
+        <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
           <MovingText
             className="animated-text-home hidden"
             type="fadeInFromLeft"
@@ -647,9 +665,9 @@ export const Home = () => {
             className="hover:text-base-yellow duration-300 ">
             <MovingText
               className="animated-text-home hidden"
-              type="rotateCW"
-              duration="1000ms"
-              delay="2s"
+              type="popIn"
+              duration="2000ms"
+              delay="0s"
               direction="normal"
               timing="ease"
               iteration="1"
@@ -664,7 +682,7 @@ export const Home = () => {
       {/* Start how we do it slide */}
       <Section
         id="howWeDoIt"
-        className="justify-center md:p-20 xl:p-32 px-10 bg-waves-how bg-no-repeat bg-bottom h-screen">
+        className="justify-center md:p-20 xl:p-32 px-10 bg-waves-how bg-no-repeat bg-bottom my-32 lg:my-0 h-auto lg:h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 content-center h-full">
           <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
           <div className="md:p-8">
@@ -732,8 +750,8 @@ export const Home = () => {
 
       {/* Start out technology slide */}
       <Section
-        id="ourTec"
-        className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat bg-bottom px-10 h-screen">
+        id="ourTech"
+        className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat bg-bottom px-10 h-full lg:h-screen">
         <div className="self-center md:p-20 2xl:p-32">
           <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase mb-12">
             <MovingText
@@ -745,77 +763,77 @@ export const Home = () => {
               timing="ease"
               iteration="1"
               fillMode="none">
-              OUR TECNOLOGY
+              OUR TECHNOLOGY
             </MovingText>
           </div>
-          <div className="flex flex-wrap gap-4 relative">
+          <div className="flex flex-wrap gap-4 relative justify-center">
             <div
               ref={pythonRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={pythonIcon} alt="python" />
             </div>
             <div
               ref={jsRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={jsIcon} alt="JS" />
             </div>
             <div
               ref={jiraRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={jiraIcon} alt="Jira" />
             </div>
             <div
               ref={awsRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={awsIcon} alt="AWS" />
             </div>
             <div
               ref={unityRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={unityIcon} alt="Unity" />
             </div>
             <div
               ref={flutterRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={flutterIcon} alt="Flutter" />
             </div>
             <div
               ref={djangoRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={djangoIcon} alt="Django" />
             </div>
             <div
               ref={angularRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={angularIcon} alt="Angular" />
             </div>
             <div
               ref={reactRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={reactIcon} alt="React" />
             </div>
             <div
               ref={githubRef}
               className="
-                bg-black shadow-purple w-24 md:w-52 h-24 md:h-52 cursor-grab rounded-xl
+                bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
               ">
               <img src={githubIcon} alt="Github" />
             </div>
@@ -825,7 +843,7 @@ export const Home = () => {
       {/* Ends out technology slide */}
 
       {/* Start dev areas slide */}
-      <Section id="devAreas" className="justify-center md:p-24 xl:p-32 h-screen px-10">
+      <Section id="devAreas" className="justify-center md:p-24 xl:p-32 h-full px-10">
         <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4 h-full">
           <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
             <MovingText
@@ -1072,7 +1090,7 @@ export const Home = () => {
       </Section>
       {/* Ends dev areas slide */}
 
-      <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+      <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
         <button type="button" onClick={handleChangeSection} className="sticky">
           <IconArrowDown
             className="

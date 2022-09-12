@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from "three"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { degToRad } from "three/src/math/MathUtils"
+import { isMobile } from 'react-device-detect'
 
 export const Star = () => {
 
@@ -22,7 +23,7 @@ export const Star = () => {
 
   useEffect(() => {
 
-    if (document.getElementById('canvas-bg') === null){
+    if (document.getElementById('canvas-bg') === null && !isMobile){
 
       // renderer
       renderer = new THREE.WebGLRenderer({ antialias: true });

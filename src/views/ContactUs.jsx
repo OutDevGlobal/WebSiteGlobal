@@ -5,14 +5,26 @@ import { Section, useScrollSection } from 'react-scroll-section'
 import { HideScroll } from 'react-hide-on-scroll'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
-import { ReactComponent as AttachIcon } from '../assets/svg/attach.svg'
+import { setSection } from '../redux/sectionSlice'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const ContactUs = () => {
+  const dispatch = useDispatch()
   const content = useScrollSection('content')
+  const section = useSelector((state) => state.section.section)
 
   const handleChangeSection = () => {
     content.onClick()
   }
+
+  useEffect(() => {
+    if (section !== ''){
+      if (section === 'content'){
+        content.onClick()
+      }
+      dispatch(setSection(''))
+    }
+  }, [section])
 
   useEffect(() => {
     window.gsap.registerPlugin(ScrollTrigger)
@@ -24,20 +36,20 @@ export const ContactUs = () => {
         markers: false,
         onEnter() {
           element.classList.remove('hidden')
-          element.classList.add('block')
+          element.classList.add('grid')
         },
-        onLeave() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
-        onEnterBack() {
-          element.classList.remove('hidden')
-          element.classList.add('block')
-        },
-        onLeaveBack() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
+        // onLeave() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
+        // onEnterBack() {
+        //   element.classList.remove('hidden')
+        //   element.classList.add('grid')
+        // },
+        // onLeaveBack() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
       })
     })
   }, [])
@@ -53,8 +65,8 @@ export const ContactUs = () => {
   return (
     <div className="w-full relative">
       {/* Start banner slide */}
-      <div className="grid grid-cols-1 md:grid-cols-3 md:justify-end h-screen">
-        <div className="md:col-start-3 text-2xl md:text-6xl uppercase justify-center md:self-center md:mr-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:justify-end h-screen px-10">
+        <div className="md:col-start-3 text-5xl md:text-6xl uppercase justify-center self-center md:mr-20">
           <MovingText
             className="animated-text-contact hidden"
             type="fadeInFromRight"
@@ -72,9 +84,9 @@ export const ContactUs = () => {
 
       <Section id="content">
         {/* Start Contact slide */}
-        <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:px-20 px-10">
           <div className="md:col-start-2">
-            <div className="uppercase text-2xl md:text-6xl">
+            <div className="uppercase text-4xl md:text-6xl">
               <MovingText
                 className="animated-text-contact hidden"
                 type="fadeInFromRight"
@@ -88,7 +100,7 @@ export const ContactUs = () => {
                 <p>Let&apos;s Talk</p>
               </MovingText>
             </div>
-            <div className="uppercase text-2xl md:text-7xl font-bold mt-10">
+            <div className="uppercase text-4xl md:text-7xl font-bold mt-10">
               <MovingText
                 className="animated-text-contact hidden"
                 type="fadeInFromRight"
@@ -136,7 +148,7 @@ export const ContactUs = () => {
       </Section>
 
       <HideScroll variant="down">
-        <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+        <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
           <button
             type="button"
             onClick={handleChangeSection}

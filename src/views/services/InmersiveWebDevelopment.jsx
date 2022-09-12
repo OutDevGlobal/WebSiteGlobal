@@ -23,20 +23,20 @@ export const InmersiveWebDevelopment = () => {
         markers: false,
         onEnter() {
           element.classList.remove('hidden')
-          element.classList.add('block')
+          element.classList.add('grid')
         },
-        onLeave() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
-        onEnterBack() {
-          element.classList.remove('hidden')
-          element.classList.add('block')
-        },
-        onLeaveBack() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
+        // onLeave() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
+        // onEnterBack() {
+        //   element.classList.remove('hidden')
+        //   element.classList.add('grid')
+        // },
+        // onLeaveBack() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
       })
     })
   }, [])
@@ -153,7 +153,7 @@ export const InmersiveWebDevelopment = () => {
 
       <Section id="content">
         {/* Start subtitle slide */}
-        <div className="md:m-20 mb-40">
+        <div className="md:m-20 mb-40 lg:h-auto">
           <MovingText
             className="animated-text-inmersive hidden"
             type="popIn"
@@ -175,7 +175,7 @@ export const InmersiveWebDevelopment = () => {
         {/* Start content slide */}
         <div>
           {/* Start 360º Video */}
-          <div className="relative w-full mb-40">
+          <div className="relative h-screen lg:h-auto w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
@@ -226,8 +226,8 @@ export const InmersiveWebDevelopment = () => {
                 ">
                 <div
                   className="
-                    bg-left-image bg-fixed
-                    bg-video-360 bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                    lg:bg-left-image lg:bg-fixed
+                    bg-video-360 bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
                   "
                 />
               </div>
@@ -236,7 +236,7 @@ export const InmersiveWebDevelopment = () => {
           {/* Ends 360º Video */}
 
           {/* Start Data Visualization */}
-          <div className="relative w-full mb-40">
+          <div className="relative h-screen lg:h-auto w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
@@ -287,7 +287,7 @@ export const InmersiveWebDevelopment = () => {
                 ">
                 <div
                   className="
-                    bg-right-image bg-fixed
+                    lg:bg-right-image bg-fixed
                     bg-data-visualization bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
                   "
                 />
@@ -297,7 +297,7 @@ export const InmersiveWebDevelopment = () => {
           {/* Ends Data Visualization */}
 
           {/* Start Home Stores */}
-          <div className="relative w-full mb-40">
+          <div className="relative h-screen lg:h-auto w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <MovingText
@@ -349,7 +349,7 @@ export const InmersiveWebDevelopment = () => {
                 ">
                 <div
                   className="
-                    bg-left-image bg-fixed
+                    lg:bg-left-image bg-fixed
                     bg-home-stores bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
                   "
                 />
@@ -359,7 +359,7 @@ export const InmersiveWebDevelopment = () => {
           {/* Ends Home Stores */}
 
           {/* Start Digital Art */}
-          <div className="relative w-full mb-40">
+          <div className="relative h-screen lg:h-auto w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <MovingText
@@ -425,7 +425,7 @@ export const InmersiveWebDevelopment = () => {
       </Section>
 
       <HideScroll variant="down">
-        <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+        <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
           <button
             type="button"
             onClick={handleChangeSection}

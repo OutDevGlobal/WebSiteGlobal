@@ -25,20 +25,20 @@ export const Services = () => {
         markers: false,
         onEnter() {
           element.classList.remove('hidden')
-          element.classList.add('block')
+          element.classList.add('grid')
         },
-        onLeave() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
-        onEnterBack() {
-          element.classList.remove('hidden')
-          element.classList.add('block')
-        },
-        onLeaveBack() {
-          element.classList.remove('block')
-          element.classList.add('hidden')
-        },
+        // onLeave() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
+        // onEnterBack() {
+        //   element.classList.remove('hidden')
+        //   element.classList.add('grid')
+        // },
+        // onLeaveBack() {
+        //   element.classList.remove('grid')
+        //   element.classList.add('hidden')
+        // },
       })
     })
   }, [])
@@ -98,8 +98,8 @@ export const Services = () => {
   return (
     <div className="w-full relative px-1">
       {/* Start banner slide */}
-      <div className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen">
-        <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
+      <div className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-screen">
+        <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
           <MovingText
             className="animated-text-services hidden"
             type="flip"
@@ -473,7 +473,7 @@ export const Services = () => {
       {/* Ends services slide */}
 
       <HideScroll variant="down">
-        <div className="fixed lute cursor-pointer bottom-20 right-20 hidden md:block">
+        <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
           <button
             type="button"
             onClick={handleChangeSection}
