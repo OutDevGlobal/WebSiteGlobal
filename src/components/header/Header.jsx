@@ -66,26 +66,27 @@ export const Header = () => {
           sticky top-0 w-full flex items-center justify-between flex-wrap px-10 z-50 pointer-events-none
         `}>
         <MainLogo />
-        <div
+        <button
+          type="button"
+          onClick={handleMenu}
+          onMouseEnter={showGrayImage}
+          onMouseLeave={hiddeGrayImage}
           className="
             flex items-center justify-center bg-navIconBorder hover:bg-navIconBorderEmpty bg-cover bg-no-repeat 
-            w-10 h-10 sm:w-16 sm:h-16 pointer-events-auto
+            w-16 h-16 lg:w-10 lg:h-10 pointer-events-auto mt-2 lg:mt-0
           ">
           <div className="card rotate-45">
-            <button
-              type="button"
-              onClick={handleMenu}
-              onMouseEnter={showGrayImage}
-              onMouseLeave={hiddeGrayImage}
+            <div
+
               className="flex justify-center rotate-45 w-6 h-6 sm:w-10 sm:h-10">
               <img
                 src={navigationIcon}
                 className="w-6 h-6 sm:w-10 sm:h-10"
                 alt="OutDevGlobal-Menu"
               />
-            </button>
+            </div>
           </div>
-        </div>
+        </button>
       </nav>
       <div
         id="menu"
@@ -128,16 +129,6 @@ export const Header = () => {
                 duration-300 py-3
               ">
               Development Areas
-            </NavLink>
-            <NavLink
-              to="/contact-us"
-              onClick={handleMenu}
-              className="
-                text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
-                text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
-                duration-300 py-3
-              ">
-              Say Hello
             </NavLink>
             <div className="text-center flex gap-8 justify-center md:justify-start py-3">
               <a
