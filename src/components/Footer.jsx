@@ -22,13 +22,13 @@ export const Footer = () => {
             <div className="flex justify-center z-10">
               <img src={logo} className="w-52" alt="OutDev" />
             </div>
-            <div className="flex gap-8 mr-10">
+            <div className="lg:flex gap-8 lg:mr-10">
               <div className="flex flex-col font-sofia font-bold gap-2 mb-4 text-xl lg:text-4xl">
                 <p className="text-white hover:text-base-purple duration-300 cursor-default">USA</p>
                 <p className="hover:text-base-purple duration-300 cursor-default">MX</p>
                 <p className="hover:text-base-purple duration-300 cursor-default">CANADA</p>
               </div>
-              <div className="flex flex-col font-sofia font-bold gap-2 mb-4">
+              <div className="flex flex-col font-sofia font-bold gap-2 mb-4 justify-center">
                 <p className="font-sofia font-light text-xl">
                   The Gas Company Tower 555 West 5th Street 35th Floor
                 </p>
