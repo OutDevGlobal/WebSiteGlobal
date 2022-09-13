@@ -115,7 +115,7 @@ export const InmersiveWebDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="relative z-30 text-2xl md:text-6xl 2xl:text-8xl">
-              Exceptional contents and world-class Visuals
+              Exceptional contents and world-class visualization
             </p>
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
@@ -335,8 +335,8 @@ export const InmersiveWebDevelopment = () => {
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     Home shoppin are designed to digitally extend or replace reality for the user in order to 
-                    improve the overall experience. These can include: augmented reality (AR),  virtual reality (VR), 
-                    and mixed reality (MR), a blend of physical and digital worlds to produce new environments. 
+                    improve the overall experience. These can include: aumented reality (AR),  virtual reality (VR), 
+                    and mixed reality (MR), a combination of physical and digital worlds to produce new environments. 
                   </p>
                 </MovingText>
               </div>
@@ -398,7 +398,7 @@ export const InmersiveWebDevelopment = () => {
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     Immersive digital art experiences are becoming more and more popular and art galleries, 
                     museums, and cultural spaces have started making use of Information and Communication Technologies,
-                    Virtual Reality, and Augmented Reality to innovate and differentiate their cultural services in
+                    Virtual Reality, and Aumented Reality to innovate and differentiate their cultural services in
                     the market.
                   </p>
                 </MovingText>

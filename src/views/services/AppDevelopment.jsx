@@ -115,7 +115,7 @@ export const AppDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="relative z-30 text-2xl md:text-6xl 2xl:text-8xl">
-              Exceptional contents and world-class Visuals
+              We code beautiful and interactive Cross-platform mobile Apps.
             </p>
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
@@ -164,9 +164,9 @@ export const AppDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Mobile apps has its roots in more traditional software development. One critical difference, however,
-              is that mobile apps are often written specifically to take advantage of the unique features of a 
-              particular mobile device.
+              Mobile apps have their roots in more traditional software development. However, 
+              one critical difference is that mobile apps are often written specifically to take advantage 
+              of the unique features of a particular mobile device.
             </p>
           </MovingText>
         </div>
@@ -325,7 +325,7 @@ export const AppDevelopment = () => {
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">Hybrid</p>
                 </MovingText>
-                {/* <MovingText
+                <MovingText
                   className="animated-text-app hidden"
                   type="popIn"
                   duration="1000ms"
@@ -335,14 +335,12 @@ export const AppDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    The best way to develop all this apps is doing it just one time, using a different programming 
+                    software we can write a unique code that would be use in both of the operating system.
+                    In this sense, we can optimize the processes to develop the apps, ensuring that those apps 
+                    would run in any device that uses any of the operating systems.
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">

@@ -115,7 +115,7 @@ export const Web2Development = () => {
             iteration="1"
             fillMode="none">
             <p className="relative z-30  text-2xl md:text-6xl 2xl:text-8xl">
-              We create beautiful and interactive Website
+              We create beautiful and interactive Websites
             </p>
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
@@ -164,10 +164,11 @@ export const Web2Development = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Technology has helped build a platform that has enabled the businesses to cash in on the huge population
-              and market that is now accessible over the internet and sell to them. millions of users access and use
-              the internet for various purposes throughout the day. They use the internet for  browsing, writing
-              & communication, listening, watching news, videos, trading and selling.
+              Technology has helped build platforms that have enabled the businesses to take advantage on 
+              the huge population and market that are now accessible over the internet and sell to them. 
+              Millions of users access and use the internet for various purposes throughout the day. 
+              They use the internet to  browse, write, communicate, listen to music, watch videos, read news, 
+              trade and sell.
             </p>
           </MovingText>
         </div>

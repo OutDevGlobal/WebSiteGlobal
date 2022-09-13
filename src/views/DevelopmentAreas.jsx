@@ -147,6 +147,8 @@ export const DevelopmentAreas = () => {
                   <p className="font-sofia font-light font-md text-justify md:text-left">
                     We develop your life project side by side with you, focusing on new technologies, so that you are 
                     always up-to-date and can enter new markets in a better way.
+                  </p>
+                  <p className="font-sofia font-light font-md text-justify md:text-left mt-3">
                     We give you the necessary tools so that your business can reach its maximum potential;
                     simplify actions, speed up processes and reduce costs with a global solution that allows you to 
                     control everything that happens in your company from the same place.
@@ -213,12 +215,15 @@ export const DevelopmentAreas = () => {
                   <p className="font-sofia font-light font-md text-justify md:text-left">
                     Art is the way people perceive reality, we seek to preserve that expression and share it with the
                     rest of the world.
-
+                  </p>
+                  <p className="font-sofia font-light font-md text-justify md:text-left mt-3">
                     We seek to enhance the beauty of life in each of the pieces that the artist paints, draws, writes, 
                     composes, sculpts, molds... creates.
-
+                  </p>
+                  <p className="font-sofia font-light font-md text-justify md:text-left  mt-3">
                     And the most important; we generate environments where people can appreciate the artist's 
-                    creations and have them for themselves, synchronizing virtual reality with physical reality in a harmonious and perfect way.
+                    creations and have them for themselves, synchronizing virtual reality with physical reality in a 
+                    harmonious and perfect way.
                   </p>
                 </MovingText>
               </div>
@@ -283,6 +288,8 @@ export const DevelopmentAreas = () => {
                     The technology incorporated into the items we use daily allows us to make out day to day more 
                     efficient; with the use of watches, glasses, bracelets and shirts we can know body indicators 
                     or even generate actions such as listening to music or receiving messages.
+                  </p>
+                  <p className="font-sofia font-light font-md text-justify md:text-left mt-3">
                     We believe that the technology must provide solutions to our personal benefit on the daily 
                     activities, in this context we venture in the reseach of products that contribute to different 
                     areas as health, safety, help for people with disabilities, location of older people, etc.
@@ -466,10 +473,10 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl mb-5 ">
-                    More agile education preocesses with VR / MR / AR
+                    Faster education processes with VR / MR / AR
                   </p>
                 </MovingText>
-                {/* <MovingText
+                <MovingText
                   className="animated-text-dev-areas hidden"
                   type="popIn"
                   duration="2000ms"
@@ -479,14 +486,12 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left ">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    We know that there are many ways of learning and thanks to these technologies we can include 
+                    different forms in a single system, we believe that education can advance exponentially by 
+                    having access to it with virtual reality where you can study implicitly while you're having 
+                    fun as well as do practices in a world where you can fail without any risk.
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -523,7 +528,7 @@ export const DevelopmentAreas = () => {
                     Feeding
                   </p>
                 </MovingText>
-                {/* <MovingText
+                <MovingText
                   className="animated-text-dev-areas hidden"
                   type="popIn"
                   duration="2000ms"
@@ -533,7 +538,7 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-thin text-2xl mb-5 ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Food Preservation / Vertical Planting Computer Analysis / AI
                   </p>
                 </MovingText>
                 <MovingText
@@ -546,14 +551,11 @@ export const DevelopmentAreas = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md text-justify md:text-left ">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Focusing efforts to prevent hunger in the world is an issue of global importance; 
+                    applying technology to seeds to improve their tolerance to droughts, having better 
+                    fertilizers, doing computer vision to prevent pest and doing vertical planting.
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">

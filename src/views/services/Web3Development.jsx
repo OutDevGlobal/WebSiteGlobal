@@ -164,9 +164,9 @@ export const Web3Development = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Web 3.0  is an answer to the dilemma of the Web being monopolized by big corporations by giving the power
-              to individuals in the form of ownership. To achieve this, Web3 uses blockchains, cryptocurrencies, and 
-              NFTs and will be the “read-write-own” web.
+              The answer to the dilemma of the Web being monopolized by big corporations is that web 3.0 gives the
+              power to individuals in the form of ownership. To achieve this, Web 3.0 uses blockchains, 
+              cryptocurrencies and NFTs, being this the “read-write-own” web.
             </p>
           </MovingText>
         </div>
@@ -274,8 +274,8 @@ export const Web3Development = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Token is a programmable digital unit of value that is recorded on a digital ledger,
-                    in this case crypto tokes are digital units used for transaction amoing decentrilized environments.
+                    A token is a programmable digital unit of value that is recorded on a digital ledger,
+                    in this case crypto tokens are digital units used for transaction amoing decentrilized environments.
                     These tokens are designed to be used for a particular purpose, usually within the 
                     application/platform for which they are developed.
                   </p>

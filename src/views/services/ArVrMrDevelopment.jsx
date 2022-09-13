@@ -115,7 +115,7 @@ export const ArVrMrDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="relative z-30 text-2xl md:text-6xl 2xl:text-8xl">
-              Exceptional contents and world-class Visuals
+              The most espectacular interactive experiences
             </p>
           </MovingText>
           <div className="pointer-events-none w-image-service-full h-image-service-full hidden md:flex">
@@ -154,7 +154,7 @@ export const ArVrMrDevelopment = () => {
       <Section id="content">
         {/* Start subtitle slide */}
         <div className="md:m-20 mb-40">
-          {/* <MovingText
+          <MovingText
             className="animated-text-arvrmr hidden"
             type="popIn"
             duration="2000ms"
@@ -164,15 +164,11 @@ export const ArVrMrDevelopment = () => {
             iteration="1"
             fillMode="none">
             <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-2/3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              efficitur semper nunc, eget accumsan mauris. Ut dictum lectus sit
-              amet sapien ullamcorper, quis sagittis lacus vehicula.
-              Pellentesque in nisl ante. Nullam vitae quam semper metus vehicula
-              gravida. Donec quam tortor, suscipit sed suscipit eu, viverra eu
-              nisi. In pellentesque egestas odio. Suspendisse ac orci non nunc
-              cursus iaculis nec ut orci.
+              The incorporation of digital realities in the new developmets allow us to create unimaginable 
+              worlds that we can appreciate just by using or smartphones, forging worlds that are out of 
+              this reality or taking the reality into the digital world.
             </p>
-          </MovingText> */}
+          </MovingText>
         </div>
         {/* Ends subtitle slide */}
 
@@ -206,19 +202,6 @@ export const ArVrMrDevelopment = () => {
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">Art Preservation</p>
                 </MovingText>
-                {/* <MovingText
-                  className="animated-text-arvrmr hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
                 <MovingText
                   className="animated-text-arvrmr hidden"
                   type="popIn"
@@ -229,14 +212,13 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    The beauty of art could be lost in a blink of an eye, natural disasters, accidents and even 
+                    time are some of the enemies of this pieces, through the use of a nft we could preserve the 
+                    beauty of the piece and the unique value that it has implicit, giving the owner the safety 
+                    that there's not another legit owner that could claims the property of the NFT.
+                    Doing this we can keep these beauty for the eternity.
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -284,19 +266,6 @@ export const ArVrMrDevelopment = () => {
                   fillMode="none">
                   <p className="uppercase text-3xl xl:text-5xl mb-5">Medical Check Up</p>
                 </MovingText>
-                {/* <MovingText
-                  className="animated-text-arvrmr hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
                 <MovingText
                   className="animated-text-arvrmr hidden"
                   type="popIn"
@@ -307,14 +276,11 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    The use of data to improve the body health is a reality through data science, 
+                    using some standard metrics we could know how good or bad we are according to 
+                    that standars in a faster and d
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -364,19 +330,6 @@ export const ArVrMrDevelopment = () => {
                     Body Analysis With VR / MR / AR
                   </p>
                 </MovingText>
-                {/* <MovingText
-                  className="animated-text-arvrmr hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
                 <MovingText
                   className="animated-text-arvrmr hidden"
                   type="popIn"
@@ -387,14 +340,12 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    The use of augmented and virtual reality for the analysis of our bodies would be the key 
+                    we needed to improve the way we understand how our body works and to communicate what 
+                    diseases do to our bodies, making way much more easy the understanding processes to the 
+                    patient and trying to arouse people’s interest in their health care
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -444,19 +395,6 @@ export const ArVrMrDevelopment = () => {
                     Agile Education Processes with VR / MR / AR
                   </p>
                 </MovingText>
-                {/* <MovingText
-                  className="animated-text-arvrmr hidden"
-                  type="fadeInFromRight"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </MovingText>
                 <MovingText
                   className="animated-text-arvrmr hidden"
                   type="popIn"
@@ -467,14 +405,13 @@ export const ArVrMrDevelopment = () => {
                   iteration="1"
                   fillMode="none">
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                    Donec blandit, sem eget eleifend sagittis, ante est iaculis
-                    lacus, ut malesuada urna lectus ut est. Etiam vitae ligula
-                    sit amet nisi fermentum cursus tempor non mauris. Nulla
-                    euismod risus libero, semper fringilla felis tincidunt
-                    vitae. Nunc et sapien fermentum, rhoncus nulla eleifend,
-                    ultrices enim.
+                    Integrating technology to the traditional learning processes would be the needed jump to make 
+                    way faster the way people learn and implement information in their daily activities.
+                    Incorporate the use of augmented and virtual reality to schools could give to students 
+                    the confidence to put in practice on a real environment what they have learned on the 
+                    safety of a classroom
                   </p>
-                </MovingText> */}
+                </MovingText>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">

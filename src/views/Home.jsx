@@ -911,7 +911,7 @@ export const Home = () => {
                   SMART WEARABLES
                 </p>
                 <p className="xl:text-xl font-sofia font-light text-md slide-right">
-                  Devices Accesories and Clothing...
+                  Devices accesories and clothing...
                 </p>
               </MovingText>
               <div
