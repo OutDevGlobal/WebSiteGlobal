@@ -12,13 +12,13 @@ module.exports = {
       },
       width: {
         'image-service': '300px',
-        'image-service-full': '500px',
+        'image-service-full': '450px',
         'image-mobile': '18rem',
         'image-wide': '450px',
       },
       height: {
         'image-service': '450px',
-        'image-service-full': '650px',
+        'image-service-full': '600px',
         'image-mobile': '25rem',
         'image-wide': '600px',
       },
