@@ -46,10 +46,10 @@ export const AppDevelopment = () => {
   return (
     <div className="w-full relative px-10 bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       <ScrollContainer>
-        <ScrollPage>
+        <ScrollPage key="banner">
           {/* Start banner slide */}
           <div
-            id="banner"
+            key="banner"
             className="grid grid-cols-1 justify-center md:p-20 h-full">
             <div className="uppercase self-center md:w-2/3 relative">
               
@@ -91,7 +91,7 @@ export const AppDevelopment = () => {
         </ScrollPage>
 
         {/* Start content slide */}
-        <ScrollPage>
+        <ScrollPage key="subtitle">
           {/* Start subtitle slide */}
           <div className="py-40 pointer-events-none">
             <Animator animation={batch(Fade(), MoveIn(200, 0), Sticky())}>
@@ -105,9 +105,8 @@ export const AppDevelopment = () => {
           {/* Ends subtitle slide */}
         </ScrollPage>
 
-        {/* Start content slide */}
-        <ScrollPage>
-          {/* Start Hybrid */}
+        <ScrollPage key="android">
+          {/* Start Android */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
@@ -142,10 +141,10 @@ export const AppDevelopment = () => {
               </div>
             </div>
           </div>
-          {/* Ends Hybrid */}
+          {/* Ends Android */}
         </ScrollPage>
 
-        <ScrollPage>
+        <ScrollPage key="ios">
           {/* Start IOS */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
@@ -185,7 +184,7 @@ export const AppDevelopment = () => {
           {/* Ends IOS */}
         </ScrollPage>
 
-        <ScrollPage>
+        <ScrollPage key="hybrid">
           {/* Start Hybrid */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
