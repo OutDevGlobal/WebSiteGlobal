@@ -28,7 +28,7 @@ export const Footer = () => {
                 <p className="hover:text-base-purple duration-300 cursor-default">MX</p>
                 <p className="hover:text-base-purple duration-300 cursor-default">CANADA</p>
               </div>
-              <div className="flex flex-col font-sofia font-bold gap-2 mb-4 justify-center">
+              <div className="flex flex-col font-sofia font-bold gap-2 mb-4 justify-center mx-10 lg:mx-0">
                 <p className="font-sofia font-light text-xl">
                   The Gas Company Tower 555 West 5th Street 35th Floor
                 </p>
@@ -46,7 +46,7 @@ export const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 font-sofia font-light">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 font-sofia font-light mx-10 lg:mx-0">
               <div className="flex flex-col gap-2">
                 <NavLink
                   to="/"
