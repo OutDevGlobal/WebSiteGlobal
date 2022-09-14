@@ -1,21 +1,9 @@
 import React, { useEffect } from 'react'
-import { HideScroll } from 'react-hide-on-scroll'
 import {
-  Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, 
-  StickyOut, Zoom, ZoomIn, ZoomOut
+  Animator, ScrollContainer, ScrollPage, batch, Fade, MoveIn, MoveOut, Sticky, ZoomIn
 } from "react-scroll-motion"
 
-import { Section, useScrollSection } from 'react-scroll-section'
-import { ReactComponent as IconArrowDown } from '../../assets/svg/arrow_down.svg'
-
 export const AppDevelopment = () => {
-  const content = useScrollSection('content')
-
-  const fromRight = batch(FadeIn(), MoveIn(-200, 0), FadeOut())
-
-  const handleChangeSection = () => {
-    content.onClick()
-  }
 
   useEffect( () => {
     if (location.pathname !== '/' &&  document.getElementById('canvas-bg') !== null) {
@@ -60,7 +48,7 @@ export const AppDevelopment = () => {
       <ScrollContainer>
         <ScrollPage>
           {/* Start banner slide */}
-          <Section
+          <div
             id="banner"
             className="grid grid-cols-1 justify-center md:p-20 h-full">
             <div className="uppercase self-center md:w-2/3 relative">
@@ -98,7 +86,7 @@ export const AppDevelopment = () => {
                 </Animator>
               </div>
             </div>
-          </Section>
+          </div>
           {/* Ends banner slide */}
         </ScrollPage>
 
@@ -240,21 +228,6 @@ export const AppDevelopment = () => {
         {/* Ends content slide */}
 
       </ScrollContainer>
-
-      <HideScroll variant="down">
-        <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
-          <button
-            type="button"
-            onClick={handleChangeSection}
-            className="sticky">
-            <IconArrowDown
-              className="
-                text-transparent hover:text-base-yellow hover:translate hover:scale-110 duration-300
-              "
-            />
-          </button>
-        </div>
-      </HideScroll>
     </div>
   )
 }
