@@ -59,7 +59,7 @@ export const ArVrMrDevelopment = () => {
                 onMouseLeave={hiddeColorCursor}
                 className="
                   pointer-events-none w-image-service-full h-image-service-full hidden md:block
-                  absolute -top-1/2 left-3/4 z-0
+                  absolute -top-72 left-3/4 z-0
                 "
               >
                 <div className=" pointer-events-auto bg-ar-vr-mr-service bg-no-repeat grayscale w-full h-full absolute"/>
