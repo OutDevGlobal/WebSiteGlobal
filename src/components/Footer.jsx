@@ -10,7 +10,7 @@ export const Footer = () => {
   const dispatch = useDispatch()
 
   return (
-    <Section id="footer" className="h-full"> 
+    <Section id="footer"> 
       <footer className="md:flex justify-center">
         <div className="md:w-full relative">
           <img

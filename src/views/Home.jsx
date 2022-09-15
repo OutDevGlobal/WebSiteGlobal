@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import {
-  Animator, ScrollContainer, ScrollPage, batch, Fade, MoveIn, MoveOut, Sticky, ZoomIn, Move
+  Animator, ScrollContainer, ScrollPage, batch, Fade, MoveIn, MoveOut, ZoomIn, Move
 } from "react-scroll-motion"
 import { ReactComponent as IconSlashDivider } from '../assets/svg/slash_divider.svg'
 
@@ -159,10 +159,10 @@ export const Home = () => {
           {/* Start who we are slide */}
           <div
             id="whoWeAre"
-            className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
+            className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-full px-10">
             <div className="self-center">
               <div className="text-6xl 2xl:text-8xl md:p-8 ">
-                <Animator animation={batch(ZoomIn(), Fade())}>
+                <Animator animation={batch(MoveIn(-200, 0), Fade())}>
                   <p>WHO WE ARE</p>
                 </Animator>
               </div>
@@ -194,7 +194,7 @@ export const Home = () => {
           {/* Start stuff slide */}
           <div
             id="stuff"
-            className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-screen px-10">
+            className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-full px-10">
             <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center ">
               <Animator animation={batch(ZoomIn())}>
                 <p>
@@ -209,9 +209,9 @@ export const Home = () => {
           {/* Start services slide */}
           <div
             id="services"
-            className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
+            className="justify-center md:p-20 xl:p-32 cursor-default h-full px-10">
             <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
-              <Animator animation={batch(ZoomIn(), Fade(), MoveOut(0, -200))}>
+              <Animator animation={batch(MoveIn(-200, 0), Fade(), MoveOut(0, -200))}>
                 <p>
                   WHAT DO WE DO?
                 </p>
@@ -496,12 +496,12 @@ export const Home = () => {
           {/* Start how we do it slide */}
           <div
             id="howWeDoIt"
-            className="justify-center md:p-20 xl:p-32 px-10 bg-waves-how bg-no-repeat bg-bottom my-32 lg:my-0 h-auto lg:h-screen">
+            className="justify-center md:p-20 xl:p-32 px-10 bg-waves-how bg-no-repeat bg-bottom">
             <div className="grid grid-cols-1 md:grid-cols-2 content-center h-full">
               <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
               <div className="md:p-8">
                 <div className="uppercase text-6xl 2xl:text-8xl mb-12 ">
-                  <Animator animation={batch(ZoomIn())}>
+                  <Animator animation={batch(MoveIn(-200, 0))}>
                     <p>
                       HOW WE DO IT?
                     </p>
@@ -536,85 +536,44 @@ export const Home = () => {
           {/* Start out technology slide */}
           <div
             id="ourTech"
-            className="justify-center my-10 md:my-auto bg-waves-technology bg-no-repeat bg-bottom px-10 h-full lg:h-screen">
-            <div className="self-center md:p-20 2xl:p-32">
+            className="justify-center bg-waves-technology bg-no-repeat bg-cover px-10 h-full">
+            <div className="self-center md:px-20 2xl:px-32">
               <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase mb-12">
-                <Animator animation={batch(ZoomIn())}>
-                  <p className="font-sofia font-light text-lg xl:text-2xl">
+                <Animator animation={batch(MoveIn(-200, 0))}>
+                  <p className="font-sofia font-light text-2xl xl:text-6xl z-50">
                     OUR TECHNOLOGY
                   </p>
                 </Animator>
               </div>
               <div className="flex flex-wrap gap-4 relative justify-center">
-                <div
-                  
-                  ref={pythonRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={jsRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={pythonIcon} alt="python" />
                 </div>
-                <div
-                  ref={jsRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={jsRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={jsIcon} alt="JS" />
                 </div>
-                <div
-                  ref={jiraRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={jiraRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={jiraIcon} alt="Jira" />
                 </div>
-                <div
-                  ref={awsRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={awsRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={awsIcon} alt="AWS" />
                 </div>
-                <div
-                  ref={unityRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={unityRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={unityIcon} alt="Unity" />
                 </div>
-                <div
-                  ref={flutterRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={flutterRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={flutterIcon} alt="Flutter" />
                 </div>
-                <div
-                  ref={djangoRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={djangoRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={djangoIcon} alt="Django" />
                 </div>
-                <div
-                  ref={angularRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={angularRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={angularIcon} alt="Angular" />
                 </div>
-                <div
-                  ref={reactRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={reactRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={reactIcon} alt="React" />
                 </div>
-                <div
-                  ref={githubRef}
-                  className="
-                    bg-black shadow-purple w-32 md:w-52 h-32 md:h-52 cursor-grab rounded-xl
-                  ">
+                <div ref={githubRef} className="bg-black shadow-purple w-20 md:w-52 h-20 md:h-52 rounded-xl">
                   <img src={githubIcon} alt="Github" />
                 </div>
               </div>
@@ -624,28 +583,28 @@ export const Home = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start dev areas slide */}
-          <div id="devAreas" className="justify-center md:p-24 xl:p-32 h-full px-10">
-            <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4 h-full">
+          <div id="devAreas" className="justify-center md:px-24 xl:px-32 px-10">
+            <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4">
               <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
                 <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
-                  <p className="font-sofia font-light text-lg xl:text-2xl">
+                  <p className="font-sofia font-light text-lg xl:text-2xl mb-5">
                     we invest efforts in different areas that take us to the next
                     level
                   </p>
                 </Animator>
               </div>
-              <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 lg:gap-3">
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, 800))}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4">
                       Research and technological development
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       The future is now and there are infinite opportunities...
                     </p>
                   </Animator>
@@ -661,15 +620,15 @@ export const Home = () => {
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(0, 800))}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4">
                       SMART WEARABLES
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       Devices accesories and clothing...
                     </p>
                   </Animator>
@@ -685,15 +644,15 @@ export const Home = () => {
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(-800, 800))}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
                       SPORTS
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       Computer vision reference Wearables body check...
                     </p>
                   </Animator>
@@ -709,15 +668,15 @@ export const Home = () => {
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, 0))}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
                       ART AND ENTRETAINMENT
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       New experiences are comming from real world to virtual world...
                     </p>
                   </Animator>
@@ -733,15 +692,15 @@ export const Home = () => {
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade())}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
                       EDUCATION
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       Learning is getting into an evolution, where virtual and mixed reality makes possible new 
                       learning ways...
                     </p>
@@ -758,15 +717,15 @@ export const Home = () => {
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(-800, 0))}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
                       HEALTH
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       Know how things work and reduce the risk in real life...
                     </p>
                   </Animator>
@@ -782,15 +741,15 @@ export const Home = () => {
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="mb-10 text-left"
+                  className="mb-3 lg:mb-10 text-left"
                   onMouseMove={moveRoundImage}
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, -800))}>
-                    <p className="text-2xl 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
                       FEEDING
                     </p>
-                    <p className="xl:text-xl font-sofia font-light text-md slide-right">
+                    <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
                       Food preservation, vertical planting with computer analysis and artificial intelligence...
                     </p>
                   </Animator>

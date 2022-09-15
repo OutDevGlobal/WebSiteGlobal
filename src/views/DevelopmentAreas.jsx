@@ -39,7 +39,7 @@ export const DevelopmentAreas = () => {
               </Animator>
             </div>
             <Animator animation={batch(Fade(), MoveIn(200, 0), Sticky())}>
-              <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-full">
+              <p className="text-2xl lg:text-4xl 2xl:text-6xl mt-10 md:w-full">
                 The future is now and there are infinite opportunities, that is
                 why we invest part of our efforts in different areas that take us
                 to the next level.
@@ -50,7 +50,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
         {/* Start Technological Development */}
-        <div className="relative w-full mb-40">
+        <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -76,7 +76,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
@@ -95,7 +95,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Art and Entretainment */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -125,7 +125,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
@@ -144,7 +144,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Smart Wearables */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -171,7 +171,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
@@ -190,7 +190,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Sports */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -213,7 +213,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
@@ -232,7 +232,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Health */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -257,7 +257,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
@@ -276,7 +276,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Education */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -299,7 +299,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
@@ -318,7 +318,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Feeding */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -340,7 +340,7 @@ export const DevelopmentAreas = () => {
                 </Animator>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
+            <div className="hidden lg:grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
                   md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
