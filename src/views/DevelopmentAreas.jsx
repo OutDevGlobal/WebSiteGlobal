@@ -1,47 +1,9 @@
 import React, { useEffect } from 'react'
-import M from 'react-moving-text'
-const MovingText = M.default? M.default: M
-import { Section, useScrollSection } from 'react-scroll-section'
-import { HideScroll } from 'react-hide-on-scroll'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ReactComponent as IconArrowDown } from '../assets/svg/arrow_down.svg'
+import {
+  Animator, ScrollContainer, ScrollPage, batch, Fade, MoveIn, MoveOut, Sticky, ZoomIn
+} from "react-scroll-motion"
 
 export const DevelopmentAreas = () => {
-  const content = useScrollSection('content')
-
-  const handleChangeSection = () => {
-    content.onClick()
-  }
-
-  useEffect(() => {
-    window.gsap.registerPlugin(ScrollTrigger)
-
-    // Text animation
-    window.gsap.utils.toArray('.animated-text-dev-areas').forEach((element) => {
-      ScrollTrigger.create({
-        trigger: element,
-        markers: false,
-        onEnter() {
-          element.classList.remove('hidden')
-          element.classList.add('grid')
-        },
-        // onLeave() {
-        //   element.classList.remove('grid')
-        //   element.classList.add('hidden')
-        // },
-        // onEnterBack() {
-        //   element.classList.remove('hidden')
-        //   element.classList.add('grid')
-        // },
-        // onLeaveBack() {
-        //   element.classList.remove('grid')
-        //   element.classList.add('hidden')
-        // },
-      })
-    })
-  }, [])
-
-  useEffect( () => () => ScrollTrigger.getAll().forEach(st => st.kill()), [] )
 
   useEffect( () => {
     if (location.pathname !== '/' &&  document.getElementById('canvas-bg') !== null) {
@@ -51,109 +13,67 @@ export const DevelopmentAreas = () => {
 
   return (
     <div className="w-full bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
-      {/* Start banner slide */}
-      <div className="p-14 md:p-20 xl:p-32 grid grid-cols-1 justify-center h-screen">
-        <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
-          <MovingText
-            className="animated-text-dev-areas hidden"
-            type="flip"
-            duration="500ms"
-            delay="0ms"
-            direction="normal"
-            timing="ease-in"
-            iteration="1"
-            fillMode="none">
-            We&apos;re an Integral services development company
-          </MovingText>
-        </div>
-      </div>
-      {/* Ends banner slide */}
 
-      <Section id="content" className="pt-40">
-        {/* Start subtitle slide */}
-        <div className="p-14 md:p-20 xl:p-32 mb-40">
-          <div className="text-2xl md:text-6xl 2xl:text-8xl uppercase md:w-1/2 ">
-            <MovingText
-              className="animated-text-dev-areas hidden"
-              type="fadeInFromLeft"
-              duration="1000ms"
-              delay="0s"
-              direction="normal"
-              timing="ease"
-              iteration="1"
-              fillMode="none">
-              Research and Development
-            </MovingText>
+      <ScrollContainer>
+        <ScrollPage>
+          {/* Start banner slide */}
+          <div className="p-14 md:p-20 xl:p-32 grid grid-cols-1 justify-center h-screen">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
+              <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
+                <p className="text-2xl md:text-6xl 2xl:text-8xl">
+                  We&apos;re an Integral services development company
+                </p>
+              </Animator>
+            </div>
           </div>
-          <MovingText
-            className="animated-text-dev-areas hidden"
-            type="popIn"
-            duration="2000ms"
-            delay="0ms"
-            direction="normal"
-            timing="ease-out"
-            iteration="1"
-            fillMode="none">
-              <p className="text-lg xl:text-2xl mt-10 md:w-2/3 ">
-              The future is now and there are infinite opportunities, that is
-              why we invest part of our efforts in different areas that take us
-              to the next level.
-            </p>
-          </MovingText>
-        </div>
-        {/* Ends subtitle slide */}
-
-        {/* Start content slide */}
-        <div className="mx-14 md:mx-20">
-          {/* Start Technological Development */}
-          <div className="relative w-full mb-40">
+          {/* Ends banner slide */}
+        </ScrollPage>
+        <ScrollPage>
+          {/* Start subtitle slide */}
+          <div className="p-14 md:p-20 xl:p-32 mb-40 pt-20">
+            <div className=" uppercase md:w-1/2 ">
+              <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                <p className="text-2xl lg:text-6xl 2xl:text-8xl mt-10 md:w-full">
+                  Research and Development
+                </p>
+              </Animator>
+            </div>
+            <Animator animation={batch(Fade(), MoveIn(200, 0), Sticky())}>
+              <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-full">
+                The future is now and there are infinite opportunities, that is
+                why we invest part of our efforts in different areas that take us
+                to the next level.
+              </p>
+            </Animator>
+          </div>
+          {/* Ends subtitle slide */}
+        </ScrollPage>
+        <ScrollPage>
+        {/* Start Technological Development */}
+        <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Technological Development
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                  Web 3.0 / Descentralized solutions Web 2.0 / Computer vision / Data science Custom developments
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
+                    Web 3.0 / Descentralized solutions Web 2.0 / Computer vision / Data science Custom developments
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     We develop your life project side by side with you, focusing on new technologies, so that you are 
                     always up-to-date and can enter new markets in a better way.
                   </p>
-                  <p className="font-sofia font-light font-md text-justify md:text-left mt-3">
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     We give you the necessary tools so that your business can reach its maximum potential;
                     simplify actions, speed up processes and reduce costs with a global solution that allows you to 
                     control everything that happens in your company from the same place.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -172,60 +92,37 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Technological Development */}
-
+        </ScrollPage>
+        <ScrollPage>
           {/* Start Art and Entretainment */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Art and Entretainment
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
                     Art Preservation Synchronization of virtual reality with the real world
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     Art is the way people perceive reality, we seek to preserve that expression and share it with the
                     rest of the world.
                   </p>
-                  <p className="font-sofia font-light font-md text-justify md:text-left mt-3">
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     We seek to enhance the beauty of life in each of the pieces that the artist paints, draws, writes, 
                     composes, sculpts, molds... creates.
                   </p>
-                  <p className="font-sofia font-light font-md text-justify md:text-left  mt-3">
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     And the most important; we generate environments where people can appreciate the artist's 
                     creations and have them for themselves, synchronizing virtual reality with physical reality in a 
                     harmonious and perfect way.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -244,57 +141,34 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Art and Entretainment */}
-
+        </ScrollPage>
+        <ScrollPage>
           {/* Start Smart Wearables */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Smart Wearables
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                  Devices / Accesories Clothing
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
+                    Devices / Accesories Clothing
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     The technology incorporated into the items we use daily allows us to make out day to day more 
                     efficient; with the use of watches, glasses, bracelets and shirts we can know body indicators 
                     or even generate actions such as listening to music or receiving messages.
                   </p>
-                  <p className="font-sofia font-light font-md text-justify md:text-left mt-3">
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     We believe that the technology must provide solutions to our personal benefit on the daily 
                     activities, in this context we venture in the reseach of products that contribute to different 
                     areas as health, safety, help for people with disabilities, location of older people, etc.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -313,53 +187,30 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Technological Development */}
-
+        </ScrollPage>
+        <ScrollPage>
           {/* Start Sports */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Sports
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
-                    Computer vision reference Wearables body check,
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
+                    Computer vision reference Wearables body check
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     We know that the world of sports is exciting, that’s why we are attracted to the idea of 
                     implement artificial intelligence technology to recognize scenarios and include the games
                     rules to help make sports more attractive and fais in their different modalities, while applying 
                     sensors technology and performance measurement to help athletes to increase their performance.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -378,47 +229,24 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Sports */}
-
+        </ScrollPage>
+        <ScrollPage>
           {/* Start Health */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Health
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl 2xl:text-3xl mb-5">
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
                     Sensors technology and performance measurement to help athletes to increase their performance.
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     Throughout history a lo largo de la historia los avances de la tecnologia en tema de salud 
                     siempre son bienvenidos, en Outdev queremos aportar soluciones implementando tecnologia 
                     blockchain donde se pueda tener un registro global inmutable ayudando a la industria para 
@@ -426,7 +254,7 @@ export const DevelopmentAreas = () => {
                     tambien incursionamos en tecnologias Vr/mr/ar para facilitar a los medicos el uso de instrumentos
                     a larga distancia y claridad en el aprendizaje de los nuevos talentos en el ambito de la medicina.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -445,53 +273,30 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Health */}
-
+        </ScrollPage>
+        <ScrollPage>
           {/* Start Education */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5 ">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Education
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
                     Faster education processes with VR / MR / AR
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     We know that there are many ways of learning and thanks to these technologies we can include 
                     different forms in a single system, we believe that education can advance exponentially by 
                     having access to it with virtual reality where you can study implicitly while you're having 
                     fun as well as do practices in a world where you can fail without any risk.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -510,52 +315,29 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Education */}
-
+        </ScrollPage>
+        <ScrollPage>
           {/* Start Feeding */}
           <div className="relative w-full mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="fadeInFromLeft"
-                  duration="1000ms"
-                  delay="0s"
-                  direction="normal"
-                  timing="ease"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="uppercase text-2xl md:text-3xl 2xl:text-6xl mb-5 ">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">
                     Feeding
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-thin text-2xl mb-5 ">
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="text-md md:text-2xl xl-text-2xl self-center font-sofia font-thin">
                     Food Preservation / Vertical Planting Computer Analysis / AI
                   </p>
-                </MovingText>
-                <MovingText
-                  className="animated-text-dev-areas hidden"
-                  type="popIn"
-                  duration="2000ms"
-                  delay="0ms"
-                  direction="normal"
-                  timing="ease-out"
-                  iteration="1"
-                  fillMode="none">
-                  <p className="font-sofia font-light font-md text-justify md:text-left ">
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-md xl:text-lg">
                     Focusing efforts to prevent hunger in the world is an issue of global importance; 
                     applying technology to seeds to improve their tolerance to droughts, having better 
                     fertilizers, doing computer vision to prevent pest and doing vertical planting.
                   </p>
-                </MovingText>
+                </Animator>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-6 z-0">
@@ -574,24 +356,9 @@ export const DevelopmentAreas = () => {
             </div>
           </div>
           {/* Ends Feeding */}
-        </div>
-        {/* Ends content slide */}
-      </Section>
+        </ScrollPage>
+      </ScrollContainer>
 
-      <HideScroll variant="down">
-        <div className="fixed cursor-pointer bottom-20 right-20 hidden md:block">
-          <button
-            type="button"
-            onClick={handleChangeSection}
-            className="sticky">
-            <IconArrowDown
-              className="
-                text-transparent hover:text-base-yellow hover:translate hover:scale-110 duration-300
-              "
-            />
-          </button>
-        </div>
-      </HideScroll>
     </div>
   )
 }
