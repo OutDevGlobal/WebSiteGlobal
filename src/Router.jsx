@@ -5,7 +5,6 @@ import { ScrollingProvider } from 'react-scroll-section'
 import { Footer } from './components/Footer'
 import { Header } from './components/header/Header'
 import { ScrollToTop } from './components/utils/ScrollToTop'
-import { ContactUs } from './views/ContactUs'
 import { DevelopmentAreas } from './views/DevelopmentAreas'
 import { Home } from './views/Home'
 import { Services } from './views/Services'
@@ -32,7 +31,6 @@ export const SiteRouter = () => (
         <Route path="/web-2-development" element={<Web2Development />} />
         <Route path="/app-development" element={<AppDevelopment />} />
         <Route path="/ar-vr-mr-development" element={<ArVrMrDevelopment />} />
-        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </ScrollingProvider>

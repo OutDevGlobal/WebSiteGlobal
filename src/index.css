@@ -162,13 +162,8 @@ body {
   display: flex;
   z-index: 3;
 }
-/*
-.card:hover:before, .card:hover:after {
-  animation: none;
-  opacity: 0;
-}
-*/
-.card:hover:before {
+
+.card:hover:before{
   content: '';
   width: 104%;
   height: 104%;
@@ -181,23 +176,16 @@ body {
   );
   position: absolute;
   z-index: -5;
-  /* top: -1% ;
-    left: -2%; */
   animation: customspin 2.5s linear infinite;
 }
 
 .card:hover:after {
   position: absolute;
   content: '';
-  top: calc(var(--card-height));
-  left: 0;
-  right: 0;
-  z-index: 0;
   height: 100%;
   width: 100%;
   margin: 0 auto;
   z-index: -5;
-  transform: scale(0.8);
   filter: blur(calc(var(--card-height)));
   background-image: linear-gradient(
     var(--rotate),
