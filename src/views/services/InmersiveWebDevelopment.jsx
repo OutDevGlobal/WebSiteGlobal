@@ -62,7 +62,7 @@ export const InmersiveWebDevelopment = () => {
                   absolute -top-1/2 left-3/4 z-0
                 "
               >
-                <div className=" pointer-events-auto bg-v-service bg-no-repeat grayscale w-full h-full absolute"/>
+                <div className=" pointer-events-auto bg-inmersive-service bg-no-repeat grayscale w-full h-full absolute"/>
                 <div
                   className="
                     pointer-events-none
@@ -89,183 +89,183 @@ export const InmersiveWebDevelopment = () => {
           </div>
           {/* Ends banner slide */}
         </ScrollPage>
-      </ScrollContainer>
 
-      {/* Start content slide */}
-      <ScrollPage key="subtitle">
-        {/* Start subtitle slide */}
-        <div className="py-40 pointer-events-none">
-          <Animator animation={batch(Fade(), MoveIn(200, 0), Sticky())}>
-            <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-full">
-              The COVID-19 pandemic changed the world in a number of ways, immersive technologies, 
-              have helped customers to see and understand how products work in a space. Or how important is the 
-              experience from your sit.
-            </p>
-          </Animator>
-        </div>
-        {/* Ends subtitle slide */}
-      </ScrollPage>
-
-      <ScrollPage key="video">
-        {/* Start 360º Video */}
-        <div className="relative w-full mb-40">
-          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
-            <div className="col-start-2 col-span-2">
-              <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                  / Expertise — Inmersive Web Development
-                </p>
-              </Animator>
-              <Animator animation={batch(ZoomIn())}>
-                <p className="uppercase text-3xl xl:text-5xl mb-5">360º Video</p>
-              </Animator>
-              <Animator animation={batch(Fade(), MoveIn(200, 0))}>
-                <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                  360 videos are recordings that include views from every direction, all shot at the same time, 
-                  using a rig of multiple cameras or an omnidirectional camera. 
-                </p>
-              </Animator>
-            </div>
+        {/* Start content slide */}
+        <ScrollPage key="subtitle">
+          {/* Start subtitle slide */}
+          <div className="py-40 pointer-events-none">
+            <Animator animation={batch(Fade(), MoveIn(200, 0), Sticky())}>
+              <p className="text-lg lg:text-2xl 2xl:text-3xl mt-10 md:w-full">
+                The COVID-19 pandemic changed the world in a number of ways, immersive technologies, 
+                have helped customers to see and understand how products work in a space. Or how important is the 
+                experience from your sit.
+              </p>
+            </Animator>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
-            <div
-              className="
-                md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
-                mt-4 md:mt-0
-              ">
+          {/* Ends subtitle slide */}
+        </ScrollPage>
+
+        <ScrollPage key="video">
+          {/* Start 360º Video */}
+          <div className="relative w-full mb-40">
+            <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
+              <div className="col-start-2 col-span-2">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
+                    / Expertise — Inmersive Web Development
+                  </p>
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">360º Video</p>
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
+                    360 videos are recordings that include views from every direction, all shot at the same time, 
+                    using a rig of multiple cameras or an omnidirectional camera. 
+                  </p>
+                </Animator>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
-                  lg:bg-left-image lg:bg-fixed
-                  bg-video-360 bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
-                "
-              />
+                  md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+                  mt-4 md:mt-0
+                ">
+                <div
+                  className="
+                    lg:bg-left-image lg:bg-fixed
+                    bg-video-360 bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                  "
+                />
+              </div>
             </div>
           </div>
-        </div>
-        {/* Ends 360º Video */}
-      </ScrollPage>
+          {/* Ends 360º Video */}
+        </ScrollPage>
 
-      <ScrollPage key="data-visualization">
-        {/* Start Data Visualization */}
-        <div className="relative w-full mb-40">
-          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
-            <div className="col-start-3 col-span-2">
-              <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                  / Expertise — Inmersive Web Development
-                </p>
-              </Animator>
-              <Animator animation={batch(ZoomIn())}>
-                <p className="uppercase text-3xl xl:text-5xl mb-5">Data Visualization</p>
-              </Animator>
-              <Animator animation={batch(Fade(), MoveIn(200, 0))}>
-                <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                  This concept consist in merging logical data visualizations with empathetic stories to maximize 
-                  impact and understandability “Makes data sence”.
-                </p>
-              </Animator>
+        <ScrollPage key="data-visualization">
+          {/* Start Data Visualization */}
+          <div className="relative w-full mb-40">
+            <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
+              <div className="col-start-3 col-span-2">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
+                    / Expertise — Inmersive Web Development
+                  </p>
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Data Visualization</p>
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
+                    This concept consist in merging logical data visualizations with empathetic stories to maximize 
+                    impact and understandability “Makes data sence”.
+                  </p>
+                </Animator>
+              </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
-            <div
-              className="
-                md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
-                mt-4 md:mt-0
-              ">
+            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
-                  lg:bg-right-image bg-fixed
-                  bg-data-visualization bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
-                "
-              />
+                  md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+                  mt-4 md:mt-0
+                ">
+                <div
+                  className="
+                    lg:bg-right-image bg-fixed
+                    bg-data-visualization bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+                  "
+                />
+              </div>
             </div>
           </div>
-        </div>
-        {/* Ends Data Visualization */}
-      </ScrollPage>
+          {/* Ends Data Visualization */}
+        </ScrollPage>
 
-      <ScrollPage key="home-stores">
-        {/* Start Home Stores */}
-        <div className="relative w-full mb-40">
-          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
-            <div className="col-start-2 col-span-2">
-              <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                  / Expertise — Inmersive Web Development
-                </p>
-              </Animator>
-              <Animator animation={batch(ZoomIn())}>
-                <p className="uppercase text-3xl xl:text-5xl mb-5">Home Stores</p>
-              </Animator>
-              <Animator animation={batch(Fade(), MoveIn(200, 0))}>
-                <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                  Home shoppin are designed to digitally extend or replace reality for the user in order to 
-                  improve the overall experience. These can include: augmented reality (AR),  virtual reality (VR), 
-                  and mixed reality (MR), a combination of physical and digital worlds to produce new environments. 
-                </p>
-              </Animator>
+        <ScrollPage key="home-stores">
+          {/* Start Home Stores */}
+          <div className="relative w-full mb-40">
+            <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
+              <div className="col-start-2 col-span-2">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
+                    / Expertise — Inmersive Web Development
+                  </p>
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Home Stores</p>
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
+                    Home shoppin are designed to digitally extend or replace reality for the user in order to 
+                    improve the overall experience. These can include: augmented reality (AR),  virtual reality (VR), 
+                    and mixed reality (MR), a combination of physical and digital worlds to produce new environments. 
+                  </p>
+                </Animator>
+              </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
-            <div
-              className="
-                md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
-                mt-4 md:mt-0
-              ">
+            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
-                  lg:bg-left-image bg-fixed
-                  bg-home-stores bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
-                "
-              />
+                  md:col-start-3 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+                  mt-4 md:mt-0
+                ">
+                <div
+                  className="
+                    lg:bg-left-image bg-fixed
+                    bg-home-stores bg-no-repeat  w-full h-image-mobile md:w-image-wide md:h-image-wide top-0
+                  "
+                />
+              </div>
             </div>
           </div>
-        </div>
-        {/* Ends Home Stores */}
-      </ScrollPage>
+          {/* Ends Home Stores */}
+        </ScrollPage>
 
-      <ScrollPage key="digital-art">
-        {/* Start Digital Art */}
-        <div className="relative w-full mb-40">
-          <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
-            <div className="col-start-3 col-span-2">
-              <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
-                  / Expertise — Inmersive Web Development
-                </p>
-              </Animator>
-              <Animator animation={batch(ZoomIn())}>
-                <p className="uppercase text-3xl xl:text-5xl mb-5">Digital Art</p>
-              </Animator>
-              <Animator animation={batch(Fade(), MoveIn(200, 0))}>
-                <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
-                  Immersive digital art experiences are becoming more and more popular and art galleries, 
-                  museums, and cultural spaces have started making use of Information and Communication Technologies,
-                  Virtual Reality, and Augmented Reality to innovate and differentiate their cultural services in
-                  the market.
-                </p>
-              </Animator>
+        <ScrollPage key="digital-art">
+          {/* Start Digital Art */}
+          <div className="relative w-full mb-40">
+            <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
+              <div className="col-start-3 col-span-2">
+                <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
+                  <p className="text-md md:text-2xl xl:text-4xl self-center font-sofia font-thin">
+                    / Expertise — Inmersive Web Development
+                  </p>
+                </Animator>
+                <Animator animation={batch(ZoomIn())}>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5">Digital Art</p>
+                </Animator>
+                <Animator animation={batch(Fade(), MoveIn(200, 0))}>
+                  <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
+                    Immersive digital art experiences are becoming more and more popular and art galleries, 
+                    museums, and cultural spaces have started making use of Information and Communication Technologies,
+                    Virtual Reality, and Augmented Reality to innovate and differentiate their cultural services in
+                    the market.
+                  </p>
+                </Animator>
+              </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 z-0">
-            <div
-              className="
-                md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
-                mt-4 md:mt-0
-              ">
+            <div className="grid grid-cols-1 md:grid-cols-6 z-0">
               <div
                 className="
-                  bg-right-image bg-fixed
-                  bg-digital-art bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
-                "
-              />
+                  md:col-start-4 md:col-span-2 w-full h-image-mobile md:w-image-wide md:h-image-wide relative
+                  mt-4 md:mt-0
+                ">
+                <div
+                  className="
+                    bg-right-image bg-fixed
+                    bg-digital-art bg-no-repeat w-full h-image-mobile md:w-image-wide md:h-image-wide
+                  "
+                />
+              </div>
             </div>
           </div>
-        </div>
-        {/* Ends Digital Art */}
-      </ScrollPage>
+          {/* Ends Digital Art */}
+        </ScrollPage>
       {/* Ends content slide */}
 
+      </ScrollContainer>
     </div>
   )
 }
