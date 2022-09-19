@@ -59,13 +59,13 @@ export const Services = () => {
   }
 
   return (
-    <div className="w-full relative px-1">
+    <div className="w-full block px-1">
       <ScrollContainer>
         <ScrollPage>
           {/* Start banner slide */}
-          <div className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-screen">
+          <div className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-full content-center">
             <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-              <p className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
+              <p className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
                 we solve your challenges with excelent desing and innovate
                 technology
               </p>
@@ -78,7 +78,7 @@ export const Services = () => {
           <div
             id="services"
             className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
-            <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
               <Animator animation={batch(Fade(), MoveOut(0, -200))}>
                 <p>
                   WHAT DO WE DO?
@@ -89,7 +89,7 @@ export const Services = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -123,7 +123,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/ar-vr-mr-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -156,7 +156,7 @@ export const Services = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -190,7 +190,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -259,7 +259,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -292,7 +292,7 @@ export const Services = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-2-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -326,7 +326,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/app-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>

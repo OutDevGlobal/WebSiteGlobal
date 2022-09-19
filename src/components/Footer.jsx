@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <Section id="footer"> 
       <footer className="md:flex justify-center">
-        <div className="md:w-full relative">
+        <div className="md:w-full block">
           <img
             src={background}
             className="absolute w-full md:w-5/12 h-[400px] md:h-[400px] -mt-28 md:-ml-12 z-5"

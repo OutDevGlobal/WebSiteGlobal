@@ -44,7 +44,7 @@ export const ArVrMrDevelopment = () => {
   }
 
   return (
-    <div className="w-full relative px-10 bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
+    <div className="w-full block px-10 bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       <ScrollContainer>
         <ScrollPage key="banner">
           {/* Start banner slide */}
@@ -80,7 +80,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                  <p className="text-2xl md:text-6xl 2xl:text-8xl">
+                  <p className="text-4xl md:text-6xl 2xl:text-8xl">
                     The most espectacular interactive experiences
                   </p>
                 </Animator>
@@ -107,7 +107,7 @@ export const ArVrMrDevelopment = () => {
         {/* Start content slide */}
         <ScrollPage key="art-preservation">
           {/* Start Art Preservation */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -149,7 +149,7 @@ export const ArVrMrDevelopment = () => {
 
         <ScrollPage key="medical-check-up">
           {/* Start Medical Check Up */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -164,7 +164,7 @@ export const ArVrMrDevelopment = () => {
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
                     The use of data to improve the body health is a reality through data science, 
                     using some standard metrics we could know how good or bad we are according to 
-                    that standars in a faster and d
+                    that standars in a faster and direct way.
                   </p>
                 </Animator>
               </div>
@@ -189,7 +189,7 @@ export const ArVrMrDevelopment = () => {
 
         <ScrollPage key="body-analysis">
           {/* Start Body Analysis With VR / MR / AR */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -230,7 +230,7 @@ export const ArVrMrDevelopment = () => {
 
         <ScrollPage key="agile-education">
           {/* Start Agile Education Processes with VR / MR / AR */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>

@@ -20,7 +20,7 @@ export const DevelopmentAreas = () => {
           <div className="p-14 md:p-20 xl:p-32 grid grid-cols-1 justify-center h-screen">
             <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
               <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                <p className="text-2xl md:text-6xl 2xl:text-8xl">
+                <p className="text-4xl md:text-6xl 2xl:text-8xl">
                   We&apos;re an Integral services development company
                 </p>
               </Animator>
@@ -50,7 +50,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
         {/* Start Technological Development */}
-        <div className="relative w-full mb-40 px-10">
+        <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -95,7 +95,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Art and Entretainment */}
-          <div className="relative w-full mb-40 px-10">
+          <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -144,7 +144,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Smart Wearables */}
-          <div className="relative w-full mb-40 px-10">
+          <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -190,7 +190,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Sports */}
-          <div className="relative w-full mb-40 px-10">
+          <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -232,7 +232,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Health */}
-          <div className="relative w-full mb-40 px-10">
+          <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -276,7 +276,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Education */}
-          <div className="relative w-full mb-40 px-10">
+          <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -318,7 +318,7 @@ export const DevelopmentAreas = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Feeding */}
-          <div className="relative w-full mb-40 px-10">
+          <div className="relative w-full mt-40 lg:mb-40 px-10">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>

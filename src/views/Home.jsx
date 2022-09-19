@@ -132,7 +132,7 @@ export const Home = () => {
   }
 
   return (
-    <div className="w-full relative">
+    <div className="w-full block">
       <ScrollContainer>
         <ScrollPage>
           {/* Start home slide */}
@@ -210,7 +210,7 @@ export const Home = () => {
           <div
             id="services"
             className="justify-center md:p-20 xl:p-32 cursor-default h-full px-10">
-            <div className="text-2xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
               <Animator animation={batch(MoveIn(-200, 0), Fade(), MoveOut(0, -200))}>
                 <p>
                   WHAT DO WE DO?
@@ -221,7 +221,7 @@ export const Home = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -255,7 +255,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/ar-vr-mr-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -288,7 +288,7 @@ export const Home = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -322,7 +322,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -391,7 +391,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -424,7 +424,7 @@ export const Home = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-2-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -458,7 +458,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/app-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -496,11 +496,11 @@ export const Home = () => {
           {/* Start how we do it slide */}
           <div
             id="howWeDoIt"
-            className="justify-center md:p-20 xl:p-32 px-10 bg-waves-how bg-no-repeat bg-bottom">
-            <div className="grid grid-cols-1 md:grid-cols-2 content-center h-full">
+            className="justify-center px-10 md:px-20 xl:px-32 bg-waves-how bg-no-repeat bg-bottom">
+            <div className="grid grid-cols-1 md:grid-cols-2 content-center">
               <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
               <div className="md:p-8">
-                <div className="uppercase text-6xl 2xl:text-8xl mb-12 ">
+                <div className="uppercase text-4xl 2xl:text-8xl mb-12 ">
                   <Animator animation={batch(MoveIn(-200, 0))}>
                     <p>
                       HOW WE DO IT?
@@ -583,11 +583,11 @@ export const Home = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start dev areas slide */}
-          <div id="devAreas" className="justify-center md:px-24 xl:px-32 px-10">
+          <div id="devAreas" className="justify-center px-10 md:px-24 xl:px-32">
             <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4">
               <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
                 <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
-                  <p className="font-sofia font-light text-lg xl:text-2xl mb-5">
+                  <p className="font-sofia font-light text-2xl py-5 pt-20">
                     we invest efforts in different areas that take us to the next
                     level
                   </p>
@@ -601,7 +601,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, 800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4">
                       Research and technological development
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -625,7 +625,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(0, 800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4">
                       SMART WEARABLES
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -649,7 +649,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(-800, 800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                       SPORTS
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -673,7 +673,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, 0))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                       ART AND ENTRETAINMENT
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -697,7 +697,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade())}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                       EDUCATION
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -722,7 +722,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(-800, 0))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                       HEALTH
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -746,7 +746,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, -800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase lg:mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
                       FEEDING
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">

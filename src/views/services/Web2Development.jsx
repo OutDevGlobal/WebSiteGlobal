@@ -44,7 +44,7 @@ export const Web2Development = () => {
   }
 
   return (
-    <div className="w-full relative px-10 bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
+    <div className="w-full block px-10 bg-gradient-to-t from-black/20 via-base-blue/10 to-black/20">
       <ScrollContainer>
         <ScrollPage key="banner">
           {/* Start banner slide */}
@@ -80,7 +80,7 @@ export const Web2Development = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                  <p className="text-2xl md:text-6xl 2xl:text-8xl">
+                  <p className="text-4xl md:text-6xl 2xl:text-8xl">
                     We create beautiful and interactive Websites.
                   </p>
                 </Animator>
@@ -106,7 +106,7 @@ export const Web2Development = () => {
         </ScrollPage>
         <ScrollPage key="ecommerce">
           {/* Start e-Commerce */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -145,7 +145,7 @@ export const Web2Development = () => {
         </ScrollPage>
         <ScrollPage key="landing-pages">
           {/* Start Landing Pages */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -184,7 +184,7 @@ export const Web2Development = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Content Managment System */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-2 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
@@ -223,7 +223,7 @@ export const Web2Development = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Custom Software Development */}
-          <div className="relative w-full mb-40">
+          <div className="relative w-full mt-40 lg:mb-40">
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
               <div className="col-start-3 col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
