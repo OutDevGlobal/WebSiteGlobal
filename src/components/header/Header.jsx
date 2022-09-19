@@ -63,7 +63,7 @@ export const Header = () => {
       <nav
         className={`
           ${addBackground && "bg-mainBackground"}
-          sticky top-0 w-full flex items-center justify-between flex-wrap px-10 z-50 pointer-events-none
+          sticky top-0 w-full flex items-center justify-between flex-wrap py-2 px-10 z-50 pointer-events-none
         `}>
         <MainLogo />
         <button
@@ -73,7 +73,7 @@ export const Header = () => {
           onMouseLeave={hiddeGrayImage}
           className="
             flex items-center justify-center bg-navIconBorder hover:bg-navIconBorderEmpty bg-cover bg-no-repeat 
-            w-16 h-16 lg:w-10 lg:h-10 pointer-events-auto mt-2 lg:mt-0
+            w-16 h-16 lg:w-10 lg:h-10 pointer-events-auto lg:mt-0
           ">
           <div className="card rotate-45">
             <div
