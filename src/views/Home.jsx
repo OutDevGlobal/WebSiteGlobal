@@ -136,7 +136,7 @@ export const Home = () => {
       <ScrollContainer>
         <ScrollPage>
           {/* Start home slide */}
-          <div id="home" className="-mt-32 flex justify-center h-screen px-10">
+          <div id="home" className="-mt-32 flex justify-center px-10 h-screen">
             <div className="self-center">
               <Star />
             </div>
@@ -159,7 +159,7 @@ export const Home = () => {
           {/* Start who we are slide */}
           <div
             id="whoWeAre"
-            className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-full px-10">
+            className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-screen">
             <div className="self-center">
               <div className="text-6xl 2xl:text-8xl md:p-8 ">
                 <Animator animation={batch(MoveIn(-200, 0), Fade())}>
@@ -194,7 +194,7 @@ export const Home = () => {
           {/* Start stuff slide */}
           <div
             id="stuff"
-            className="grid grid-cols-1 justify-center md:p-20 xl:p-32 h-full px-10">
+            className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-screen">
             <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center ">
               <Animator animation={batch(ZoomIn())}>
                 <p>
@@ -209,19 +209,19 @@ export const Home = () => {
           {/* Start services slide */}
           <div
             id="services"
-            className="justify-center md:p-20 xl:p-32 cursor-default h-full px-10">
-            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
+            className="justify-center px-10 md:px-20 xl:px-32 cursor-default h-screen">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:px-8 pb-10 uppercase">
               <Animator animation={batch(MoveIn(-200, 0), Fade(), MoveOut(0, -200))}>
                 <p>
                   WHAT DO WE DO?
                 </p>
               </Animator>
             </div>
-            <div className="text-xl md:text-4xl md:px-20">
-              <div className="grid md:flex my-1 gap-8">
+            <div className="text-xl md:text-3xl md:px-20">
+              <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -255,7 +255,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/ar-vr-mr-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -285,10 +285,10 @@ export const Home = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className="grid md:flex my-1 gap-8">
+              <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -322,7 +322,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -352,7 +352,7 @@ export const Home = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className="grid md:flex my-1 gap-8">
+              <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/inmersive-web-development"
                   className="
@@ -391,7 +391,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -421,10 +421,10 @@ export const Home = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className="grid md:flex my-1 gap-8">
+              <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/web-2-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -458,7 +458,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/app-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -496,11 +496,11 @@ export const Home = () => {
           {/* Start how we do it slide */}
           <div
             id="howWeDoIt"
-            className="justify-center px-10 md:px-20 xl:px-32 bg-waves-how bg-no-repeat bg-bottom">
+            className="justify-center px-10 md:px-20 xl:px-32 bg-waves-how bg-no-repeat bg-bottom h-screen">
             <div className="grid grid-cols-1 md:grid-cols-2 content-center">
               <div className="bg-fixed bg-how-section bg-no-repeat bg-contain md:mx-10" />
-              <div className="md:p-8">
-                <div className="uppercase text-4xl 2xl:text-8xl mb-12 ">
+              <div className="md:px-8">
+                <div className="uppercase text-4xl 2xl:text-8xl mb-8">
                   <Animator animation={batch(MoveIn(-200, 0))}>
                     <p>
                       HOW WE DO IT?
@@ -536,11 +536,11 @@ export const Home = () => {
           {/* Start out technology slide */}
           <div
             id="ourTech"
-            className="justify-center bg-waves-technology bg-no-repeat bg-cover px-10 h-full">
+            className="justify-center bg-waves-technology bg-no-repeat bg-cover h-screen">
             <div className="self-center md:px-20 2xl:px-32">
-              <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase mb-12">
+              <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
                 <Animator animation={batch(MoveIn(-200, 0))}>
-                  <p className="font-sofia font-light text-2xl xl:text-6xl z-50">
+                  <p className="font-sofia font-light text-2xl xl:text-6xl">
                     OUR TECHNOLOGY
                   </p>
                 </Animator>
@@ -583,7 +583,7 @@ export const Home = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start dev areas slide */}
-          <div id="devAreas" className="justify-center px-10 md:px-24 xl:px-32">
+          <div id="devAreas" className="justify-center px-10 md:px-24 xl:px-32 h-screen">
             <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4">
               <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
                 <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
