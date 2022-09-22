@@ -69,7 +69,7 @@ export const ArVrMrDevelopment = () => {
                     bg-ar-vr-mr-service bg-no-repeat
                     h-24 w-24 duration-800 rounded-full
                     highlight-section
-                    border-2 border-base-yellow 
+                    border-2 border-base-purple 
                   "
                 />
               </div>
@@ -80,7 +80,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                  <p className="text-4xl md:text-6xl 2xl:text-8xl">
+                  <p className="text-4xl md:text-6xl 2xl:text-8xl font-montserrat font-extrabold">
                     The most espectacular interactive experiences
                   </p>
                 </Animator>
@@ -116,7 +116,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Art Preservation</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">Art Preservation</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -158,7 +158,7 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Medical Check Up</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">Medical Check Up</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -198,7 +198,9 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Body Analysis With VR / MR / AR</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
+                    Body Analysis With VR / MR / AR
+                  </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -239,7 +241,9 @@ export const ArVrMrDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Agile Education Processes with VR / MR / AR</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
+                    Agile Education Processes with VR / MR / AR
+                  </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">

@@ -69,7 +69,7 @@ export const InmersiveWebDevelopment = () => {
                     bg-inmersive-service bg-no-repeat
                     h-24 w-24 duration-800 rounded-full
                     highlight-section
-                    border-2 border-base-yellow 
+                    border-2 border-base-purple 
                   "
                 />
               </div>
@@ -80,7 +80,7 @@ export const InmersiveWebDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                  <p className="text-4xl md:text-6xl 2xl:text-8xl">
+                  <p className="text-4xl md:text-6xl 2xl:text-8xl font-montserrat font-extrabold">
                     Exceptional contents and world-class visualization
                   </p>
                 </Animator>
@@ -116,7 +116,7 @@ export const InmersiveWebDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">360º Video</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">360º Video</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -155,7 +155,9 @@ export const InmersiveWebDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Data Visualization</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
+                    Data Visualization
+                  </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -194,7 +196,9 @@ export const InmersiveWebDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Home Stores</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
+                    Home Stores
+                  </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -234,7 +238,7 @@ export const InmersiveWebDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Digital Art</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">Digital Art</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">

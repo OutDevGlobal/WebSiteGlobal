@@ -69,7 +69,7 @@ export const Web3Development = () => {
                     bg-web3-service bg-no-repeat
                     h-24 w-24 duration-800 rounded-full
                     highlight-section
-                    border-2 border-base-yellow 
+                    border-2 border-base-purple 
                   "
                 />
               </div>
@@ -80,7 +80,7 @@ export const Web3Development = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                  <p className="text-4xl md:text-6xl 2xl:text-8xl">
+                  <p className="text-4xl md:text-6xl 2xl:text-8xl font-montserrat font-extrabold">
                     We dive into the blockchain with you
                   </p>
                 </Animator>
@@ -113,7 +113,7 @@ export const Web3Development = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">NFT</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">NFT</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -152,7 +152,7 @@ export const Web3Development = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Crypto Tokens</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">Crypto Tokens</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -192,7 +192,9 @@ export const Web3Development = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Decentralized Solutions</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
+                    Decentralized Solutions
+                  </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">

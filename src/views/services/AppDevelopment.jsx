@@ -69,7 +69,7 @@ export const AppDevelopment = () => {
                     bg-app-service bg-no-repeat
                     h-24 w-24 duration-800 rounded-full
                     highlight-section
-                    border-2 border-base-yellow 
+                    border-2 border-base-purple 
                   "
                 />
               </div>
@@ -80,7 +80,7 @@ export const AppDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                  <p className="text-4xl md:text-6xl 2xl:text-8xl">
+                  <p className="text-4xl md:text-6xl 2xl:text-8xl font-montserrat font-extrabold">
                     We code beautiful and interactive Cross-platform mobile Apps.
                   </p>
                 </Animator>
@@ -116,7 +116,7 @@ export const AppDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Android</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">Android</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -155,7 +155,7 @@ export const AppDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">IOS</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">IOS</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">
@@ -195,7 +195,7 @@ export const AppDevelopment = () => {
                   </p>
                 </Animator>
                 <Animator animation={batch(ZoomIn())}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">Hybrid</p>
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">Hybrid</p>
                 </Animator>
                 <Animator animation={batch(Fade(), MoveIn(200, 0))}>
                   <p className="font-sofia font-light font-md lg:text-xl xl:text-2xl">

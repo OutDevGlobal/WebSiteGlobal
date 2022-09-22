@@ -161,7 +161,7 @@ export const Home = () => {
             id="whoWeAre"
             className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-screen">
             <div className="self-center">
-              <div className="text-6xl 2xl:text-8xl md:p-8 ">
+              <div className="text-6xl 2xl:text-8xl md:p-8 font-montserrat font-extrabold">
                 <Animator animation={batch(MoveIn(-200, 0), Fade())}>
                   <p>WHO WE ARE</p>
                 </Animator>
@@ -195,9 +195,9 @@ export const Home = () => {
           <div
             id="stuff"
             className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-screen">
-            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center ">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
               <Animator animation={batch(ZoomIn())}>
-                <p>
+                <p className="font-montserrat font-extrabold">
                   We team up with you to develop the products that you need
                 </p>
               </Animator>
@@ -210,7 +210,7 @@ export const Home = () => {
           <div
             id="services"
             className="justify-center px-10 md:px-20 xl:px-32 cursor-default h-screen">
-            <div className="text-4xl md:text-6xl 2xl:text-8xl md:px-8 pb-10 uppercase">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:px-8 pb-10 uppercase font-montserrat font-extrabold">
               <Animator animation={batch(MoveIn(-200, 0), Fade(), MoveOut(0, -200))}>
                 <p>
                   WHAT DO WE DO?
@@ -221,7 +221,7 @@ export const Home = () => {
               <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -244,7 +244,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -255,7 +255,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/ar-vr-mr-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -278,7 +278,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-ar-vr-mr-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -288,7 +288,7 @@ export const Home = () => {
               <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -311,7 +311,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -322,7 +322,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -345,7 +345,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -356,7 +356,7 @@ export const Home = () => {
                 <NavLink
                   to="/inmersive-web-development"
                   className="
-                    hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 
+                    hover:text-base-purple cursor-pointer md:self-center text-left duration-300 
                   "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
@@ -380,7 +380,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-inmersive-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -391,7 +391,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -414,7 +414,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -424,7 +424,7 @@ export const Home = () => {
               <div className="grid md:flex py-1 gap-8">
                 <NavLink
                   to="/web-2-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -447,7 +447,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web2-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -458,7 +458,7 @@ export const Home = () => {
                 </div>
                 <NavLink
                   to="/app-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 py-2 lg:py-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 py-2 lg:py-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -481,7 +481,7 @@ export const Home = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-app-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -502,7 +502,7 @@ export const Home = () => {
               <div className="md:px-8">
                 <div className="uppercase text-4xl 2xl:text-8xl mb-8">
                   <Animator animation={batch(MoveIn(-200, 0))}>
-                    <p>
+                    <p className="font-montserrat font-extrabold">
                       HOW WE DO IT?
                     </p>
                   </Animator>
@@ -540,7 +540,7 @@ export const Home = () => {
             <div className="self-center md:px-20 2xl:px-32">
               <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
                 <Animator animation={batch(MoveIn(-200, 0))}>
-                  <p className="font-sofia font-light text-2xl xl:text-6xl">
+                  <p className="text-2xl xl:text-6xl font-montserrat font-extrabold">
                     OUR TECHNOLOGY
                   </p>
                 </Animator>
@@ -587,7 +587,7 @@ export const Home = () => {
             <div className="self-center grid grid-cols-1 md:grid-cols-3 xl:gap-4">
               <div className="text-2xl md:text-4xl 2xl:text-6xl md:px-8 uppercase text-left cursor-default self-start">
                 <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
-                  <p className="font-sofia font-light text-2xl py-5 pt-20">
+                  <p className="text-2xl py-5 pt-20 font-montserrat font-extrabold">
                     we invest efforts in different areas that take us to the next
                     level
                   </p>
@@ -601,7 +601,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, 800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4">
                       Research and technological development
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -613,7 +613,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-technological-dev bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />
@@ -625,7 +625,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(0, 800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4">
                       SMART WEARABLES
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -637,7 +637,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-smart-wearables bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />
@@ -649,7 +649,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(-800, 800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4 ">
                       SPORTS
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -661,7 +661,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-sports bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />
@@ -673,7 +673,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, 0))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4 ">
                       ART AND ENTRETAINMENT
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -685,7 +685,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-art-and-entretainment bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />
@@ -697,7 +697,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade())}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4 ">
                       EDUCATION
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -710,7 +710,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-education bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />
@@ -722,7 +722,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(-800, 0))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4 ">
                       HEALTH
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -734,7 +734,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-health bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />
@@ -746,7 +746,7 @@ export const Home = () => {
                   onMouseEnter={showRoundImage}
                   onMouseLeave={hideRoundImage}>
                   <Animator animation={batch(Fade(), MoveIn(800, -800))}>
-                    <p className="text-lg 2xl:text-3xl hover:text-base-yellow duration-300 uppercase mb-4 ">
+                    <p className="text-lg 2xl:text-3xl hover:text-base-purple duration-300 uppercase mb-4 ">
                       FEEDING
                     </p>
                     <p className="hidden lg:block xl:text-xl font-sofia font-light text-md slide-right">
@@ -758,7 +758,7 @@ export const Home = () => {
                       absolute -top-1/2 duration-300
                       highlight-section
                       bg-feeding bg-no-repeat bg-cover
-                      border-2 border-base-yellow h-0 w-0 rounded-full
+                      border-2 border-base-purple h-0 w-0 rounded-full
                       pointer-events-none
                     "
                   />

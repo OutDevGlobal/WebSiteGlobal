@@ -44,7 +44,7 @@ module.exports = {
       },
       backgroundImage: {
         // How we do it
-        "how-section": "url('/img/how-we-do-it/how_we_do_it.png')",
+        "how-section": "url('/img/how-we-do-it/how_we_do_it.jpg')",
         "waves-how": "url('/img/how-we-do-it/waves.png')",
 
         // Services

@@ -65,7 +65,7 @@ export const Services = () => {
           {/* Start banner slide */}
           <div className="grid grid-cols-1 justify-center px-10 md:p-20 xl:p-32 h-full content-center">
             <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-              <p className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
+              <p className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase font-montserrat font-extrabold">
                 we solve your challenges with excelent desing and innovate
                 technology
               </p>
@@ -78,7 +78,7 @@ export const Services = () => {
           <div
             id="services"
             className="justify-center md:p-20 xl:p-32 cursor-default h-screen px-10">
-            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase">
+            <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase font-montserrat font-extrabold">
               <Animator animation={batch(Fade(), MoveOut(0, -200))}>
                 <p>
                   WHAT DO WE DO?
@@ -89,7 +89,7 @@ export const Services = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -112,7 +112,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -123,7 +123,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/ar-vr-mr-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -146,7 +146,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-ar-vr-mr-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -156,7 +156,7 @@ export const Services = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -179,7 +179,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -190,7 +190,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -213,7 +213,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -224,7 +224,7 @@ export const Services = () => {
                 <NavLink
                   to="/inmersive-web-development"
                   className="
-                    hover:text-base-yellow cursor-pointer md:self-center text-left duration-300 
+                    hover:text-base-purple cursor-pointer md:self-center text-left duration-300 
                   "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
@@ -248,7 +248,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-inmersive-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -259,7 +259,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/web-3-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -282,7 +282,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web3-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -292,7 +292,7 @@ export const Services = () => {
               <div className="grid md:flex my-1 gap-8">
                 <NavLink
                   to="/web-2-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -315,7 +315,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-web2-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />
@@ -326,7 +326,7 @@ export const Services = () => {
                 </div>
                 <NavLink
                   to="/app-development"
-                  className="hover:text-base-yellow cursor-pointer text-left duration-300 my-2 lg:my-5 "
+                  className="hover:text-base-purple cursor-pointer text-left duration-300 my-2 lg:my-5 "
                   onMouseMove={moveOnGrayImage}
                   onMouseEnter={showGrayImage}
                   onMouseLeave={hiddeGrayImage}>
@@ -349,7 +349,7 @@ export const Services = () => {
                         absolute -top-1/2
                         hidden highlight-section
                         bg-app-service bg-no-repeat
-                        border-2 border-base-yellow h-24 w-24 duration-800 rounded-full
+                        border-2 border-base-purple h-24 w-24 duration-800 rounded-full
                         pointer-events-none
                       "
                     />

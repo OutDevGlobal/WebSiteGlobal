@@ -20,7 +20,7 @@ export const DevelopmentAreas = () => {
           <div className="p-14 md:p-20 xl:p-32 grid grid-cols-1 justify-center h-screen">
             <div className="text-4xl md:text-6xl 2xl:text-8xl md:p-8 uppercase self-center">
               <Animator animation={batch(Fade(), MoveOut(-200, 0))}>
-                <p className="text-4xl md:text-6xl 2xl:text-8xl">
+                <p className="text-4xl md:text-6xl 2xl:text-8xl font-montserrat font-extrabold">
                   We&apos;re an Integral services development company
                 </p>
               </Animator>
@@ -33,7 +33,7 @@ export const DevelopmentAreas = () => {
           <div className="p-14 md:p-20 xl:p-32 mb-40 pt-20">
             <div className=" uppercase md:w-1/2 ">
               <Animator animation={batch(Fade(), MoveIn(200, 0))}>
-                <p className="text-2xl lg:text-6xl 2xl:text-8xl mt-10 md:w-full">
+                <p className="text-2xl lg:text-6xl 2xl:text-8xl mt-10 md:w-full font-montserrat font-extrabold">
                   Research and Development
                 </p>
               </Animator>
@@ -54,7 +54,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Technological Development
                   </p>
                 </Animator>
@@ -99,7 +99,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Art and Entretainment
                   </p>
                 </Animator>
@@ -148,7 +148,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Smart Wearables
                   </p>
                 </Animator>
@@ -194,7 +194,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Sports
                   </p>
                 </Animator>
@@ -236,7 +236,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Health
                   </p>
                 </Animator>
@@ -280,7 +280,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-3 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Education
                   </p>
                 </Animator>
@@ -322,7 +322,7 @@ export const DevelopmentAreas = () => {
             <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10 pointer-events-none">
               <div className="md:col-start-2 md:col-span-2">
                 <Animator animation={batch(Fade(), MoveIn(-200, 0))}>
-                  <p className="uppercase text-3xl xl:text-5xl mb-5">
+                  <p className="uppercase text-3xl xl:text-5xl mb-5 font-montserrat font-extrabold">
                     Feeding
                   </p>
                 </Animator>
