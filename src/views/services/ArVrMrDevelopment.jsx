@@ -118,7 +118,7 @@ export const ArVrMrDevelopment = () => {
         {/* Start content slide */}
         <ScrollPage key="art-preservation">
           {/* Start Art Preservation */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-2 col-span-2">
@@ -168,7 +168,7 @@ export const ArVrMrDevelopment = () => {
 
         <ScrollPage key="medical-check-up">
           {/* Start Medical Check Up */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-3 col-span-2">
@@ -214,7 +214,7 @@ export const ArVrMrDevelopment = () => {
 
         <ScrollPage key="body-analysis">
           {/* Start Body Analysis With VR / MR / AR */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-2 col-span-2">
@@ -262,7 +262,7 @@ export const ArVrMrDevelopment = () => {
 
         <ScrollPage key="agile-education">
           {/* Start Agile Education Processes with VR / MR / AR */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-3 col-span-2">

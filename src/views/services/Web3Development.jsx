@@ -116,7 +116,7 @@ export const Web3Development = () => {
         </ScrollPage>
         <ScrollPage key="nft">
           {/* Start NFT */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-2 col-span-2">
@@ -163,7 +163,7 @@ export const Web3Development = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Crypto Tokens */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-3 col-span-2">
@@ -210,7 +210,7 @@ export const Web3Development = () => {
         </ScrollPage>
         <ScrollPage>
           {/* Start Decentralized Solutions */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-2 col-span-2">

@@ -118,7 +118,7 @@ export const InmersiveWebDevelopment = () => {
 
         <ScrollPage key="video">
           {/* Start 360º Video */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-2 col-span-2">
@@ -206,7 +206,7 @@ export const InmersiveWebDevelopment = () => {
 
         <ScrollPage key="home-stores">
           {/* Start Home Stores */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-2 col-span-2">
@@ -254,7 +254,7 @@ export const InmersiveWebDevelopment = () => {
 
         <ScrollPage key="digital-art">
           {/* Start Digital Art */}
-          <div className="relative w-full h-full lg:mb-40 flex">
+          <div className="relative w-full h-full flex">
             <div className="self-center">
               <div className="md:absolute bottom-5 grid grid-cols-1 md:grid-cols-6 z-10">
                 <div className="col-start-3 col-span-2">
