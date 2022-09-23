@@ -7,8 +7,5 @@ export default defineConfig({
   esbuild: {
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
   },
-  plugins: [
-    react(),
-    svgr(),
-  ],
+  plugins: [react(), svgr()],
 })

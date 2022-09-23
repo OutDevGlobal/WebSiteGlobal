@@ -163,7 +163,7 @@ body {
   z-index: 3;
 }
 
-.card:hover:before{
+.card:hover:before {
   content: '';
   width: 104%;
   height: 104%;
@@ -208,4 +208,3 @@ canvas {
   left: 0;
   margin: auto;
 }
-

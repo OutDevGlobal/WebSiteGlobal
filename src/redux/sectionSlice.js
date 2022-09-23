@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
-
+import { createSlice } from '@reduxjs/toolkit'
 
 const sectionSlice = createSlice({
   name: 'filter',

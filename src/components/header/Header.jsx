@@ -8,15 +8,14 @@ import { ReactComponent as InstagramIcon } from '../../assets/svg/social/instagr
 import { ReactComponent as LinkedinIcon } from '../../assets/svg/social/linkedin.svg'
 
 import navigationIcon from '../../assets/svg/brand/navigationIcon.svg'
-const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100082506201627"
-const TWITTER_URL = "https://twitter.com/OutDev_Global"
-const INSTAGRAM_URL = "https://www.instagram.com/out_dev_mx/"
-const LINKEDIN_URL = "https://www.linkedin.com/company/outdev-global/mycompany/"
+const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=100082506201627'
+const TWITTER_URL = 'https://twitter.com/OutDev_Global'
+const INSTAGRAM_URL = 'https://www.instagram.com/out_dev_mx/'
+const LINKEDIN_URL = 'https://www.linkedin.com/company/outdev-global/mycompany/'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [addBackground, setAddBackground] = useState(false)
-  
 
   const changeBackground = () => {
     if (window.scrollY >= 66) {
@@ -29,7 +28,7 @@ export const Header = () => {
   useEffect(() => {
     // console.log(process)
     changeBackground()
-    window.addEventListener("scroll", changeBackground)
+    window.addEventListener('scroll', changeBackground)
   })
 
   const handleMenu = () => {
@@ -62,9 +61,10 @@ export const Header = () => {
     <>
       <nav
         className={`
-          ${addBackground && "bg-mainBackground"}
+          ${addBackground && 'bg-mainBackground'}
           sticky top-0 w-full flex items-center justify-between flex-wrap py-2 px-10 z-50 pointer-events-none
-        `}>
+        `}
+      >
         <MainLogo />
         <button
           type="button"
@@ -74,11 +74,10 @@ export const Header = () => {
           className="
             flex items-center justify-center bg-navIconBorder hover:bg-navIconBorderEmpty bg-cover bg-no-repeat 
             w-16 h-16 lg:w-10 lg:h-10 pointer-events-auto lg:mt-0
-          ">
+          "
+        >
           <div className="card rotate-45">
-            <div
-
-              className="flex justify-center rotate-45 w-6 h-6 sm:w-10 sm:h-10">
+            <div className="flex justify-center rotate-45 w-6 h-6 sm:w-10 sm:h-10">
               <img
                 src={navigationIcon}
                 className="w-6 h-6 sm:w-10 sm:h-10"
@@ -93,13 +92,15 @@ export const Header = () => {
         className="
           fixed z-40 flex h-0 w-screen justify-center items-center bg-black opacity-0 duration-700
           overflow-hidden bottom-0
-        ">
+        "
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 w-full px-10">
           <div
             className="
               flex flex-col text-white text-xl space-y-3 items-top w-full text-center md:text-left
               col-start-2 col-span-2
-            ">
+            "
+          >
             <NavLink
               to="/"
               onClick={handleMenu}
@@ -107,7 +108,8 @@ export const Header = () => {
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
                 duration-300 py-3
-              ">
+              "
+            >
               Home
             </NavLink>
             <NavLink
@@ -117,7 +119,8 @@ export const Header = () => {
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
                 duration-300 py-3
-              ">
+              "
+            >
               Services
             </NavLink>
             <NavLink
@@ -127,36 +130,41 @@ export const Header = () => {
                 text-transparent bg-clip-text bg-gradient-to-t from-gray-500 to-white
                 text-4xl md:text-5xl hover:text-6xl hover:text-white hover:border-base-blue hover:border-b-4
                 duration-300 py-3
-              ">
+              "
+            >
               Development Areas
             </NavLink>
             <div className="text-center flex gap-8 justify-center md:justify-start py-3">
               <a
                 href={FACEBOOK_URL}
-                target='_blank'
+                target="_blank"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue">
+                className="text-white text-2xl hover:text-base-blue"
+              >
                 <FacebookIcon className="w-4 hover:w-6 duration-300" />
               </a>
               <a
                 href={TWITTER_URL}
-                target='_blank'
+                target="_blank"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue">
+                className="text-white text-2xl hover:text-base-blue"
+              >
                 <TwitterIcon className="w-6 hover:w-8 duration-300 mt-1" />
               </a>
               <a
                 href={INSTAGRAM_URL}
-                target='_blank'
+                target="_blank"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue">
+                className="text-white text-2xl hover:text-base-blue"
+              >
                 <InstagramIcon className="w-6 hover:w-8 duration-300 mt-1" />
               </a>
               <a
                 href={LINKEDIN_URL}
-                target='_blank'
+                target="_blank"
                 onClick={handleMenu}
-                className="text-white text-2xl hover:text-base-blue">
+                className="text-white text-2xl hover:text-base-blue"
+              >
                 <LinkedinIcon className="w-6 hover:w-8 duration-300 mt-2" />
               </a>
             </div>

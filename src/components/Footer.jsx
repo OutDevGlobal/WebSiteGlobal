@@ -10,7 +10,7 @@ export const Footer = () => {
   const dispatch = useDispatch()
 
   return (
-    <Section id="footer"> 
+    <Section id="footer">
       <footer className="md:flex justify-center">
         <div className="md:w-full block">
           <img
@@ -24,9 +24,15 @@ export const Footer = () => {
             </div>
             <div className="lg:flex gap-8 lg:mr-10">
               <div className="flex flex-col font-sofia font-bold gap-2 mb-4 text-xl lg:text-4xl">
-                <p className="text-white hover:text-base-purple duration-300 cursor-default">USA</p>
-                <p className="hover:text-base-purple duration-300 cursor-default">MX</p>
-                <p className="hover:text-base-purple duration-300 cursor-default">CANADA</p>
+                <p className="text-white hover:text-base-purple duration-300 cursor-default">
+                  USA
+                </p>
+                <p className="hover:text-base-purple duration-300 cursor-default">
+                  MX
+                </p>
+                <p className="hover:text-base-purple duration-300 cursor-default">
+                  CANADA
+                </p>
               </div>
               <div className="flex flex-col font-sofia font-bold gap-2 mb-4 justify-center mx-10 lg:mx-0">
                 <p className="font-sofia font-light text-xl">
@@ -36,13 +42,15 @@ export const Footer = () => {
                   Los Angeles, California 90013
                 </p>
                 <p className="font-sofia text-lg">
-                  <span className="font-bold">USA Direct: </span> +1 (310) 910 9151
+                  <span className="font-bold">USA Direct: </span> +1 (310) 910
+                  9151
                 </p>
                 <p className="font-sofia text-lg">
                   <span className="font-bold">México: </span> +52 (33) 2315 2303
                 </p>
                 <p className="font-sofia text-lg">
-                  <span className="font-bold">E.Mail: </span> contacto@outdev.com.mx
+                  <span className="font-bold">E.Mail: </span>{' '}
+                  contacto@outdev.com.mx
                 </p>
               </div>
             </div>
@@ -50,44 +58,57 @@ export const Footer = () => {
               <div className="flex flex-col gap-2">
                 <NavLink
                   to="/"
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   Home
                 </NavLink>
                 <Link
                   to="/"
-                  onClick={() => { dispatch(setSection("whoWeAre")) }}
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  onClick={() => {
+                    dispatch(setSection('whoWeAre'))
+                  }}
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   About us
                 </Link>
                 <NavLink
                   to="/"
-                  onClick={() => { dispatch(setSection("ourTech")) }}
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  onClick={() => {
+                    dispatch(setSection('ourTech'))
+                  }}
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   Our Tech
                 </NavLink>
               </div>
               <div className="flex flex-col gap-2">
                 <NavLink
                   to="/services"
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   Services
                 </NavLink>
                 <NavLink
                   to="/development-areas"
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   Research and Development
                 </NavLink>
               </div>
               <div className="flex flex-col gap-2">
                 <NavLink
                   to="/contact-us"
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   Locations
                 </NavLink>
                 <NavLink
                   to="/contact-us"
-                  onClick={() => { dispatch(setSection("content")) }}
-                  className="text-white text-2xl hover:text-base-purple duration-300">
+                  onClick={() => {
+                    dispatch(setSection('content'))
+                  }}
+                  className="text-white text-2xl hover:text-base-purple duration-300"
+                >
                   Contact us
                 </NavLink>
               </div>
@@ -101,14 +122,16 @@ export const Footer = () => {
               <div>
                 <a
                   href="/"
-                  className="text-white text-sm hover:text-md hover:text-base-purple duration-300">
+                  className="text-white text-sm hover:text-md hover:text-base-purple duration-300"
+                >
                   Terms and Conditions
                 </a>
               </div>
               <div>
                 <a
                   href="/"
-                  className="text-white text-sm hover:text-2md hover:text-base-purple duration-300">
+                  className="text-white text-sm hover:text-2md hover:text-base-purple duration-300"
+                >
                   Privacy Policy
                 </a>
               </div>
