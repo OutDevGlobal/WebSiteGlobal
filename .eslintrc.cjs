@@ -15,7 +15,7 @@ module.exports = {
   rules: {
     'no-param-reassign': 0,
     'max-len': ['error', { code: 120 }],
-    'semi': ['error', 'never'],
+    semi: ['error', 'never'],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/prop-types': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
